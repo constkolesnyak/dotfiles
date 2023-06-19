@@ -9,7 +9,7 @@ alias confp="$EDITOR ~/.zsh_plugins.txt"
 alias confv="$EDITOR ~/.config/nvim/init.lua"
 
 # GNU Stow is full of bugs but it's good enough
-stow_ending="--verbose -d ~/.dotfiles . 2>&1 | grep -v '^BUG'"
+stow_ending="--verbose -d ~/dotfiles . 2>&1 | grep -v '^BUG'"
 alias nostow="stow --no $stow_ending"  # dry run
 alias restow="stow --restow $stow_ending"
 alias unstow="stow --delete $stow_ending"
