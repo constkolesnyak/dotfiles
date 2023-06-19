@@ -9,11 +9,3 @@ nv_at_line() {
         awk -F ':' '{print "+"$2" "$1}')
 }
 
-lt() {
-    la --tree --level=3 "$@" | cat
-}
-
-ltmax() {
-    la --tree "$@" | cat
-}
-

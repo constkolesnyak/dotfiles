@@ -33,6 +33,10 @@ alias la="ls -a"
 alias l.="exa -a | egrep '^\.'"
 alias l="ls -lba"
 
+lt() { la --tree "$@" | bat --style='grid,numbers' }
+alias ltl="lt -L"
+alias ltg="lt -I .git --git-ignore"
+
 
 ### REPLACEMENTS ###
 
