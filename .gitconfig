@@ -1,0 +1,33 @@
+[user]
+	name = Konstantin Kolesnyak
+	email = constkolesnyak@gmail.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+    rebase = true
+
+[core]
+	editor = code --wait
+	autocrlf = input
+
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = code
+[mergetool "code"]
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+[color]
+    ui = always
+    branch = always
+    diff = always
+    interactive = always
+    status = always
+    grep = always
+    decorate = always
+    showbranch = always

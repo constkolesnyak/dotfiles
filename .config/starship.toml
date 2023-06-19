@@ -1,0 +1,22 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 5
+
+[git_branch]
+# Remove 'on'
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[cmd_duration]
+# Remove 'took'
+format = '[$duration]($style) '
+# Grey
+style = 'fg:246'  
+
+[python]
+# Remove 'via'
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+

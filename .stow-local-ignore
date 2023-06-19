@@ -1,0 +1,10 @@
+^/ignore
+
+.DS_Store
+
+\.git
+\.gitignore
+
+^/README.*
+^/LICENSE.*
+^/COPYING

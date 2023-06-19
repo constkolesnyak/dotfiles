@@ -1,0 +1,9 @@
+---
+"pane_group:navigate_left": none
+"terminal:copy": shift-cmd-C
+"terminal:copy_outputs": cmd-c
+"terminal:copy_commands": ctrl-shift-cmd-C
+"pane_group:navigate_right": none
+"workspace:activate_next_tab": alt-cmd-right
+"pane_group:add_down": ctrl-shift-cmd-D
+"workspace:activate_prev_tab": alt-cmd-left
