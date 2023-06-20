@@ -1,6 +1,8 @@
 ### DOTFILES ###
 
 alias reload='. ~/.zshrc'
+alias realias='. ~/.zsh_aliases.zsh'
+alias refunc='. ~/.zsh_functions.zsh'
 
 alias conf="$EDITOR ~/.zshrc"
 alias confa="$EDITOR ~/.zsh_aliases.zsh"
@@ -16,9 +18,15 @@ alias unstow="stow --delete $stow_ending"
 unset stow_ending
 
 
-### GIT ###
+### BREW ###
 
-alias g="git"
+alias brupg="brew update && brew upgrade && mas upgrade"
+
+brew_ending="--no-upgrade --verbose --file=~/dotfiles/stow_ignore/Brewfile"
+alias brcheck="brew bundle check $brew_ending"
+alias brdump="brew bundle dump --force --describe $brew_ending"
+alias brbundle="brew bundle $brew_ending"
+unset brew_ending
 
 
 ### LS ###
@@ -47,6 +55,8 @@ alias rm='trash-put --trash-dir ~/.Trash'
 
 
 ### MISC ###
+
+alias a='acs'
 
 # Editors
 alias v='code'
