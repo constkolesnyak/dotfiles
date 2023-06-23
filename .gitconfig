@@ -5,22 +5,31 @@
 [init]
 	defaultBranch = main
 
-[pull]
-    rebase = true
-
 [core]
 	editor = code --wait
 	autocrlf = input
+    pager = delta
+
+
+### INFO ###
+
+[log]
+    date = format:%d %b %Y - %H:%M
+    abbrevCommit = 7
+
+[pager]
+	log = bat --style=plain
+
+[format]
+	pretty = %C(magenta)%h%Creset %C(auto)%d%Creset%n%C(yellow)%an%Creset %C(yellow)<%ae>%Creset%n%C(blue)%ad%Creset%n%n    %B
 
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 
-[merge]
-    tool = code
-[mergetool "code"]
-    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+### COLOR ###
 
 [color]
     ui = always
@@ -31,3 +40,49 @@
     grep = always
     decorate = always
     showbranch = always
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = red
+
+
+### MERGE & REBASE ###
+
+[pull]
+    rebase = true
+
+[rebase]
+	autosquash = true
+
+[merge]
+    tool = code
+[mergetool "code"]
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+
+### DELTA ###
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    line-numbers = true
+    side-by-side = false
+    navigate = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
+
+### END ### (for 'git config' command)
