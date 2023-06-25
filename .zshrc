@@ -28,9 +28,7 @@ setopt noglobdots
 
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
-
-# Use 'j' instead of 'z'
-eval "$(zoxide init zsh --cmd j)"
+eval "$(zoxide init zsh)"
 
 # Antidote: ~/.zsh_plugins.txt
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
@@ -40,7 +38,7 @@ antidote load
 
 ### FINAL ###
 
-. ~/.zsh_aliases.zsh
-. ~/.zsh_functions.zsh
+. ~/.functions.zsh
+realias
 
 dinosay --random --color purple 'Facturusne operae pretium sim?'

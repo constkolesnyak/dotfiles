@@ -1,12 +1,11 @@
 ### DOTFILES ###
 
 alias reload='. ~/.zshrc'
-alias realias='. ~/.zsh_aliases.zsh'
-alias refunc='. ~/.zsh_functions.zsh'
+alias refunc='. ~/.functions.zsh'
 
 alias conf="$EDITOR ~/.zshrc"
-alias confa="$EDITOR ~/.zsh_aliases.zsh"
-alias conff="$EDITOR ~/.zsh_functions.zsh"
+alias confa="$EDITOR ~/.aliases.zsh"
+alias conff="$EDITOR ~/.functions.zsh"
 alias confp="$EDITOR ~/.zsh_plugins.txt"
 alias confv="$EDITOR ~/.config/nvim/init.lua"
 
@@ -82,4 +81,5 @@ alias mv='mv -i'
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
-
+alias j='__zoxide_z'
+alias ji='__zoxide_zi'

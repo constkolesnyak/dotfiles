@@ -1,3 +1,11 @@
+realias() {
+    unalias -a
+
+    for file in ~/.*aliases.zsh; do
+        . "$file"
+    done
+}
+
 mkd() {
 	mkdir $1
 	cd $1
