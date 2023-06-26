@@ -5,7 +5,10 @@ export MAGIC_ENTER_OTHER_COMMAND=" l"
 
 export VISUAL="nvim"
 export EDITOR="nvim"
+
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# Fix Unicode in GNU Less 
+export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
 
 
 ### MISC ###
