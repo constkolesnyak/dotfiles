@@ -1,5 +1,6 @@
 ^/stow_ignore
 
+Icon\r
 .DS_Store
 
 \.git
@@ -7,4 +8,4 @@
 
 ^/README.*
 ^/LICENSE.*
-^/COPYING
+

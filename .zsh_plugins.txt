@@ -7,5 +7,4 @@ ohmyzsh/ohmyzsh path:plugins/extract/extract.plugin.zsh
 ohmyzsh/ohmyzsh path:plugins/magic-enter/magic-enter.plugin.zsh
 ohmyzsh/ohmyzsh path:plugins/macos/macos.plugin.zsh
 ohmyzsh/ohmyzsh path:plugins/aliases/aliases.plugin.zsh
-ohmyzsh/ohmyzsh path:plugins/extract/extract.plugin.zsh
 
