@@ -5,6 +5,8 @@ alias refunc='. ~/.functions.zsh'
 
 alias conf="$EDITOR ~/.zshrc"
 alias confa="$EDITOR ~/.aliases.zsh"
+alias confga="$EDITOR ~/.git_aliases.zsh"
+alias confg="$EDITOR ~/.gitconfig"
 alias conff="$EDITOR ~/.functions.zsh"
 alias confp="$EDITOR ~/.zsh_plugins.txt"
 alias confv="$EDITOR ~/.config/nvim/init.lua"
@@ -53,6 +55,16 @@ alias diff='batdiff'
 alias rm='trash-put --trash-dir ~/.Trash'
 
 
+### NAVIGATION ###
+
+alias ..='cd ..'
+alias ...='cd ../..'
+
+alias j='__zoxide_z'
+alias ji='__zoxide_zi'
+alias jj='j - >/dev/null'
+
+
 ### MISC ###
 
 alias a='acs'
@@ -78,8 +90,3 @@ alias yt-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
 alias cp='cp -i'
 alias mv='mv -i'
 
-# Navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias j='__zoxide_z'
-alias ji='__zoxide_zi'
