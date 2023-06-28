@@ -11,8 +11,8 @@ mkd() {
 	cd $1
 }
 
-nv_at_line() {
-    nv $(rg --line-number . |
+nvi() {
+    nv $(rg --hidden --line-number . |
         fzf --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' |
         awk -F ':' '{print "+"$2" "$1}')
 }
