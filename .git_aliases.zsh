@@ -125,6 +125,7 @@ alias gdsth='git diff stash@{0} HEAD'
 ### INFO ###
 
 alias gs='git status'
+alias gss='git status -s'
 
 alias gsh='git show'
 alias gsht='git show --stat'
