@@ -11,12 +11,10 @@ alias conff="v ~/.functions.zsh"
 alias confp="v ~/.zsh_plugins.txt"
 alias confv="v ~/.config/nvim/init.lua"
 
-# GNU Stow is full of bugs but it's good enough
-stow_ending="--verbose -d ~/dotfiles . 2>&1 | grep -v '^BUG'"
-alias nostow="stow --no $stow_ending"  # dry run
-alias restow="stow --restow $stow_ending"
-alias unstow="stow --delete $stow_ending"
-unset stow_ending
+# My Stow
+alias nostow="stow.xsh no"
+alias restow="stow.xsh restow"
+alias unstow="stow.xsh delete"
 
 
 ### BREW ###
@@ -26,7 +24,7 @@ alias brls="brew list"
 alias brins="brew install"
 alias bruni="brew uninstall"
 
-brew_ending="--no-upgrade --verbose --file=~/dotfiles/stow_ignore/Brewfile"
+brew_ending="--no-upgrade --verbose --file=~/dotfiles/stow_local_ignore/Brewfile"
 alias brcheck="brew bundle check $brew_ending"
 alias brdump="brew bundle dump --force --describe $brew_ending"
 alias brbundle="brew bundle $brew_ending"

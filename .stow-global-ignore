@@ -1,0 +1,11 @@
+.stow-global-ignore
+stow_local_ignore
+
+Icon\r
+.DS_Store
+
+.git
+.gitignore
+
+README.*
+LICENSE.*

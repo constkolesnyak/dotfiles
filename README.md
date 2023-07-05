@@ -16,7 +16,8 @@ Simple dotfiles with configs, aliases and whatnot
 | [GNU Stow](https://www.gnu.org/software/stow/)      | Symlink farm manager     |
 | [Homebrew](https://brew.sh/)                        | Package manager          |
 | [Warp](https://www.warp.dev/)                       | Terminal                 |
-| [Neovim](https://neovim.io/)                        | Editor                   |
+| [VS Code](https://code.visualstudio.com/)           | Editor                   |
+| [Neovim](https://neovim.io/)                        | Additional editor        |
 | [Packer](https://github.com/wbthomason/packer.nvim) | Neovim plugin manager    |
 | [Zsh](https://www.zsh.org/)                         | Shell                    |
 | [Antidote](https://getantidote.github.io/)          | Zsh plugin manager       |
@@ -31,7 +32,7 @@ Simple dotfiles with configs, aliases and whatnot
    git clone https://github.com/constkolesnyak/dotfiles.git ~/dotfiles
    ```
 
-2. Source aliases
+1. Source aliases
 
    _**Note**: run_ `where some_alias` _to understand aliases before executing them_
 
@@ -39,7 +40,7 @@ Simple dotfiles with configs, aliases and whatnot
    . ~/dotfiles/.aliases.zsh
    ```
 
-3. Install apps via Homebrew
+1. Install apps via Homebrew
 
    _**Note**: remove apps you don't need from the_ `Brewfile` _before installation_
 
@@ -47,26 +48,38 @@ Simple dotfiles with configs, aliases and whatnot
    brbundle
    ```
 
-4. Run Stow in simulation mode
+1. Add my scripts to PATH
+
+   ```sh
+   export PATH="$PATH:$HOME/dotfiles/stow_local_ignore/bin"
+   ```
+
+1. Symlink .stow-global-ignore
+
+   ```sh
+   ln -s ~/dotfiles/.stow-global-ignore ~/.stow-global-ignore
+   ```
+
+1. Run Stow in simulation mode
    ```sh
    nostow
    ```
 
-5. Run Stow for real
+1. Run Stow for real
    ```sh
    restow
    ```
 
-6. Source `.zshrc`
+1. Source `.zshrc`
    ```sh
    reload
    ```
 
-7. Sync macOS settings with defaults scripts in `stow_ignore/bin/`
+1. Sync macOS settings with defaults scripts 
    ```sh
    # On your mac with desired settings
-   ./defaults_export.zsh
+   defaults_export.zsh
    
    # On your new mac
-   ./defaults_import.xsh
+   defaults_import.xsh
    ```

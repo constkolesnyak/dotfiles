@@ -1,5 +1,7 @@
 ### VARIABLES ###
 
+export PATH="$PATH:$HOME/dotfiles/stow_local_ignore/bin"
+
 export MAGIC_ENTER_GIT_COMMAND=" l; git status -s"
 export MAGIC_ENTER_OTHER_COMMAND=" l"
 
