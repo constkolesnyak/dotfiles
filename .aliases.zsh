@@ -12,9 +12,9 @@ alias confp="v ~/.zsh_plugins.txt"
 alias confv="v ~/.config/nvim/init.lua"
 
 # My Stow
-alias nostow="stow.xsh no"
-alias restow="stow.xsh restow"
-alias unstow="stow.xsh delete"
+alias nostow="my_stow.xsh no"
+alias restow="my_stow.xsh restow"
+alias unstow="my_stow.xsh delete"
 
 
 ### BREW ###
