@@ -1,43 +1,135 @@
 {
+// MISC
+
     "editor.fontSize": 20,
     "editor.minimap.enabled": false,
+    "telemetry.telemetryLevel": "crash",
 
 
-/// VIM ///
+// FORMAT
 
+    "editor.formatOnSave": true,
+    "[jsonc]": {
+        "editor.formatOnSave": false
+    },
+
+    // Prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+
+
+// VIM
+
+    // Emulated plugins
     "vim.easymotion": true,
+    "vim.replaceWithRegister": true,
+    "vim.vim.surround": true,
+    // indent-object and textobj-arguments: true
+
+    // Misc
+    "vim.leader": "<space>",
     "vim.incsearch": true,
+    "vim.hlsearch": false,
+    "vim.usectrlkeys": false,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.timeout": 300,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
+    "vim.highlightedyank.enable": true,
+
+    // Insert mode
+    "vim.insertModeKeyBindingsNonRecursive": [
         {
-            "before": [
-                "k",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["k", "j"],
+            "after": ["<Esc>"]
         }
     ],
+
+    // Normal mode
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
             "before": ["K"],
-            "commands": ["lineBreakInsert"],
-            "silent": true
+            "after": ["o", "<Esc>"]
+        },
+        {
+            "before": ["g", "p"],
+            "after": ["<C-o>"]
+        },
+        {
+            "before": ["U"],
+            "after": ["<C-r>"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
         },
         {
             "before": ["f"],
             "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
         }
     ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
-    "vim.operatorPendingModeKeyBindings": [
+
+    // Visual mode
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j"],
+            "after": ["g", "j"]
+        },
+        {
+            "before": ["k"],
+            "after": ["g", "k"]
+        },
+        {
+            "before": ["n"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["L"],
+            "after": ["$"]
+        },
+        {
+            "before": ["H"],
+            "after": ["^"]
+        },
+        {
+            "before": ["<Tab>"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["f"],
+            "after": ["<leader>", "<leader>", "s"]
+        },
+        {
+            "before": ["s"],
+            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+        }
+    ],
+
+    // Pending mode
+    "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+            "before": ["n"],
+            "after": ["<Esc>"]
+        },
         {
             "before": ["L"],
             "after": ["$"]
@@ -46,23 +138,5 @@
             "before": ["H"],
             "after": ["^"]
         }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
     ]
 }
