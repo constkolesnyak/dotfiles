@@ -1,5 +1,5 @@
 .stow-global-ignore
-stow_local_ignore
+slig
 
 Icon\r
 .DS_Store

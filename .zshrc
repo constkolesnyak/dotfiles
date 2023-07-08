@@ -1,6 +1,6 @@
 ### VARIABLES ###
 
-export PATH="$PATH:$HOME/dotfiles/stow_local_ignore/bin"
+export PATH="$PATH:$HOME/dotfiles/slig/bin"
 
 export MAGIC_ENTER_GIT_COMMAND=" l; gss"
 export MAGIC_ENTER_OTHER_COMMAND=" l"

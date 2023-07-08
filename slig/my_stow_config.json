@@ -3,7 +3,7 @@
         "dotfiles": "~/dotfiles"
     },
     {
-        "dotfiles": "~/dotfiles/stow_local_ignore/VSCode",
+        "dotfiles": "~/dotfiles/slig/VSCode",
         "target": "~/Library/Application Support/Code/User"
     }
 ]

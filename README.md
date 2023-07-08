@@ -51,7 +51,7 @@ Simple dotfiles with configs, aliases and whatnot
 1. Add my scripts to PATH
 
    ```sh
-   export PATH="$PATH:$HOME/dotfiles/stow_local_ignore/bin"
+   export PATH="$PATH:$HOME/dotfiles/slig/bin"
    ```
 
 1. Symlink .stow-global-ignore

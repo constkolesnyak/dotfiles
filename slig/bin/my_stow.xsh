@@ -28,7 +28,7 @@ except KeyError:
     exit(1)
 
 
-path_pairs = read_json(${'HOME'} + '/dotfiles/stow_local_ignore/my_stow_config.json')
+path_pairs = read_json(${'HOME'} + '/dotfiles/slig/my_stow_config.json')
 
 for path_pair in path_pairs:
     dotfiles_dir_name = path_pair['dotfiles'].split('/')[-1]

@@ -24,7 +24,7 @@ alias brls="brew list"
 alias brins="brew install"
 alias bruni="brew uninstall"
 
-brew_ending="--no-upgrade --verbose --file=~/dotfiles/stow_local_ignore/Brewfile"
+brew_ending="--no-upgrade --verbose --file=~/dotfiles/slig/Brewfile"
 alias brcheck="brew bundle check $brew_ending"
 alias brdump="brew bundle dump --force --describe $brew_ending"
 alias brbundle="brew bundle $brew_ending"
