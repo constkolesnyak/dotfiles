@@ -9,7 +9,7 @@
 // FORMAT
 
     "editor.formatOnSave": true,
-    "[jsonc]": {
+    "[jsonc][markdown]": {
         "editor.formatOnSave": false
     },
 
