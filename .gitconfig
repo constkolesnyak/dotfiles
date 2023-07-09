@@ -1,3 +1,5 @@
+### ESSENTIAL ###
+
 [user]
 	name = Konstantin Kolesnyak
 	email = constkolesnyak@gmail.com
@@ -85,4 +87,4 @@
     hunk-header-style = file line-number syntax
 
 
-### END ### (for 'git config' command)
+### LINES BELLOW ARE ADDED BY 'git config' COMMAND ###
