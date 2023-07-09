@@ -1,32 +1,58 @@
 {
-// MISC
+//* MISC
 
-    "editor.fontSize": 20,
-    "editor.minimap.enabled": false,
     "telemetry.telemetryLevel": "crash",
 
 
-// FORMAT
+//* APPEARANCE
+
+    "editor.fontSize": 20,
+    "editor.minimap.enabled": false,
+
+    //* Theme
+    "workbench.iconTheme": "high-contrast-icons-dark",
+    "workbench.colorTheme": "Omni",
+    "materialTheme.accent": "Purple",
+    "editor.tokenColorCustomizations": {
+        "comments": "#8086A2"
+    },
+    "workbench.colorCustomizations": {
+        "foreground": "#C7CCE5",
+        "editor.foreground": "#C7CCE5",
+        "editor.selectionBackground": "#366B84",
+        "quickInput.foreground": "#DBE0F9",
+        "descriptionForeground": "#C7CCE5",
+        "sideBar.foreground": "#DBE0F9",
+        "gitDecoration.ignoredResourceForeground": "#777C95"
+    },
+    
+
+//* LINTERS
+
+    "cSpell.enableFiletypes": ["properties"],
+
+
+//* FORMAT
 
     "editor.formatOnSave": true,
     "[jsonc][markdown]": {
         "editor.formatOnSave": false
     },
 
-    // Prettier
+    //* Prettier
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 4,
 
 
-// VIM
+//* VIM
 
-    // Emulated plugins
+    //* Emulated plugins
     "vim.easymotion": true,
     "vim.replaceWithRegister": true,
     "vim.vim.surround": true,
     // indent-object and textobj-arguments: true
 
-    // Misc
+    //* Misc
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": false,
@@ -36,7 +62,7 @@
     "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
 
-    // Insert mode
+    //* Insert mode
     "vim.insertModeKeyBindingsNonRecursive": [
         {
             "before": ["k", "j"],
@@ -44,7 +70,7 @@
         }
     ],
 
-    // Normal mode
+    //* Normal mode
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["j"],
@@ -84,7 +110,7 @@
         }
     ],
 
-    // Visual mode
+    //* Visual mode
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": ["j"],
@@ -124,7 +150,7 @@
         }
     ],
 
-    // Pending mode
+    //* Pending mode
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         {
             "before": ["n"],
@@ -138,5 +164,8 @@
             "before": ["H"],
             "after": ["^"]
         }
-    ]
+
+
+//* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
+    ],
 }
