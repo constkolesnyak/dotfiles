@@ -71,7 +71,6 @@ alias kj='j - >/dev/null'
 alias a='acs'
 
 # Editors
-alias v='code'
 alias nv='nvim'
 
 # Python

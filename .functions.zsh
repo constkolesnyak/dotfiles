@@ -17,3 +17,11 @@ nvi() {
         awk -F ':' '{print "+"$2" "$1}')
 }
 
+
+v() {
+    if [ $# -eq 0 ]; then
+        code .
+    else
+        code $@
+    fi
+}
