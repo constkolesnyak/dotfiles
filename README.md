@@ -23,7 +23,7 @@ Simple dotfiles with configs, aliases, and whatnot.
 | [Antidote](https://getantidote.github.io/)          | Zsh plugin manager    |
 | [Xonsh](https://xon.sh/)                            | Additional shell      |
 | [Starship](https://starship.rs/)                    | Prompt                |
-| [defaults](https://macos-defaults.com/)             | macOS CLI settings    |
+| [defaults](https://macos-defaults.com/)             | macOS settings CLI    |
 
 ## How It Works
 

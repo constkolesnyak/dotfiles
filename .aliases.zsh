@@ -1,4 +1,4 @@
-### DOTFILES ###
+##* DOTFILES ###
 
 alias reload='. ~/.zshrc'
 alias refunc='. ~/.functions.zsh'
@@ -17,7 +17,7 @@ alias restow="my_stow.xsh restow"
 alias unstow="my_stow.xsh delete"
 
 
-### BREW ###
+##* BREW ###
 
 alias brupg="brew update && brew upgrade && mas upgrade"
 alias brls="brew list"
@@ -31,9 +31,8 @@ alias brbundle="brew bundle $brew_ending"
 unset brew_ending
 
 
-### LS ###
+##* LS ###
 
-# For piping
 alias bls="/bin/ls"  
 
 alias ls="exa --color=always --icons --group-directories-first"
@@ -48,7 +47,7 @@ alias ltl="lt -L"
 alias ltg="lt -I .git --git-ignore"
 
 
-### REPLACEMENTS ###
+##* REPLACEMENTS ###
 
 alias ps='procs'
 alias cat='bat'
@@ -56,7 +55,7 @@ alias diff='batdiff'
 alias rm='trash-put --trash-dir ~/.Trash'
 
 
-### NAVIGATION ###
+##* NAVIGATION ###
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -66,15 +65,13 @@ alias ji='__zoxide_zi'
 alias kj='j - >/dev/null'
 
 
-### MISC ###
+##* MISC ###
 
-alias a='acs'
-
-# Editors
 alias nv='nvim'
-
-# Python
 alias py='python3'
+
+# List or search aliases
+alias a='acs'
 
 # Clipboard
 alias cbc='pbcopy'
@@ -86,7 +83,6 @@ alias yt-hd="yt-dlp -f 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]'"
 alias yt-fullhd="yt-dlp -f 'bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]'"
 alias yt-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
 
-# Confirmations
+# Confirmation
 alias cp='cp -i'
 alias mv='mv -i'
-

@@ -1,4 +1,4 @@
-### LOG ###
+##* LOG ###
 
 alias glog="git log --graph --all"
 alias glol='glog --oneline'
@@ -7,12 +7,25 @@ alias glp='gl -p'
 alias glt='gl --stat'
 alias glsl='git shortlog'
 
-# View the full change history of a single file:
-# Usage: glf <file> [<from line>] [<to line>]
-alias glf='git_log_file'
+# View the full change history of a single file
+function glf() {
+  if [[ -z $1 ]]; then
+    echo "Usage:    git_log_file <file> [<from line>] [<to line>]"
+    return 1
+  elif [[ -z $2 ]]; then
+    glog -p -- $1
+    return 0
+  elif [[ $2 == *,* ]]; then
+    3=${2#*,}
+    2=${2%,*}
+  elif [[ -z $3 ]]; then
+    3=$2
+  fi
+  glog -L $2,$3:$1
+}
 
 
-### ADD ###
+##* ADD ###
 
 alias ga='git add'
 alias gaa='git add --all'
@@ -20,7 +33,7 @@ alias gap='git add --patch'
 alias gai='git add --interactive'
 
 
-### COMMIT ###
+##* COMMIT ###
 
 alias gc='git commit --verbose'
 
@@ -33,20 +46,15 @@ alias gcfa='git commit -a --fixup'
 alias gcs='git commit --squash'
 alias gcsa='git commit -a --squash'
 
-# Change commit message
 alias gam='git commit --amend -m' 
-# Add all modified files and change commit message
 alias gama='git commit --amend -am' 
-# Keep commit message
 alias gan='git commit --amend --no-edit' 
-# Add all modified files and keep commit message
 alias gana='git commit --amend --no-edit -a' 
 
 
-### BRANCH ###
+##* BRANCH ###
 
 alias gbr='git branch'
-
 alias gbl='git branch -vva'
 
 alias gbc='git switch -c'
@@ -59,7 +67,7 @@ alias gbm='git switch main'
 alias gbd='git switch dev'
 
 
-### STASH ###
+##* STASH ###
 
 alias gst='git stash'
 alias gstu='git stash -u'
@@ -73,7 +81,7 @@ alias gstl='git stash list'
 alias gsts='git stash show -p'
 
 
-### REMOTE ###
+##* REMOTE ###
 
 alias gcl='git clone --recurse-submodules'
 alias ghcl='gh repo clone'
@@ -97,12 +105,11 @@ alias gpusht='git push --tags'
 alias gsup='git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)'
 
 
-### RE... x3 ###
+##* RE(SET/STORE/VERT) ###
 
 alias gr='git reset'
 alias grs='git reset --soft' 
 alias grhard='git reset --hard' 
-# Safer version of --hard
 alias grk='git reset --keep' 
 
 alias grt='git restore'
@@ -111,7 +118,7 @@ alias grts='git restore --staged'
 alias grev='git revert'
 
 
-### DIFF ###
+##* DIFF ###
 
 alias gd='git diff'
 alias gds='git diff --staged'
@@ -122,7 +129,7 @@ alias gdst='git diff stash@{0}'
 alias gdsth='git diff stash@{0} HEAD'
 
 
-### INFO ###
+##* INFO ###
 
 alias gs='git status'
 alias gss='git status -s'
@@ -137,7 +144,7 @@ alias gcfl='git config --list'
 alias glsf='git ls-files'
 
 
-### MERGE & REBASE ###
+##* MERGE & REBASE ###
 
 alias gm='git merge'
 alias gmt='git mergetool'
@@ -149,7 +156,7 @@ alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
 
 
-### MISC ###
+##* MISC ###
 
 alias g="git"
 
@@ -172,24 +179,3 @@ alias grm='git rm'
 alias gmv='git mv'
 
 alias gman='git help'
-
-
-### FUNCTIONS ###
-
-# View the full change history of a single file:
-function git_log_file() {
-  if [[ -z $1 ]]; then
-    echo "Usage:    git_log_file <file> [<from line>] [<to line>]"
-    return 1
-  elif [[ -z $2 ]]; then
-    glog -p -- $1
-    return 0
-  elif [[ $2 == *,* ]]; then
-    3=${2#*,}
-    2=${2%,*}
-  elif [[ -z $3 ]]; then
-    3=$2
-  fi
-  glog -L $2,$3:$1
-}
-

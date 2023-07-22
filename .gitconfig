@@ -1,4 +1,4 @@
-### ESSENTIAL ###
+##* ESSENTIAL ###
 
 [user]
 	name = Konstantin Kolesnyak
@@ -13,7 +13,7 @@
     pager = delta
 
 
-### INFO ###
+##* INFO ###
 
 [log]
     date = format:%d %b %Y - %H:%M
@@ -31,7 +31,7 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 
 
-### COLOR ###
+##* COLOR ###
 
 [color]
     ui = always
@@ -49,7 +49,7 @@
 	untracked = red
 
 
-### MERGE & REBASE ###
+##* MERGE & REBASE ###
 
 [pull]
     rebase = true
@@ -63,7 +63,7 @@
     cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 
 
-### DELTA ###
+##* DELTA ###
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
@@ -87,4 +87,4 @@
     hunk-header-style = file line-number syntax
 
 
-### LINES BELLOW ARE ADDED BY 'git config' COMMAND ###
+##* LINES BELLOW ARE ADDED BY 'git config' COMMAND ###

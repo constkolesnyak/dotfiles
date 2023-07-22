@@ -6,10 +6,12 @@ realias() {
     done
 }
 
+
 mkd() {
 	mkdir $1
 	cd $1
 }
+
 
 nvi() {
     nv $(rg --hidden --line-number . |

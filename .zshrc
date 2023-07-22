@@ -1,4 +1,4 @@
-### VARIABLES ###
+##* VARIABLES ###
 
 export PATH="$PATH:$HOME/dotfiles/slig/bin"
 
@@ -13,7 +13,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
 
 
-### MISC ###
+##* MISC ###
 
 # /path/to/dir = cd /path/to/dir
 setopt autocd
@@ -25,23 +25,23 @@ setopt notify
 setopt share_history
 # Don't save commands that start with a space in history
 setopt histignorespace
-# * shouldn't match dotfiles
+# Globs shouldn't match dotfiles
 setopt noglobdots
 
 
-### PLUGINS ###
+##* PLUGINS ###
 
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# Antidote: ~/.zsh_plugins.txt
+# Antidote plugins are listed in ~/.zsh_plugins.txt
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 antidote load
 
 
-### FINAL ###
+##* FINAL ###
 
 . ~/.functions.zsh
 realias
