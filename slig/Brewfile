@@ -55,8 +55,12 @@ brew "gh"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Ping, but with a graph
+brew "gping"
 # Tool for glamorous shell scripts
 brew "gum"
 # Improved top (interactive process viewer)
@@ -65,6 +69,8 @@ brew "htop"
 brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Pager program similar to more
+brew "less"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Mac App Store command-line interface
@@ -205,4 +211,26 @@ mas "Things", id: 904280696
 mas "ToothFairy", id: 1191449274
 mas "Userscripts-Mac-App", id: 1463298887
 mas "Velja", id: 1607635845
-mas "Vinegar", id: 1591303229
+vscode "74th.monokai-charcoal-high-contrast"
+vscode "aaron-bond.better-comments"
+vscode "ahmadawais.shades-of-purple"
+vscode "AndenetAlexander.vim-cheatsheet"
+vscode "carlos18mz.cyberpunk-2077-rebuild"
+vscode "eamodio.gitlens"
+vscode "Endormi.2077-theme"
+vscode "enkia.tokyo-night"
+vscode "Equinusocio.vsc-material-theme"
+vscode "esbenp.prettier-vscode"
+vscode "eserozvataf.one-dark-pro-monokai-darker"
+vscode "evondev.dracula-high-contrast"
+vscode "jnoortheen.xonsh"
+vscode "johnpapa.winteriscoming"
+vscode "max-SS.Cyberpunk"
+vscode "mechatroner.rainbow-csv"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "rocketseat.theme-omni"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "teabyii.ayu"
+vscode "vscode-icons-team.vscode-icons"
+vscode "vscodevim.vim"
