@@ -17,9 +17,10 @@ def read_json(file_path):
             error(f"Error while parsing {file_path}:", e, sep='\n')
 
 
-def gum_print(text, reverse_colors=False):
+def gum_print(text, header=False):
     colors = [120, 212]
-    if reverse_colors:
+    if header:
+        text = text.upper()
         colors.reverse()
 
     gum style \
@@ -31,15 +32,15 @@ def gum_print(text, reverse_colors=False):
 valid_args = ('no', 'delete', 'restow')
 try:
     if $ARG1 not in valid_args:
-        error('Valid arguments:', valid_args)
+        error('Only these arguments are valid:', valid_args)
 except KeyError:
     error('One argument is expected')
 
 if $ARG1 == 'no':
-    gum_print('SIMULATION MODE', reverse_colors=True)
+    gum_print('Simulation mode', header=True)
 
 
-path_pairs = read_json(${'HOME'} + '/dotfiles/slig/my_stow_config.json')
+path_pairs = read_json($HOME + '/dotfiles/slig/my_stow_config.json')
 
 for path_pair in path_pairs:
     dotfiles_dir_name = path_pair['dotfiles'].split('/')[-1]
@@ -52,7 +53,5 @@ for path_pair in path_pairs:
     if target:
         target = f"-t '{target}'"         
 
-    evalx(
-        f"stow --{$ARG1} --verbose {dotfiles} {target} . 2>&1 |\
-            grep -v -e '^BUG' -e '^WARN'"
-    )
+    clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
+    evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")
