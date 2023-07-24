@@ -3,11 +3,15 @@
         "dotfiles": "~/dotfiles"
     },
     {
-        "dotfiles": "~/dotfiles/slig/VSCode",
-        "target": "~/Library/Application Support/Code/User"
-    },
-    {
         "dotfiles": "~/dotfiles/slig/zsh",
         "target": "~"
+    },
+    {
+        "dotfiles": "~/dotfiles/slig/git",
+        "target": "~"
+    },
+    {
+        "dotfiles": "~/dotfiles/slig/VSCode",
+        "target": "~/Library/Application Support/Code/User"
     }
 ]
