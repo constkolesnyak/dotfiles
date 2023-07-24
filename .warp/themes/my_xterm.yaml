@@ -2,6 +2,14 @@ accent: "#007bee"
 background: "#000000"
 details: darker
 foreground: "#e5e5e5"
+
+background_image:
+  # the path is relative to ~/.warp/themes/
+  # the full path to the picture is: ~/.warp/themes/warp.jpg
+  path: twin_peaks_with_borders.jpg
+  # the opacity value is required and can range from 0-100
+  opacity: 35
+
 terminal_colors:
   bright:
     black: "#7f7f7f"
