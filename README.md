@@ -27,7 +27,6 @@ Configs, aliases, and whatnot.
 
 ## How It Works
 
-- 10x devs [put](https://dotfiles.github.io/inspiration) all of their dotfiles into respective subdirectories. I don't. Maybe someday I will.
 - [`my_stow.xsh`](slig/bin/my_stow.xsh) passes [dirs and targets](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow) from [`my_stow_config.json`](slig/my_stow_config.json) to GNU Stow.
 - `slig` stands for ***S***tow ***L***ocal ***IG***nore. There are two differences from [`.stow-local-ignore`](https://www.gnu.org/software/stow/manual/stow.html#Types-And-Syntax-Of-Ignore-Lists):
     - `slig` is a directory.
