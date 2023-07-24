@@ -5,5 +5,9 @@
     {
         "dotfiles": "~/dotfiles/slig/VSCode",
         "target": "~/Library/Application Support/Code/User"
+    },
+    {
+        "dotfiles": "~/dotfiles/slig/zsh",
+        "target": "~"
     }
 ]
