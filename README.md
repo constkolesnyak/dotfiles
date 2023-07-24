@@ -5,8 +5,7 @@
 Configs, aliases, and whatnot.
 
 ### Screenshot
-
-![Dotfiles screenshot](https://i.imgur.com/bmxeWou.png)
+![Dotfiles screenshot](slig/dotfiles_screenshot.png)
 
 ### Built With
 
