@@ -11,7 +11,7 @@
         "target": "~"
     },
     {
-        "dotfiles": "~/dotfiles/slig/VSCode",
+        "dotfiles": "~/dotfiles/slig/vscode",
         "target": "~/Library/Application Support/Code/User"
     }
 ]
