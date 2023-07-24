@@ -5,6 +5,7 @@
 Configs, aliases, and whatnot.
 
 ### Screenshot
+
 ![Dotfiles screenshot](slig/dotfiles_screenshot.png)
 
 ### Built With
@@ -28,8 +29,8 @@ Configs, aliases, and whatnot.
 
 - [`my_stow.xsh`](slig/bin/my_stow.xsh) passes [dirs and targets](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow) from [`my_stow_config.json`](slig/my_stow_config.json) to GNU Stow.
 - `slig` stands for ***S***tow ***L***ocal ***IG***nore. There are two differences from [`.stow-local-ignore`](https://www.gnu.org/software/stow/manual/stow.html#Types-And-Syntax-Of-Ignore-Lists):
-    - `slig` is a directory.
-    - `slig` doesn't override `~/.stow-global-ignore`.
+  - `slig` is a directory.
+  - `slig` doesn't override `~/.stow-global-ignore`.
 
 ## Installation
 
@@ -53,7 +54,9 @@ Configs, aliases, and whatnot.
 
 1. [Install Homebrew.](https://brew.sh/)
 
-2. Check what apps are missing. Delete the ones you don't need from `slig/Brewfile`. 
+2. Check what apps are missing.
+
+    > Delete the ones you don't need from `slig/Brewfile`.
 
         brcheck
 
