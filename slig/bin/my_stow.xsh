@@ -40,7 +40,8 @@ if $ARG1 == 'no':
     gum_print('Simulation mode', header=True)
 
 
-path_pairs = read_json($HOME + '/dotfiles/slig/my_stow_config.json')
+my_stow_config = read_json($MY_STOW_CONFIG)
+path_pairs = my_stow_config['path_pairs']
 
 for path_pair in path_pairs:
     dotfiles_dir_name = path_pair['dotfiles'].split('/')[-1]
@@ -48,10 +49,9 @@ for path_pair in path_pairs:
 
     dotfiles = f"-d '{path_pair['dotfiles']}'"
 
-    # Default target is ../dotfiles
-    target = path_pair.get('target', '')
-    if target:
-        target = f"-t '{target}'"         
+    default_target = my_stow_config['default_target']
+    target = path_pair.get('target', default_target) 
+    target = f"-t '{target}'"         
 
     clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
     evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")

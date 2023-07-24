@@ -1,17 +1,18 @@
-[
-    {
-        "dotfiles": "~/dotfiles"
-    },
-    {
-        "dotfiles": "~/dotfiles/slig/zsh",
-        "target": "~"
-    },
-    {
-        "dotfiles": "~/dotfiles/slig/git",
-        "target": "~"
-    },
-    {
-        "dotfiles": "~/dotfiles/slig/vscode",
-        "target": "~/Library/Application Support/Code/User"
-    }
-]
+{
+    "default_target": "~",
+    "path_pairs": [
+        {
+            "dotfiles": "~/dotfiles"
+        },
+        {
+            "dotfiles": "~/dotfiles/slig/zsh"
+        },
+        {
+            "dotfiles": "~/dotfiles/slig/git"
+        },
+        {
+            "dotfiles": "~/dotfiles/slig/vscode",
+            "target": "~/Library/Application Support/Code/User"
+        }
+    ]
+}
