@@ -1,6 +1,6 @@
 ##* VARIABLES ###
 
-export PATH="$PATH:$HOME/dotfiles/slig/bin"
+export PATH="$PATH:$HOME/dotfiles/bin"
 
 export MAGIC_ENTER_GIT_COMMAND=" l; gss"
 export MAGIC_ENTER_OTHER_COMMAND=" l"
@@ -11,9 +11,6 @@ export EDITOR="nvim"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Fix Unicode in GNU Less 
 export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
-
-# My variables
-export MY_STOW_CONFIG="$HOME/dotfiles/slig/my_stow_config.json"
 
 
 ##* MISC ###

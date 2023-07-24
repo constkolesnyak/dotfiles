@@ -1,0 +1,10 @@
+[
+    {
+        "target": "~",
+        "dirs": ["misc", "zsh", "git"]
+    },
+    {
+        "target": "~/Library/Application Support/Code/User",
+        "dirs": ["vscode"]
+    }
+]

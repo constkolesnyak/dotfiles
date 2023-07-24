@@ -29,6 +29,18 @@ def gum_print(text, header=False):
         @(text)
 
 
+def stow(dirs, target):
+    target = f"-t '{target}'"         
+    clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
+
+    for dotfiles in dirs:
+        dir_name = dotfiles.split('/')[-1]
+        gum_print(dir_name)
+
+        dotfiles = f"-d '~/dotfiles/{dotfiles}'"
+        evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")
+        
+
 valid_args = ('no', 'delete', 'restow')
 try:
     if $ARG1 not in valid_args:
@@ -40,18 +52,6 @@ if $ARG1 == 'no':
     gum_print('Simulation mode', header=True)
 
 
-my_stow_config = read_json($MY_STOW_CONFIG)
-path_pairs = my_stow_config['path_pairs']
-
-for path_pair in path_pairs:
-    dotfiles_dir_name = path_pair['dotfiles'].split('/')[-1]
-    gum_print(dotfiles_dir_name)
-
-    dotfiles = f"-d '{path_pair['dotfiles']}'"
-
-    default_target = my_stow_config['default_target']
-    target = path_pair.get('target', default_target) 
-    target = f"-t '{target}'"         
-
-    clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
-    evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")
+config = read_json($HOME + '/dotfiles/my_stow_config.json')
+for relationship in config:
+    stow(**relationship)

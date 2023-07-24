@@ -6,7 +6,7 @@ Configs, aliases, and whatnot.
 
 ### Screenshot
 
-![Dotfiles screenshot](slig/dotfiles_screenshot.png)
+![Screenshot](screenshot.png)
 
 ### Built With
 
@@ -14,6 +14,7 @@ Configs, aliases, and whatnot.
 | --------------------------------------------------- | --------------------- |
 | [GNU Stow](https://www.gnu.org/software/stow/)      | Symlink farm manager  |
 | [Homebrew](https://brew.sh/)                        | Package manager       |
+| [Mas](https://github.com/mas-cli/mas)               | App Store CLI         |
 | [Warp](https://www.warp.dev/)                       | Terminal              |
 | [VS Code](https://code.visualstudio.com/)           | Editor                |
 | [VSCodeVim](https://github.com/VSCodeVim/Vim)       | Vim emulator          |
@@ -23,14 +24,11 @@ Configs, aliases, and whatnot.
 | [Antidote](https://getantidote.github.io/)          | Zsh plugin manager    |
 | [Starship](https://starship.rs/)                    | Prompt                |
 | [Xonsh](https://xon.sh/)                            | Additional shell      |
-| [defaults](https://macos-defaults.com/)             | macOS settings CLI    |
+| [Defaults](https://macos-defaults.com/)             | macOS settings CLI    |
 
-## How It Works
+### How It Works
 
-- [`my_stow.xsh`](slig/bin/my_stow.xsh) passes [dirs and targets](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow) from [`my_stow_config.json`](slig/my_stow_config.json) to GNU Stow.
-- `slig` stands for ***S***tow ***L***ocal ***IG***nore. There are two differences from [`.stow-local-ignore`](https://www.gnu.org/software/stow/manual/stow.html#Types-And-Syntax-Of-Ignore-Lists):
-  - `slig` is a directory.
-  - `slig` doesn't override `~/.stow-global-ignore`.
+[`my_stow.xsh`](bin/my_stow.xsh) passes [dirs and targets](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow) from [`my_stow_config.json`](my_stow_config.json) to GNU Stow.
 
 ## Installation
 
@@ -48,15 +46,15 @@ Configs, aliases, and whatnot.
 
 3. Add my scripts to your `PATH`.
 
-        export PATH="$PATH:$HOME/dotfiles/slig/bin"
+        export PATH="$PATH:$HOME/dotfiles/bin"
 
-### 2) Homebrew
+### 2) Brew
 
 1. [Install Homebrew.](https://brew.sh/)
 
 2. Check what apps are missing.
 
-    > Delete the ones you don't need from `slig/Brewfile`.
+    > Delete the ones you don't need from `Brewfile`.
 
         brcheck
 
