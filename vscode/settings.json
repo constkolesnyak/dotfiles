@@ -1,17 +1,48 @@
 {
 //* MISC
 
-    "telemetry.telemetryLevel": "crash",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.external.osxExec": "Warp.app",
+    "search.smartCase": true,
+    "telemetry.telemetryLevel": "off",
+
+    //* Code Runner
+    "code-runner.enableAppInsights": false,
+    "code-runner.executorMap": {
+        "python": "python3"
+    },
+    "code-runner.runInTerminal": true,
+
+    //* Git
+    "diffEditor.renderSideBySide": false,
+    "gitlens.mode.active": "zen",
 
 
 //* APPEARANCE
 
     "editor.fontSize": 20,
-    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
+    "workbench.startupEditor": "none",
 
-    //* Theme
-    "workbench.iconTheme": "high-contrast-icons-dark",
-    "workbench.colorTheme": "Omni",
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.defaultModel": "foldingProviderModel",
+
+    //* Minimap
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.scale": 2,
+    "editor.minimap.autohide": true,
+    "editor.minimap.size": "fit",
+
+    //* Terminal
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.cursorBlinking": true,
+
+    //* Themes
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Winter is Coming (Dark Blue - No Italics)",
     "materialTheme.accent": "Purple",
     "editor.tokenColorCustomizations": {
         "comments": "#8086A2"
@@ -23,27 +54,27 @@
         "quickInput.foreground": "#DBE0F9",
         "descriptionForeground": "#C7CCE5",
         "sideBar.foreground": "#DBE0F9",
-        "gitDecoration.ignoredResourceForeground": "#777C95"
+        "gitDecoration.ignoredResourceForeground": "#777C95",
+        "editorGutter.modifiedBackground": "#4cc4fc",
+        "scrollbar.shadow": "#FFFFFF"
     },
     
 
-//* LINTERS
+//* LINT
 
-    "cSpell.enableFiletypes": ["properties"],
+    "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
+    "cSpell.userWords": ["dotfiles"],
 
 
 //* FORMAT
 
-    "editor.formatOnSave": true,
-    "[jsonc][markdown]": {
-        "editor.formatOnSave": false
-    },
-
-    //* Prettier
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 4,
 
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
+    
 //* VIM
 
     //* Emulated plugins
@@ -73,20 +104,20 @@
     //* Normal mode
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": ["{"],
+            "after": ["{", "z", "z"]
+        },
+        {
+            "before": ["}"],
+            "after": ["}", "z", "z"]
+        },
+        {
             "before": ["j"],
             "after": ["g", "j"]
         },
         {
             "before": ["k"],
             "after": ["g", "k"]
-        },
-        {
-            "before": ["K"],
-            "after": ["o", "<Esc>"]
-        },
-        {
-            "before": ["g", "p"],
-            "after": ["<C-o>"]
         },
         {
             "before": ["U"],
@@ -113,6 +144,14 @@
     //* Visual mode
     "vim.visualModeKeyBindingsNonRecursive": [
         {
+            "before": ["{"],
+            "after": ["{", "z", "z"]
+        },
+        {
+            "before": ["}"],
+            "after": ["}", "z", "z"]
+        },
+        {
             "before": ["j"],
             "after": ["g", "j"]
         },
@@ -133,11 +172,11 @@
             "after": ["^"]
         },
         {
-            "before": ["<Tab>"],
+            "before": [">"],
             "commands": ["editor.action.indentLines"]
         },
         {
-            "before": ["<S-Tab>"],
+            "before": ["<"],
             "commands": ["editor.action.outdentLines"]
         },
         {
