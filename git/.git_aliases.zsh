@@ -37,7 +37,7 @@ alias gai='git add --interactive'
 
 alias gc='git commit --verbose'
 
-alias gca='git commit -a'
+alias gca='git commit --verbose -a'
 alias gcm='git commit -m'
 alias gcma='git commit -am'
 
@@ -46,6 +46,7 @@ alias gcfa='git commit -a --fixup'
 alias gcs='git commit --squash'
 alias gcsa='git commit -a --squash'
 
+alias gad='git commit --verbose --amend'
 alias gam='git commit --amend -m' 
 alias gama='git commit --amend -am' 
 alias gan='git commit --amend --no-edit' 
