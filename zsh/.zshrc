@@ -31,11 +31,11 @@ setopt noglobdots
 
 ##* PLUGINS ###
 
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-# Antidote plugins are listed in ~/.zsh_plugins.txt
+# Antidote loads plugins listed in ~/.zsh_plugins.txt
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 antidote load
