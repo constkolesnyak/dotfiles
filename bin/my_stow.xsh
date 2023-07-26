@@ -29,7 +29,7 @@ def gum_print(text, header=False):
         @(text)
 
 
-def stow(dirs, target):
+def stow(action, dirs, target):
     target = f"-t '{target}'"         
     clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
 
@@ -38,20 +38,24 @@ def stow(dirs, target):
         gum_print(dir_name)
 
         dotfiles = f"-d '~/dotfiles/{dotfiles}'"
-        evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")
+        evalx(f"stow --{action} --verbose {dotfiles} {target} . {clean_output}")
         
 
-if __name__ == '__main__':
-    valid_args = ('no', 'delete', 'restow')
-    try:
-        if $ARG1 not in valid_args:
-            error('Only these arguments are valid:', valid_args)
-    except KeyError:
-        error('One argument is expected')
+def check_args():
+    if len($ARGS) != 2:
+        error('Exactly one argument is expected')
 
-    if $ARG1 == 'no':
+    valid_args = ('no', 'delete', 'restow')
+    if $ARG1 not in valid_args:
+        error('Only these arguments are valid:', ", ".join(valid_args))
+    
+
+if __name__ == '__main__':
+    check_args()
+    action = $ARG1
+    if action == 'no':
         gum_print('Simulation mode', header=True)
 
     config = read_json($HOME + '/dotfiles/my_stow_config.json')
     for relationship in config:
-        stow(**relationship)
+        stow(action, **relationship)
