@@ -5,6 +5,13 @@
     "terminal.external.osxExec": "Warp.app",
     "search.smartCase": true,
     "telemetry.telemetryLevel": "off",
+    "update.showReleaseNotes": false,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.ignoreRecommendations": false,
 
     //* Code Runner
     "code-runner.enableAppInsights": false,
@@ -18,21 +25,36 @@
     "gitlens.mode.active": "zen",
 
 
-//* APPEARANCE
+//* EDITOR
 
     "editor.fontSize": 20,
-    "workbench.sideBar.location": "right",
-    "workbench.activityBar.visible": false,
-    "workbench.startupEditor": "none",
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": true,
+        "source.organizeImports": true
+    },
+
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.insertMode": "replace",
+
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 5,
 
     "editor.stickyScroll.enabled": true,
     "editor.stickyScroll.defaultModel": "foldingProviderModel",
 
-    //* Minimap
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
     "editor.minimap.autohide": true,
     "editor.minimap.size": "fit",
+
+
+//* APPEARANCE
+
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.visible": false,
+    "workbench.startupEditor": "none",
 
     //* Terminal
     "terminal.integrated.fontSize": 18,
@@ -62,8 +84,16 @@
 
 //* LINT
 
+    "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+    
     "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
-    "cSpell.userWords": ["dotfiles"],
+    "cSpell.userWords": [
+        "dotfiles",
+        "evalx",
+        "keymap",
+        "kwargs",
+        "restow"
+    ],
 
 
 //* FORMAT
@@ -92,6 +122,7 @@
     "vim.timeout": 300,
     "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
+    "vim.foldfix": true,
 
     //* Insert mode
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -103,6 +134,26 @@
 
     //* Normal mode
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "r"],
+            "commands": ["editor.action.rename"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["editor.action.quickFix"]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": ["extension.toggleBool"]
+        },
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
         {
             "before": ["{"],
             "after": ["{", "z", "z"]
@@ -143,6 +194,14 @@
 
     //* Visual mode
     "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
         {
             "before": ["{"],
             "after": ["{", "z", "z"]
