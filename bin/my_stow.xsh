@@ -41,17 +41,17 @@ def stow(dirs, target):
         evalx(f"stow --{$ARG1} --verbose {dotfiles} {target} . {clean_output}")
         
 
-valid_args = ('no', 'delete', 'restow')
-try:
-    if $ARG1 not in valid_args:
-        error('Only these arguments are valid:', valid_args)
-except KeyError:
-    error('One argument is expected')
+if __name__ == '__main__':
+    valid_args = ('no', 'delete', 'restow')
+    try:
+        if $ARG1 not in valid_args:
+            error('Only these arguments are valid:', valid_args)
+    except KeyError:
+        error('One argument is expected')
 
-if $ARG1 == 'no':
-    gum_print('Simulation mode', header=True)
+    if $ARG1 == 'no':
+        gum_print('Simulation mode', header=True)
 
-
-config = read_json($HOME + '/dotfiles/my_stow_config.json')
-for relationship in config:
-    stow(**relationship)
+    config = read_json($HOME + '/dotfiles/my_stow_config.json')
+    for relationship in config:
+        stow(**relationship)
