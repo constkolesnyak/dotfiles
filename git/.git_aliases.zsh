@@ -179,4 +179,6 @@ alias gcpc='git cherry-pick --continue'
 alias grm='git rm'
 alias gmv='git mv'
 
+alias gclean='git clean -f'
+
 alias gman='git help'
