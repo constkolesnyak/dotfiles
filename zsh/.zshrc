@@ -17,8 +17,6 @@ export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
 
 # /path/to/dir = cd /path/to/dir
 setopt autocd
-# Tab completion
-autoload -Uz compinit && compinit
 # Report the status of backgrounds jobs on completion 
 setopt notify
 # Share commands history in all session
@@ -27,6 +25,16 @@ setopt share_history
 setopt histignorespace
 # Globs shouldn't match dotfiles
 setopt noglobdots
+
+
+##* TAB COMPLETION ###
+
+# Brew 
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+autoload -Uz compinit && compinit
 
 
 ##* PLUGINS ###
@@ -43,6 +51,7 @@ antidote load
 
 ##* FINAL ###
 
+# shellcheck source=/dev/null
 . ~/.functions.zsh
 realias
 
