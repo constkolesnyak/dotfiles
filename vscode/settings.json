@@ -14,15 +14,17 @@
     "extensions.ignoreRecommendations": false,
 
     //* Code Runner
-    "code-runner.enableAppInsights": false,
+    "code-runner.enableAppInsights": false,  // telemetry
     "code-runner.executorMap": {
         "python": "python3"
     },
     "code-runner.runInTerminal": true,
 
     //* Git
+    "git.suggestSmartCommit": false,
     "diffEditor.renderSideBySide": false,
     "gitlens.mode.active": "zen",
+    "gitlens.rebaseEditor.ordering": "asc",
 
 
 //* EDITOR
@@ -36,7 +38,6 @@
     },
 
     "editor.inlineSuggest.enabled": true,
-    "editor.suggest.insertMode": "replace",
 
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 5,
@@ -55,6 +56,63 @@
     "workbench.sideBar.location": "right",
     "workbench.activityBar.visible": false,
     "workbench.startupEditor": "none",
+
+    "better-comments.tags": [
+        {
+            "tag": "fixme",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
 
     //* Terminal
     "terminal.integrated.fontSize": 18,
@@ -80,23 +138,57 @@
         "editorGutter.modifiedBackground": "#4cc4fc",
         "scrollbar.shadow": "#FFFFFF"
     },
-    
+
 
 //* LINT
 
     "errorLens.enabledDiagnosticLevels": ["error", "warning"],
-    
+
     "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
     "cSpell.userWords": [
         "dotfiles",
         "evalx",
         "keymap",
         "kwargs",
+        "Pylance",
+        "Pytest",
         "restow"
     ],
 
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnusedImport": "warning",
+        "reportUnusedExpression": "warning",
+        "reportUnusedVariable": "warning"
+    },
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.fixAll": ["source.convertImportFormat", "source.unusedImports"],
+    "python.analysis.enablePytestSupport": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.callArgumentNames": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.autoImportCompletions": true,
+
 
 //* FORMAT
+
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "black-formatter.args": [
+        "--skip-string-normalization",
+        "--line-length",
+        "100"
+    ],
+    "isort.args": ["--profile", "black"],
 
     "prettier.tabWidth": 4,
 
@@ -104,20 +196,19 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
 
-    
+
 //* VIM
 
     //* Emulated plugins
     "vim.easymotion": true,
     "vim.replaceWithRegister": true,
     "vim.vim.surround": true,
-    // indent-object and textobj-arguments: true
+    // indent-object and textobj-arguments are enabled as well
 
     //* Misc
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": false,
-    "vim.usectrlkeys": false,
     "vim.changeWordIncludesWhitespace": true,
     "vim.timeout": 300,
     "vim.useSystemClipboard": true,
@@ -135,6 +226,18 @@
     //* Normal mode
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": ["m"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "commands": ["editor.toggleFold"]
+        },
+        {
+            "before": ["<leader>", "'"],
+            "commands": ["editor.togglequotes"]
+        },
+        {
             "before": ["<leader>", "r"],
             "commands": ["editor.action.rename"]
         },
@@ -147,6 +250,10 @@
             "commands": ["extension.toggleBool"]
         },
         {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
             "before": ["<C-d>"],
             "after": ["<C-d>", "z", "z"]
         },
@@ -155,12 +262,16 @@
             "after": ["<C-u>", "z", "z"]
         },
         {
-            "before": ["{"],
+            "before": ["["],
             "after": ["{", "z", "z"]
         },
         {
-            "before": ["}"],
+            "before": ["]"],
             "after": ["}", "z", "z"]
+        },
+        {
+            "before": ["U"],
+            "after": ["<C-r>"]
         },
         {
             "before": ["j"],
@@ -171,16 +282,12 @@
             "after": ["g", "k"]
         },
         {
-            "before": ["U"],
-            "after": ["<C-r>"]
-        },
-        {
             "before": ["L"],
-            "after": ["$"]
+            "after": ["g", "$"]
         },
         {
             "before": ["H"],
-            "after": ["^"]
+            "after": ["g", "^"]
         },
         {
             "before": ["f"],
@@ -188,7 +295,11 @@
         },
         {
             "before": ["s"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+            "after": ["f"]
+        },
+        {
+            "before": ["S"],
+            "after": ["F"]
         }
     ],
 
@@ -203,12 +314,16 @@
             "after": ["<C-u>", "z", "z"]
         },
         {
-            "before": ["{"],
+            "before": ["["],
             "after": ["{", "z", "z"]
         },
         {
-            "before": ["}"],
+            "before": ["]"],
             "after": ["}", "z", "z"]
+        },
+        {
+            "before": ["m"],
+            "after": ["<Esc>"]
         },
         {
             "before": ["j"],
@@ -219,16 +334,12 @@
             "after": ["g", "k"]
         },
         {
-            "before": ["n"],
-            "after": ["<Esc>"]
-        },
-        {
             "before": ["L"],
-            "after": ["$"]
+            "after": ["g", "$"]
         },
         {
             "before": ["H"],
-            "after": ["^"]
+            "after": ["g", "^"]
         },
         {
             "before": [">"],
@@ -244,23 +355,47 @@
         },
         {
             "before": ["s"],
-            "after": ["<leader>", "<leader>", "<leader>", "b", "d", "j", "k"]
+            "after": ["f"]
+        },
+        {
+            "before": ["S"],
+            "after": ["F"]
+        },
+        {
+            "before": ["g", "s"],
+            "after": ["S"]
         }
     ],
 
     //* Pending mode
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         {
-            "before": ["n"],
+            "before": ["m"],
             "after": ["<Esc>"]
         },
         {
             "before": ["L"],
-            "after": ["$"]
+            "after": ["g", "$"]
         },
         {
             "before": ["H"],
-            "after": ["^"]
+            "after": ["g", "^"]
+        },
+        {
+            "before": ["["],
+            "after": ["{"]
+        },
+        {
+            "before": ["]"],
+            "after": ["}"]
+        },
+        {
+            "before": ["s"],
+            "after": ["f"]
+        },
+        {
+            "before": ["S"],
+            "after": ["F"]
         }
 
 

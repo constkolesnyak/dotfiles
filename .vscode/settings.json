@@ -8,7 +8,9 @@
         "hlsearch",
         "incsearch",
         "outdent",
+        "Parens",
         "textobj",
+        "togglequotes",
         "usectrlkeys",
         "xonsh"
     ]

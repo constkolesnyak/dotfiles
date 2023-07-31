@@ -144,9 +144,9 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "cmd+[",
+        "key": "alt+[",
         "command": "workbench.action.navigateBack",
-        "when": "!terminalFocus && canNavigateBack"
+        "when": "canNavigateBack && !terminalFocus"
     },
     {
         "key": "ctrl+-",
@@ -154,9 +154,9 @@
         "when": "canNavigateBack"
     },
     {
-        "key": "cmd+]",
+        "key": "alt+]",
         "command": "workbench.action.navigateForward",
-        "when": "!terminalFocus && canNavigateForward"
+        "when": "canNavigateForward && !terminalFocus"
     },
     {
         "key": "ctrl+shift+-",
@@ -195,7 +195,14 @@
     },
     {
         "key": "cmd+l",
-        "command": "workbench.view.scm"
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.view.scm",
+                "workbench.action.focusSideBar"
+            ]
+        },
+        "when": "workbench.scm.active"
     },
     {
         "key": "ctrl+shift+g",
@@ -318,7 +325,7 @@
         "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
     },
     {
-        "key": "alt+down",
+        "key": "alt+j",
         "command": "workbench.action.editor.nextChange",
         "when": "editorTextFocus && !textCompareEditorActive"
     },
@@ -338,7 +345,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+up",
+        "key": "alt+k",
         "command": "workbench.action.editor.previousChange",
         "when": "editorTextFocus && !textCompareEditorActive"
     },
@@ -348,7 +355,7 @@
         "when": "editorTextFocus && !textCompareEditorActive"
     },
     {
-        "key": "alt+down",
+        "key": "alt+j",
         "command": "workbench.action.compareEditor.nextChange",
         "when": "textCompareEditorVisible"
     },
@@ -358,7 +365,7 @@
         "when": "textCompareEditorVisible"
     },
     {
-        "key": "alt+up",
+        "key": "alt+k",
         "command": "workbench.action.compareEditor.previousChange",
         "when": "textCompareEditorVisible"
     },
@@ -378,7 +385,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "shift+alt+up",
+        "key": "alt+cmd+k",
         "command": "editor.action.marker.prev",
         "when": "editorFocus"
     },
@@ -388,7 +395,7 @@
         "when": "editorFocus"
     },
     {
-        "key": "shift+alt+down",
+        "key": "alt+cmd+j",
         "command": "editor.action.marker.next",
         "when": "editorFocus"
     },
@@ -464,21 +471,7 @@
     },
     {
         "key": "alt+cmd+left",
-        "command": "workbench.action.previousEditor",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "alt+cmd+left",
         "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "alt+cmd+right",
-        "command": "workbench.action.nextEditor",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "alt+cmd+right",
-        "command": "-workbench.action.nextEditor"
     },
     {
         "key": "cmd+]",
@@ -505,4 +498,129 @@
         "command": "-workbench.action.closeWindow",
         "when": "!editorIsOpen && !multipleEditorGroups"
     },
+    {
+        "key": "ctrl+]",
+        "command": "-extension.vim_ctrl+]",
+        "when": "editorTextFocus && vim.active && vim.use<C-]> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "-extension.vim_ctrl+[",
+        "when": "editorTextFocus && vim.active && vim.use<C-[> && !inDebugRepl"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "workbench.action.splitEditor",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.focusNextGroup",
+        "when": "terminalEditorFocus || !terminalFocus"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "terminalEditorFocus || !terminalFocus"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "!terminalFocus || terminalEditorFocus"
+    },
+    {
+        "key": "cmd+k alt+cmd+right",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+cmd+left",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "terminalEditorFocus || !terminalFocus"
+    },
+    {
+        "key": "cmd+k alt+cmd+left",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+cmd+right",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+s",
+        "command": "-gitlens.showQuickRepoStatus",
+        "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "alt+c",
+        "command": "-gitlens.showQuickCommitFileDetails",
+        "when": "editorTextFocus && !gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "-notification.acceptPrimaryAction",
+        "when": "notificationToastsVisible"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "-workbench.action.output.toggleOutput",
+        "when": "workbench.panel.output.active"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "git.stage"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "git.unstage"
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "git.clean"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "-rerunSearchEditorSearch",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.reloadWindow"
+    }
 ]
