@@ -12,6 +12,11 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Fix Unicode in GNU Less 
 export LESSUTFCHARDEF='E000-F8FF:p,F0000-FFFFD:p,100000-10FFFD:p'
 
+export POETRY_VIRTUALENVS_IN_PROJECT=true
+export POETRY_VIRTUALENVS_OPTIONS_NO_SETUPTOOLS=true
+export POETRY_VIRTUALENVS_OPTIONS_NO_PIP=true
+export POETRY_VIRTUALENVS_PROMPT="{project_name}"
+
 
 ##* MISC ###
 

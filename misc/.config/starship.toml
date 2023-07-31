@@ -19,4 +19,11 @@ style = 'fg:246'
 [python]
 # Remove 'via'
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+# Remove 'v'
+version_format = '${raw}'
 
+[package]
+# Remove 'is'
+format = '[$symbol$version]($style) '
+# Remove 'v'
+version_format = '${raw}'

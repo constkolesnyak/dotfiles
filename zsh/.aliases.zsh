@@ -68,7 +68,10 @@ alias kj='j - >/dev/null'
 ##* MISC ###
 
 alias nv='nvim'
+
+# Python
 alias py='python3'
+alias po='poetry'
 
 # List or search aliases
 alias a='acs'
