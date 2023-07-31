@@ -64,7 +64,7 @@ def stow(action, dirs, target):
         gum_print(dir_name)
 
         clean_output = "2>&1 | grep -v -e '^BUG' -e '^WARN'"
-        command = f"stow --{action} --verbose -d '{dotfiles}' -t '{target}' . {clean_output}"
+        command = f"stow --{action} --no-folding --verbose -d '{dotfiles}' -t '{target}' . {clean_output}"
         evalx(command)
         
 
