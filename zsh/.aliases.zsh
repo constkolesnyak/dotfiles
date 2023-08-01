@@ -3,13 +3,7 @@
 alias reload='. ~/.zshrc'
 alias refunc='. ~/.functions.zsh'
 
-alias conf="v ~/.zshrc"
-alias confa="v ~/.aliases.zsh"
-alias confga="v ~/.git_aliases.zsh"
-alias confg="v ~/.gitconfig"
-alias conff="v ~/.functions.zsh"
-alias confp="v ~/.zsh_plugins.txt"
-alias confv="v ~/.config/nvim/init.lua"
+alias conf="v ~/dotfiles"
 
 # My Stow
 alias nostow="my_stow.xsh no"
@@ -24,7 +18,7 @@ alias brls="brew list"
 alias brins="brew install"
 alias bruni="brew uninstall"
 
-brew_ending="--no-upgrade --verbose --file=~/dotfiles/Brewfile"
+brew_ending="--no-upgrade --verbose --file=$DOTFILES/Brewfile"
 alias brcheck="brew bundle check $brew_ending"
 alias brdump="brew bundle dump --force --describe $brew_ending"
 alias brbundle="brew bundle $brew_ending"
@@ -50,9 +44,12 @@ alias ltg="lt -I .git --git-ignore"
 ##* REPLACEMENTS ###
 
 alias ps='procs'
-alias cat='bat'
 alias diff='batdiff'
 alias rm='trash-put --trash-dir ~/.Trash'
+alias du='ncdu'
+
+alias bcat='/bin/cat'
+alias cat='bat'
 
 
 ##* NAVIGATION ###
@@ -65,13 +62,41 @@ alias ji='__zoxide_zi'
 alias kj='j - >/dev/null'
 
 
+##* PYTHON ###
+
+alias py='python3'
+
+
+##* POETRY ###
+
+alias po='poetry'
+
+alias ponew='poetry new --no-interaction'
+alias popublish='poetry publish --build'
+
+alias poadd='poetry add'
+poaddev() { poetry add "$@" --group dev }
+alias porm='poetry remove'
+
+alias poins='poetry install'
+alias poupd='poetry update'
+alias posync='poetry install --sync'
+alias polock='poetry lock'
+
+alias poshe='poetry shell'
+alias porun='poetry run'
+
+alias poinf='poetry env info'
+alias posho='poetry show'
+alias poche='poetry check'
+alias pochelo='poetry lock --check'
+
+alias poman='poetry help'
+
+
 ##* MISC ###
 
 alias nv='nvim'
-
-# Python
-alias py='python3'
-alias po='poetry'
 
 # List or search aliases
 alias a='acs'

@@ -7,6 +7,13 @@ realias() {
 }
 
 
+reenv() {
+    for file in ~/.*.env; do
+        . "$file"
+    done
+}
+
+
 mkd() {
 	mkdir $1
 	cd $1
