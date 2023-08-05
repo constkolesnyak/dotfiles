@@ -32,21 +32,17 @@ Configs, aliases, and whatnot.
 
 ## Installation
 
-### 1) Preparation  
+### 1) Preparation
 
 1. Clone the repo.
 
         git clone https://github.com/constkolesnyak/dotfiles.git ~/dotfiles
 
-2. Source aliases.
+2. Source aliases and environment variables.
 
     > Run `where some_alias` to understand aliases before executing them.
 
-        . ~/dotfiles/.aliases.zsh
-
-3. Add my scripts to your `PATH`.
-
-        export PATH="$PATH:$HOME/dotfiles/bin"
+        . ~/dotfiles/zsh/.aliases.zsh ~/dotfiles/zsh/.zvars.env
 
 ### 2) Brew
 
@@ -86,13 +82,23 @@ Configs, aliases, and whatnot.
 
 - [Sync](https://code.visualstudio.com/docs/editor/settings-sync) VS Code UI state. Unfortunately, it [can't](https://code.visualstudio.com/docs/editor/profiles#_where-is-the-ui-state-globalstatejson-file) be version controlled.
 
+- Add SSH keys for
+[GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+and/or
+[GitLab](https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
+to `~/.ssh`.
+
 - Sync macOS settings with `defaults` scripts.
 
-        # On your mac with desired settings
-        defaults_export.zsh
+  1. On Mac-1 with desired settings.
 
-        # On your other mac
-        defaults_import.xsh
+         zsh ~/dotfiles/bin/defaults_export.zsh
+
+  2. Copy directory with settings from Mac-1 to Mac-2.
+
+  3. On Mac-2.
+
+         xonsh ~/dotfiles/bin/defaults_import.xsh
 
 ## Uninstall
 
