@@ -35,6 +35,8 @@ brew "cowsay"
 brew "cpufetch"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Run arbitrary commands when files change
 brew "entr"
 # Modern replacement for 'ls'
@@ -75,6 +77,8 @@ brew "less"
 brew "lolcat"
 # Mac App Store command-line interface
 brew "mas"
+# NCurses Disk Usage
+brew "ncdu"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -87,6 +91,10 @@ brew "onefetch"
 brew "pandoc"
 # General-purpose scripting language
 brew "php"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Python package management tool
+brew "poetry"
 # Modern replacement for ps written by Rust
 brew "procs"
 # Search tool like grep and The Silver Searcher
@@ -129,6 +137,8 @@ cask "bitwarden"
 cask "clipgrab"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Video and audio player
@@ -205,7 +215,6 @@ mas "Numbers", id: 409203825
 mas "One Thing", id: 1604176982
 mas "Pages", id: 409201541
 mas "Pixea", id: 1507782672
-mas "Spotica Menu", id: 570549457
 mas "Streaks", id: 963034692
 mas "Things", id: 904280696
 mas "ToothFairy", id: 1191449274
@@ -215,7 +224,11 @@ vscode "74th.monokai-charcoal-high-contrast"
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"
 vscode "AndenetAlexander.vim-cheatsheet"
+vscode "bierner.markdown-preview-github-styles"
+vscode "BriteSnow.vscode-toggle-quotes"
 vscode "carlos18mz.cyberpunk-2077-rebuild"
+vscode "codezombiech.gitignore"
+vscode "DavidAnson.vscode-markdownlint"
 vscode "eamodio.gitlens"
 vscode "Endormi.2077-theme"
 vscode "enkia.tokyo-night"
@@ -223,14 +236,28 @@ vscode "Equinusocio.vsc-material-theme"
 vscode "esbenp.prettier-vscode"
 vscode "eserozvataf.one-dark-pro-monokai-darker"
 vscode "evondev.dracula-high-contrast"
+vscode "formulahendry.code-runner"
+vscode "foxundermoon.shell-format"
 vscode "jnoortheen.xonsh"
 vscode "johnpapa.winteriscoming"
+vscode "mads-hartmann.bash-ide-vscode"
 vscode "max-SS.Cyberpunk"
 vscode "mechatroner.rainbow-csv"
+vscode "mhutchie.git-graph"
+vscode "mikestead.dotenv"
+vscode "ms-python.black-formatter"
+vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "patbenatar.advanced-new-file"
+vscode "PeterSchmalfeldt.explorer-exclude"
+vscode "redhat.vscode-yaml"
 vscode "rocketseat.theme-omni"
+vscode "silesky.toggle-boolean"
+vscode "sleistner.vscode-fileutils"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "tamasfe.even-better-toml"
 vscode "teabyii.ayu"
+vscode "usernamehw.errorlens"
 vscode "vscode-icons-team.vscode-icons"
 vscode "vscodevim.vim"
