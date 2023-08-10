@@ -1,13 +1,14 @@
 ---
+"terminal:copy": shift-cmd-C
 "workspace:activate_prev_tab": alt-cmd-left
 "pane_group:add_down": shift-cmd-|
 "pane_group:navigate_right": none
-"terminal:copy": shift-cmd-C
 "pane_group:add_right": "cmd-\\"
 "terminal:copy_outputs": cmd-c
-"workspace:activate_next_tab": alt-cmd-right
 "terminal:copy_commands": ctrl-shift-cmd-C
 "workspace:toggle_autosuggestions": cmd-l
 "pane_group:navigate_left": none
-"workspace:toggle_command_palette": cmd-d
 "workspace:show_command_search": cmd-j
+"workspace:activate_next_tab": alt-cmd-right
+"terminal:clear_blocks": none
+"workspace:toggle_command_palette": cmd-d
