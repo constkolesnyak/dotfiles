@@ -2,7 +2,8 @@
 
 alias glog="git log --graph --all"
 alias glol='glog --oneline'
-alias gl='glog --pretty=format:"%C(magenta)%h%Creset  %C(blue)%ad%Creset  %C(cyan)%s  %C(auto)%d%Creset%n" --date=format:"%d %b %H:%M"'
+alias gl_='glog --pretty=format:"%C(magenta)%h%Creset  %C(blue)%ad%Creset  %C(cyan)%s  %C(auto)%d%Creset%n" --date=format:"%d %b %H:%M"'
+alias gl='gl_'  # better expansion
 alias glp='gl -p'
 alias glt='gl --stat'
 alias glsl='git shortlog'

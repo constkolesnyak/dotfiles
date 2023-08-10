@@ -57,8 +57,10 @@ alias cat='bat'
 alias ..='cd ..'
 alias ...='cd ../..'
 
-alias j='__zoxide_z'
-alias ji='__zoxide_zi'
+alias j_='__zoxide_z'
+alias ji_='__zoxide_zi'
+alias j='j_'  # better expansion
+alias ji='ji_'
 alias kj='j - >/dev/null'
 
 
@@ -71,7 +73,7 @@ alias py='python3'
 
 alias po='poetry'
 
-alias ponew='poetry new --no-interaction'
+alias ponew='poetry new --src --no-interaction'
 alias popublish='poetry publish --build'
 
 alias poadd='poetry add'
