@@ -1,7 +1,7 @@
 [
     {
         "target": "~",
-        "dirs": ["misc", "zsh", "git"]
+        "dirs": ["home_misc", "zsh", "git"]
     },
     {
         "target": "~/Library/Application Support/Code/User",
