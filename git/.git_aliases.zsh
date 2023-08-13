@@ -101,8 +101,7 @@ alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gplm='git pull --no-rebase'
 
-alias gpush='git push'
-alias gpusht='git push --tags'
+alias gpush='git push --tags'
 
 alias gsup='git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)'
 
