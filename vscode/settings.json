@@ -85,7 +85,12 @@
             "tag": "*", "color": "#98C379", "backgroundColor": "transparent",
             "strikethrough": false, "underline": false,
             "bold": false, "italic": false
-        }
+        },
+        {
+            "tag": "type: ignore", "color": "#98C379", "backgroundColor": "transparent",
+            "strikethrough": false, "underline": false,
+            "bold": false, "italic": false
+        },
     ],
 
     "peacock.favoriteColors": [
@@ -113,6 +118,7 @@
 
     //* Themes
     "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "Omni",
     "materialTheme.accent": "Purple",
     "editor.tokenColorCustomizations": {
@@ -146,14 +152,14 @@
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "strict",
     "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnnecessaryTypeIgnoreComment": "error",
+        "reportUnboundVariable": "warning",
         "reportUnusedImport": "information",
         "reportUnusedExpression": "information",
         "reportUnusedVariable": "information",
         "reportUnusedFunction": "information",
         "reportUnusedClass": "information",
-        "reportUnboundVariable": "warning",
         "reportMissingTypeStubs": "information",
-        "reportUnknownMemberType": "information"
     },
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.completeFunctionParens": true,
@@ -185,6 +191,7 @@
     "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
     "cSpell.userWords": [
         "CSTOW",
+        "docstrings",
         "dotfiles",
         "evalx",
         "isort",
@@ -195,7 +202,9 @@
         "Pylance",
         "Pytest",
         "restow",
-        "venv"
+        "startswith",
+        "venv",
+        "xonsh"
     ],
 
 
@@ -243,7 +252,11 @@
         { "before": ["<leader>", "f"], "commands": ["editor.action.quickFix"] },
         { "before": ["<leader>", "b"], "commands": ["extension.toggleBool"] },
 
-        { "before": ["m"], "after": ["<Esc>"] },
+        { "before": [","], "after": ["g", "r"] },
+        { "before": ["z"], "after": [","] },
+        { "before": [";"], "after": ["<Esc>"] },
+        { "before": ["'"], "after": [";"] },
+        { "before": ["m"], "after": ["M"] },
         { "before": ["L"], "after": ["g", "$"] },
         { "before": ["H"], "after": ["g", "^"] },
         { "before": ["j"], "after": ["g", "j"] },
@@ -282,14 +295,18 @@
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
         { "before": ["g", "s"], "after": ["S"] },
 
-        { "before": ["m"], "after": ["<Esc>"] },
+        { "before": [","], "after": ["g", "r"] },
+        { "before": ["z"], "after": [","] },
+        { "before": [";"], "after": ["<Esc>"] },
+        { "before": ["'"], "after": [";"] },
+        { "before": ["m"], "after": ["M"] },
         { "before": ["L"], "after": ["g", "$"] },
         { "before": ["H"], "after": ["g", "^"] },
         { "before": ["j"], "after": ["g", "j"] },
         { "before": ["k"], "after": ["g", "k"] },
         { "before": ["<leader>", "j"], "after": ["G"] },
         { "before": ["<leader>", "k"], "after": ["g", "g"] },
-        { "before": ["<leader>", "/"], "commands": ["editor.toggleFold"] },
+        { "before": ["<leader>", "/"], "commands": ["editor.createFoldingRangeFromSelection"] },
         { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
         { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
         { "before": ["["], "after": ["{", "z", "z"] },
@@ -317,16 +334,36 @@
 
     //* Pending mode
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
-        { "before": ["<leader>", "j"], "after": ["G"] },
-        { "before": ["<leader>", "k"], "after": ["g", "g"] },
-        { "before": ["m"], "after": ["<Esc>"] },
-        { "before": ["L"], "after": ["g", "$"] },
-        { "before": ["H"], "after": ["g", "^"] },
         { "before": ["["], "after": ["{"] },
         { "before": ["]"], "after": ["}"] },
-        { "before": ["s"], "after": ["f"] },
-        { "before": ["S"], "after": ["F"] }
 
+        { "before": ["<leader>", "j"], "after": ["G"] },
+        { "before": ["<leader>", "k"], "after": ["g", "g"] },
+        { "before": [","], "after": [] },
+        { "before": ["z"], "after": [","] },
+        { "before": [";"], "after": ["<Esc>"] },
+        { "before": ["'"], "after": [";"] },
+        { "before": ["m"], "after": ["M"] },
+        { "before": ["L"], "after": ["g", "$"] },
+        { "before": ["H"], "after": ["g", "^"] },
+        { "before": ["s"], "after": ["f"] },
+        { "before": ["S"], "after": ["F"] },
+
+        { "before": ["<leader>", "<leader>", "s"], "after": [] },
+        { "before": ["<leader>", "<leader>", "f"], "after": [] },
+        { "before": ["<leader>", "<leader>", "F"], "after": [] },
+        { "before": ["<leader>", "<leader>", "t"], "after": [] },
+        { "before": ["<leader>", "<leader>", "T"], "after": [] },
+        { "before": ["<leader>", "<leader>", "w"], "after": [] },
+        { "before": ["<leader>", "<leader>", "b"], "after": [] },
+        { "before": ["<leader>", "<leader>", "l"], "after": [] },
+        { "before": ["<leader>", "<leader>", "h"], "after": [] },
+        { "before": ["<leader>", "<leader>", "e"], "after": [] },
+        { "before": ["<leader>", "<leader>", "j"], "after": [] },
+        { "before": ["<leader>", "<leader>", "k"], "after": [] },
+        { "before": ["<leader>", "<leader>", "/"], "after": [] },
+        { "before": ["<leader>", "<leader>", "g", "e"], "after": [] },
+        { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
 
 //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
     ],
