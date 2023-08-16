@@ -5,10 +5,9 @@ alias refunc='. ~/.functions.zsh'
 
 alias conf="v ~/dotfiles"
 
-# My Stow
-alias nostow="my_stow.xsh no"
-alias restow="my_stow.xsh restow"
-alias unstow="my_stow.xsh delete"
+alias nostow="cstow no"
+alias restow="cstow restow"
+alias unstow="cstow delete"
 
 
 ##* BREW ###

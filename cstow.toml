@@ -1,0 +1,5 @@
+root_dir = '$DOTFILES'
+
+[targets_dirs]
+'~' = ['home_misc', 'zsh', 'git']
+'~/Library/Application Support/Code/User' = ['vscode']
