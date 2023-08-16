@@ -1,13 +1,20 @@
-##* MISC ###
+##* SOURCE FUNCTIONS AND ENV VARS ###
 
-# shellcheck source=/dev/null
-. ~/.functions.zsh
+refunc() {
+    for file in ~/.*functions.zsh; do
+        # shellcheck source=/dev/null
+        . "$file"
+    done
+}
 
+refunc
 reenv
+
+##* MISC ###
 
 # /path/to/dir = cd /path/to/dir
 setopt autocd
-# Report the status of backgrounds jobs on completion 
+# Report the status of backgrounds jobs on completion
 setopt notify
 # Share commands history in all session
 setopt share_history
@@ -16,16 +23,14 @@ setopt histignorespace
 # Globs shouldn't match dotfiles
 setopt noglobdots
 
-
 ##* TAB COMPLETION ###
 
-# Brew 
+# Brew
 if type brew &>/dev/null; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
 autoload -Uz compinit && compinit
-
 
 ##* PLUGINS ###
 
@@ -37,7 +42,6 @@ eval "$(zoxide init zsh)"
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 antidote load
-
 
 ##* FINAL ###
 

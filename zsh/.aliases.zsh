@@ -1,7 +1,6 @@
 ##* DOTFILES ###
 
 alias reload='. ~/.zshrc'
-alias refunc='. ~/.functions.zsh'
 
 alias conf="v ~/dotfiles"
 
@@ -44,7 +43,8 @@ alias ltg="lt -I .git --git-ignore"
 
 alias ps='procs'
 alias diff='batdiff'
-alias rm='trash-put --trash-dir ~/.Trash'
+alias rm_='trash-put --trash-dir ~/.Trash'
+alias rm="rm_"  # better expansion
 alias du='ncdu'
 
 alias bcat='/bin/cat'
@@ -58,7 +58,7 @@ alias ...='cd ../..'
 
 alias j_='__zoxide_z'
 alias ji_='__zoxide_zi'
-alias j='j_'  # better expansion
+alias j='j_'  
 alias ji='ji_'
 alias kj='j - >/dev/null'
 
@@ -72,7 +72,7 @@ alias py='python3'
 
 alias po='poetry'
 
-alias ponew='poetry new --src --no-interaction'
+ponew() { poetry new --src --no-interaction $1 && cd $1 && poetry version 0.0.dev0 > /dev/null }
 alias popublish='poetry publish --build'
 
 alias poadd='poetry add'
@@ -89,6 +89,8 @@ alias porun='poetry run'
 
 alias poinf='poetry env info'
 alias posho='poetry show'
+alias poshot='poetry show --tree'
+alias poshotl='poetry show --top-level'
 alias poche='poetry check'
 alias pochelo='poetry lock --check'
 
@@ -98,6 +100,8 @@ alias poman='poetry help'
 ##* MISC ###
 
 alias nv='nvim'
+alias act="act --container-architecture linux/amd64 -s GITHUB_TOKEN=$(gh auth token)"
+mkd() { mkdir $1 && cd $1 }
 
 # List or search aliases
 alias a='acs'

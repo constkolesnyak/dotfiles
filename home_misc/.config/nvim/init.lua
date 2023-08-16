@@ -71,7 +71,7 @@ o.scrolloff = 8
 -- Line numbers
 vim.opt.number = true
 
--- As you might've already guessed, I'm bad at configuring vim
+-- I'm bad at configuring vim
 vim.cmd([[
 	noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(3)<CR>
 	noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-3)<CR>

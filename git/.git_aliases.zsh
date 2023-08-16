@@ -8,23 +8,6 @@ alias glp='gl -p'
 alias glt='gl --stat'
 alias glsl='git shortlog'
 
-# View the full change history of a single file
-function glf() {
-  if [[ -z $1 ]]; then
-    echo "Usage:    git_log_file <file> [<from line>] [<to line>]"
-    return 1
-  elif [[ -z $2 ]]; then
-    glog -p -- $1
-    return 0
-  elif [[ $2 == *,* ]]; then
-    3=${2#*,}
-    2=${2%,*}
-  elif [[ -z $3 ]]; then
-    3=$2
-  fi
-  glog -L $2,$3:$1
-}
-
 
 ##* ADD ###
 
@@ -101,7 +84,7 @@ alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gplm='git pull --no-rebase'
 
-alias gpush='git push --tags'
+alias gpush='git push && git push --tags'
 
 alias gsup='git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)'
 
@@ -182,3 +165,6 @@ alias gmv='git mv'
 alias gclean='git clean -f'
 
 alias gman='git help'
+
+alias gtag='git tag'
+alias gtagd='git tag -d'
