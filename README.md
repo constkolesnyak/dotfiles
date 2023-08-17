@@ -76,34 +76,34 @@ from [cstow.toml](cstow.toml) to GNU Stow.
 
 ### 3) Finally
 
--   Source `~/.zshrc`.
+- Source `~/.zshrc`.
 
-        reload
+      reload
 
 ### 4) Additionally
 
--   [Sync](https://code.visualstudio.com/docs/editor/settings-sync) VS Code UI state.
-    Unfortunately, it
-    [can't](https://code.visualstudio.com/docs/editor/profiles#_where-is-the-ui-state-globalstatejson-file)
-    be version controlled.
+- [Sync](https://code.visualstudio.com/docs/editor/settings-sync) VS Code UI state.
+  Unfortunately, it
+  [can't](https://code.visualstudio.com/docs/editor/profiles#_where-is-the-ui-state-globalstatejson-file)
+  be version controlled.
 
--   Add SSH keys for
-    [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-    and/or
-    [GitLab](https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
-    to `~/.ssh`.
+- Add SSH keys for
+  [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+  and/or
+  [GitLab](https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account)
+  to `~/.ssh`.
 
--   Sync macOS settings with `defaults` scripts.
+- Sync macOS settings with `defaults` scripts.
 
-    1.  On Mac-1 with desired settings.
+  1.  On Mac-1 with desired settings.
 
-            zsh ~/dotfiles/bin/defaults_export.zsh
+          zsh ~/dotfiles/bin/defaults_export.zsh
 
-    2.  Copy directory with settings from Mac-1 to Mac-2.
+  2.  Copy directory with settings from Mac-1 to Mac-2.
 
-    3.  On Mac-2.
+  3.  On Mac-2.
 
-            xonsh ~/dotfiles/bin/defaults_import.xsh
+          xonsh ~/dotfiles/bin/defaults_import.xsh
 
 ## Uninstall
 

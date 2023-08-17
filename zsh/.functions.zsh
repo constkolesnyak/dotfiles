@@ -4,7 +4,6 @@ reenv() {
     done
 }
 
-
 realias() {
     unalias -a
 
@@ -12,7 +11,6 @@ realias() {
         . "$file"
     done
 }
-
 
 v() {
     if [ $# -eq 0 ]; then
@@ -22,7 +20,6 @@ v() {
     fi
 }
 
-
 e() {
     if [ $# -eq 0 ]; then
         env
@@ -30,7 +27,6 @@ e() {
         env | rg $@
     fi
 }
-
 
 nvi() {
     nv $(rg --hidden --line-number . |

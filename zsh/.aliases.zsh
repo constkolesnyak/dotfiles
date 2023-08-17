@@ -8,7 +8,6 @@ alias nostow="cstow no"
 alias restow="cstow restow"
 alias unstow="cstow delete"
 
-
 ##* BREW ###
 
 alias brupg="brew update && brew upgrade && mas upgrade"
@@ -22,10 +21,9 @@ alias brdump="brew bundle dump --force --describe $brew_ending"
 alias brbundle="brew bundle $brew_ending"
 unset brew_ending
 
-
 ##* LS ###
 
-alias bls="/bin/ls"  
+alias bls="/bin/ls"
 
 alias ls="exa --color=always --icons --group-directories-first"
 alias sl="ls"
@@ -34,22 +32,20 @@ alias la="ls -a"
 alias l.="exa -a | egrep '^\.'"
 alias l="ls -lba"
 
-lt() { la --tree "$@" | bat --style='grid,numbers' }
+lt() {la --tree "$@" | bat --style='grid,numbers'}
 alias ltl="lt -L"
 alias ltg="lt -I .git --git-ignore"
-
 
 ##* REPLACEMENTS ###
 
 alias ps='procs'
 alias diff='batdiff'
 alias rm_='trash-put --trash-dir ~/.Trash'
-alias rm="rm_"  # better expansion
+alias rm="rm_" # better expansion
 alias du='ncdu'
 
 alias bcat='/bin/cat'
 alias cat='bat'
-
 
 ##* NAVIGATION ###
 
@@ -58,25 +54,23 @@ alias ...='cd ../..'
 
 alias j_='__zoxide_z'
 alias ji_='__zoxide_zi'
-alias j='j_'  
+alias j='j_'
 alias ji='ji_'
 alias kj='j - >/dev/null'
-
 
 ##* PYTHON ###
 
 alias py='python3'
 
-
 ##* POETRY ###
 
 alias po='poetry'
 
-ponew() { poetry new --src --no-interaction $1 && cd $1 && poetry version 0.0.dev0 > /dev/null }
+ponew() {poetry new --src --no-interaction $1 && cd $1 && poetry version 0.0.dev0 >/dev/null}
 alias popublish='poetry publish --build'
 
 alias poadd='poetry add'
-poaddev() { poetry add "$@" --group dev }
+poaddev() {poetry add "$@" --group dev}
 alias porm='poetry remove'
 
 alias poins='poetry install'
@@ -96,12 +90,11 @@ alias pochelo='poetry lock --check'
 
 alias poman='poetry help'
 
-
 ##* MISC ###
 
 alias nv='nvim'
 alias act="act --container-architecture linux/amd64 -s GITHUB_TOKEN=$(gh auth token)"
-mkd() { mkdir $1 && cd $1 }
+mkd() {mkdir $1 && cd $1}
 
 # List or search aliases
 alias a='acs'

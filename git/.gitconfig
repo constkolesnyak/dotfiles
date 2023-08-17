@@ -12,7 +12,6 @@
 	autocrlf = input
     pager = delta
 
-
 ##* INFO ###
 
 [log]
@@ -29,7 +28,6 @@
     tool = default-difftool
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
-
 
 ##* COLOR ###
 
@@ -48,7 +46,6 @@
 	changed = green
 	untracked = red
 
-
 ##* MERGE & REBASE ###
 
 [pull]
@@ -61,7 +58,6 @@
     tool = code
 [mergetool "code"]
     cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
-
 
 ##* DELTA ###
 
@@ -85,6 +81,5 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
-
 
 ##* LINES BELLOW ARE ADDED BY 'git config' COMMAND ###

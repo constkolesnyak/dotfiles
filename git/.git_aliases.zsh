@@ -3,11 +3,10 @@
 alias glog="git log --graph --all"
 alias glol='glog --oneline'
 alias gl_='glog --pretty=format:"%C(magenta)%h%Creset  %C(blue)%ad%Creset  %C(cyan)%s  %C(auto)%d%Creset%n" --date=format:"%d %b %H:%M"'
-alias gl='gl_'  # better expansion
+alias gl='gl_' # better expansion
 alias glp='gl -p'
 alias glt='gl --stat'
 alias glsl='git shortlog'
-
 
 ##* ADD ###
 
@@ -15,7 +14,6 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gap='git add --patch'
 alias gai='git add --interactive'
-
 
 ##* COMMIT ###
 
@@ -31,11 +29,10 @@ alias gcs='git commit --squash'
 alias gcsa='git commit -a --squash'
 
 alias gad='git commit --verbose --amend'
-alias gam='git commit --amend -m' 
-alias gama='git commit --amend -am' 
-alias gan='git commit --amend --no-edit' 
-alias gana='git commit --amend --no-edit -a' 
-
+alias gam='git commit --amend -m'
+alias gama='git commit --amend -am'
+alias gan='git commit --amend --no-edit'
+alias gana='git commit --amend --no-edit -a'
 
 ##* BRANCH ###
 
@@ -51,7 +48,6 @@ alias gbi='git branch --no-color | grep -v "^\*" | fzf | xargs git checkout'
 alias gbm='git switch main'
 alias gbd='git switch dev'
 
-
 ##* STASH ###
 
 alias gst='git stash'
@@ -64,7 +60,6 @@ alias gstdr='git stash drop'
 
 alias gstl='git stash list'
 alias gsts='git stash show -p'
-
 
 ##* REMOTE ###
 
@@ -88,19 +83,17 @@ alias gpush='git push && git push --tags'
 
 alias gsup='git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)'
 
-
 ##* RE(SET/STORE/VERT) ###
 
 alias gr='git reset'
-alias grs='git reset --soft' 
-alias grhard='git reset --hard' 
-alias grk='git reset --keep' 
+alias grs='git reset --soft'
+alias grhard='git reset --hard'
+alias grk='git reset --keep'
 
 alias grt='git restore'
 alias grts='git restore --staged'
 
 alias grev='git revert'
-
 
 ##* DIFF ###
 
@@ -112,7 +105,6 @@ alias gdts='git diff --stat --staged'
 alias gdst='git diff stash@{0}'
 alias gdsth='git diff stash@{0} HEAD'
 
-
 ##* INFO ###
 
 alias gs='git status'
@@ -121,12 +113,11 @@ alias gss='git status -s'
 alias gsh='git show'
 alias gsht='git show --stat'
 
-alias grl='git reflog' 
+alias grl='git reflog'
 
 alias gcfl='git config --list'
 
 alias glsf='git ls-files'
-
 
 ##* MERGE & REBASE ###
 
@@ -138,7 +129,6 @@ alias grbm='git rebase main'
 alias grbi='git rebase --interactive'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
-
 
 ##* MISC ###
 
