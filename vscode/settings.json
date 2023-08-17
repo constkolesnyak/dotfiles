@@ -36,6 +36,7 @@
 //* EDITOR
 
     "editor.linkedEditing": true,
+    "workbench.sideBar.location": "right",
     "editor.codeActionsOnSave": {
         "source.addMissingImports": true,
         "source.organizeImports": true
@@ -61,7 +62,6 @@
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Fira Code', 'Cascadia Code', 'Consolas', Menlo, Monaco, 'Courier New', monospace",
 
-    "workbench.sideBar.location": "right",
     "workbench.activityBar.visible": false,
     "workbench.startupEditor": "none",
     
@@ -90,19 +90,18 @@
             "tag": "type: ignore", "color": "#98C379", "backgroundColor": "transparent",
             "strikethrough": false, "underline": false,
             "bold": false, "italic": false
-        },
+        }
     ],
 
     "peacock.favoriteColors": [
-        { "name": "Angular Red", "value": "#dd0531" },
-        { "name": "Azure Blue", "value": "#007fff" },
-        { "name": "JavaScript Yellow", "value": "#f9e64f" },
-        { "name": "Mandalorian Blue", "value": "#1857a4" },
-        { "name": "Node Green", "value": "#215732" },
-        { "name": "React Blue", "value": "#61dafb" },
-        { "name": "Something Different", "value": "#832561" },
-        { "name": "Svelte Orange", "value": "#ff3d00" },
-        { "name": "Vue Green", "value": "#42b883" }
+        { "name": "Red", "value": "#cf0202" },
+        { "name": "Orange", "value": "#a33a02" },
+        { "name": "Yellow", "value": "#786a01" },
+        { "name": "Green", "value": "#215732" },
+        { "name": "Light Blue", "value": "#0270de" },
+        { "name": "Dark Blue", "value": "#031485" },
+        { "name": "Purple", "value": "#8002cf" },
+        { "name": "Pink", "value": "#832561" }
     ],
     "peacock.affectActivityBar": false,
     "peacock.affectSashHover": false,
@@ -125,6 +124,8 @@
         "comments": "#8086A2"
     },
     "workbench.colorCustomizations": {
+        "tab.activeBorder": "#C7CCE5",
+        "tab.activeBorderTop": "#C7CCE5",
         "foreground": "#C7CCE5",
         "editor.foreground": "#C7CCE5",
         "editor.selectionBackground": "#366B84",
@@ -159,7 +160,7 @@
         "reportUnusedVariable": "information",
         "reportUnusedFunction": "information",
         "reportUnusedClass": "information",
-        "reportMissingTypeStubs": "information",
+        "reportMissingTypeStubs": "information"
     },
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.completeFunctionParens": true,
@@ -179,7 +180,7 @@
     },
     "black-formatter.args": [
         "--skip-string-normalization",
-        "--line-length", "90"
+        "--line-length", "93"
     ],
     "isort.args": ["--profile", "black"],
 
@@ -190,16 +191,29 @@
 
     "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
     "cSpell.userWords": [
+        "autoload",
+        "Commandline",
+        "constkolesnyak",
         "CSTOW",
         "docstrings",
         "dotfiles",
         "evalx",
+        "isdir",
         "isort",
+        "jsontools",
         "keymap",
+        "Kolesnyak",
+        "konst",
+        "Konstantin",
         "kwargs",
         "Mandalorian",
+        "Neovim",
+        "oneline",
+        "pipx",
         "pydantic",
         "Pylance",
+        "PYPI",
+        "pyproject",
         "Pytest",
         "restow",
         "startswith",
@@ -210,11 +224,13 @@
 
 //* FORMAT
 
-    "prettier.tabWidth": 4,
-
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    //* Prettier
+    "[json][markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
 
 
 //* VIM
@@ -251,6 +267,7 @@
         { "before": ["<leader>", "r"], "commands": ["editor.action.rename"] },
         { "before": ["<leader>", "f"], "commands": ["editor.action.quickFix"] },
         { "before": ["<leader>", "b"], "commands": ["extension.toggleBool"] },
+        { "before": ["<leader>", "/"], "commands": ["editor.toggleFold"] },
 
         { "before": [","], "after": ["g", "r"] },
         { "before": ["z"], "after": [","] },
@@ -263,7 +280,6 @@
         { "before": ["k"], "after": ["g", "k"] },
         { "before": ["<leader>", "j"], "after": ["G"] },
         { "before": ["<leader>", "k"], "after": ["g", "g"] },
-        { "before": ["<leader>", "/"], "commands": ["editor.toggleFold"] },
         { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
         { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
         { "before": ["["], "after": ["{", "z", "z"] },
@@ -294,6 +310,7 @@
         { "before": [">"], "commands": ["editor.action.indentLines"] },
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
         { "before": ["g", "s"], "after": ["S"] },
+        { "before": ["<leader>", "/"], "commands": ["editor.createFoldingRangeFromSelection"] },
 
         { "before": [","], "after": ["g", "r"] },
         { "before": ["z"], "after": [","] },
@@ -306,7 +323,6 @@
         { "before": ["k"], "after": ["g", "k"] },
         { "before": ["<leader>", "j"], "after": ["G"] },
         { "before": ["<leader>", "k"], "after": ["g", "g"] },
-        { "before": ["<leader>", "/"], "commands": ["editor.createFoldingRangeFromSelection"] },
         { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
         { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
         { "before": ["["], "after": ["{", "z", "z"] },
@@ -365,6 +381,7 @@
         { "before": ["<leader>", "<leader>", "g", "e"], "after": [] },
         { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
 
+        
 //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
     ],
 }
