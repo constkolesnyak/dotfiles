@@ -1376,4 +1376,48 @@
         "key": "alt+cmd+a",
         "command": "git.stageSelectedRanges"
     },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "cmd+; '",
+        "command": "workbench.view.extension.test"
+    },
+    {
+        "key": "cmd+; h",
+        "command": "workbench.panel.testResults.view.focus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "shift+cmd+y",
+        "command": "-workbench.debug.action.toggleRepl",
+        "when": "workbench.panel.repl.view.active"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "cmd+k cmd+w",
+        "command": "keybindings.editor.defineWhenExpression"
+    },
+    {
+        "key": "cmd+k d",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "cmd+k r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run main.py"
+    },
+    {
+        "key": "cmd+; s",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Smoke Tests"
+    }
 ]

@@ -4,9 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "Run main.py",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "${command:python.interpreterPath}",  
+            "args": ["${workspaceFolder}/src/${workspaceFolderBasename}/main.py"],
+        },
+        {
+            "label": "Run Smoke Tests",
+            "type": "shell",
+            "command": "${workspaceFolder}/.venv/bin/pytest",
+            "args": ["-m", "smoke"],
+            "group": {
+                "kind": "test",
+            }
         }
     ]
 }
