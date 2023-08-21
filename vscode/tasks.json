@@ -4,19 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run main.py",
-            "type": "shell",
-            "command": "${command:python.interpreterPath}",  
-            "args": ["${workspaceFolder}/src/${workspaceFolderBasename}/main.py"],
+            "label": "main.py",
+            "command": "pymain",
+            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
         },
         {
-            "label": "Run Smoke Tests",
-            "type": "shell",
-            "command": "${workspaceFolder}/.venv/bin/pytest",
-            "args": ["-m", "smoke"],
-            "group": {
-                "kind": "test",
-            }
+            "label": "Smoke",
+            "command": "pyts",
+            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
+        },
+        {
+            "label": "Coverage",
+            "command": "pycov",
+            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
         }
     ]
 }
