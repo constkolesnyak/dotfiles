@@ -13,6 +13,10 @@
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": false,
 
+    "files.associations": {
+        "**/*.yml": "yaml"
+    },
+
     //* Code Runner
     "code-runner.enableAppInsights": false,  // telemetry
     "code-runner.executorMap": {
@@ -149,6 +153,8 @@
     "autoDocstring.startOnNewLine": true,
     "autoDocstring.generateDocstringOnEnter": true,
 
+    "python.testing.pytestEnabled": true,
+    
     //* Lint
     "python.languageServer": "Pylance",
     "python.analysis.typeCheckingMode": "strict",
@@ -175,8 +181,7 @@
 
     //* Format
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "black-formatter.args": [
         "--skip-string-normalization",
@@ -196,8 +201,12 @@
         "constkolesnyak",
         "CSTOW",
         "docstrings",
+        "dotenv",
         "dotfiles",
         "evalx",
+        "gname",
+        "gpath",
+        "htmlcov",
         "isdir",
         "isort",
         "jsontools",
@@ -210,11 +219,16 @@
         "Neovim",
         "oneline",
         "pipx",
+        "pybin",
+        "pycov",
+        "pycover",
         "pydantic",
         "Pylance",
+        "pymain",
         "PYPI",
         "pyproject",
         "Pytest",
+        "pyts",
         "restow",
         "startswith",
         "venv",
@@ -224,12 +238,12 @@
 
 //* FORMAT
 
+    "editor.formatOnSave": true,
+
     //* Prettier
-    "[json][markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
+    "[json][yaml][markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
 
 
@@ -383,5 +397,5 @@
 
         
 //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
-    ]
+    ],
 }

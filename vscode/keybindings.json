@@ -58,7 +58,7 @@
         "when": "viewContainer.workbench.view.extensions.enabled"
     },
     {
-        "key": "cmd+h",
+        "key": "cmd+'",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
@@ -436,7 +436,7 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "ctrl+cmd+right",
+        "key": "shift+alt+right",
         "command": "workbench.action.terminal.focusNext",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
@@ -446,7 +446,7 @@
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
-        "key": "ctrl+cmd+left",
+        "key": "shift+alt+left",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
@@ -597,7 +597,7 @@
         "when": "viewContainer.workbench.view.debug.enabled"
     },
     {
-        "key": "shift+cmd+a",
+        "key": "shift+cmd+s",
         "command": "git.stage"
     },
     {
@@ -632,7 +632,7 @@
         "when": "terminal.active"
     },
     {
-        "key": "cmd+m",
+        "key": "cmd+h",
         "command": "workbench.action.togglePanel"
     },
     {
@@ -1373,7 +1373,7 @@
         "command": "-workbench.action.openSettings"
     },
     {
-        "key": "alt+cmd+a",
+        "key": "shift+cmd+a",
         "command": "git.stageSelectedRanges"
     },
     {
@@ -1413,11 +1413,42 @@
     {
         "key": "cmd+k r",
         "command": "workbench.action.tasks.runTask",
-        "args": "Run main.py"
+        "args": "main.py"
     },
     {
         "key": "cmd+; s",
         "command": "workbench.action.tasks.runTask",
-        "args": "Run Smoke Tests"
+        "args": "Smoke"
+    },
+    {
+        "key": "cmd+; m",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Coverage"
+    },
+    {
+        "key": "cmd+; f",
+        "command": "testing.reRunFailTests"
+    },
+    {
+        "key": "cmd+; e",
+        "command": "-testing.reRunFailTests"
+    },
+    {
+        "key": "cmd+; r",
+        "command": "testing.runCurrentFile",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; f",
+        "command": "-testing.runCurrentFile",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; p",
+        "command": "testing.openOutputPeek"
+    },
+    {
+        "key": "cmd+; cmd+m",
+        "command": "-testing.openOutputPeek"
     }
 ]
