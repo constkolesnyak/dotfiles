@@ -5,8 +5,9 @@ alias reload='. ~/.zshrc'
 alias conf="v ~/dotfiles"
 
 alias nostow="cstow no"
+alias ststow="cstow stow"
 alias restow="cstow restow"
-alias unstow="cstow delete"
+alias destow="cstow delete"
 
 ##* BREW ###
 
