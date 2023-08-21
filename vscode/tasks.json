@@ -4,17 +4,17 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "main.py",
+            "label": "pymain",
             "command": "pymain",
             "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
         },
         {
-            "label": "Smoke",
+            "label": "pyts",
             "command": "pyts",
             "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
         },
         {
-            "label": "Coverage",
+            "label": "pycov",
             "command": "pycov",
             "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
         }

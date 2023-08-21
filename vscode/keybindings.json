@@ -1413,17 +1413,17 @@
     {
         "key": "cmd+k r",
         "command": "workbench.action.tasks.runTask",
-        "args": "main.py"
+        "args": "pymain"
     },
     {
         "key": "cmd+; s",
         "command": "workbench.action.tasks.runTask",
-        "args": "Smoke"
+        "args": "pyts"
     },
     {
         "key": "cmd+; m",
         "command": "workbench.action.tasks.runTask",
-        "args": "Coverage"
+        "args": "pycov"
     },
     {
         "key": "cmd+; f",
