@@ -8,12 +8,6 @@ release() {
     ganktag"
 }
 
-# 'gad' but keep the tag
-gadktag() {tag=$(git describe --tags) && gtagd $tag && gad && gtag $tag}
-
-# 'gan' but keep the tag
-ganktag() {tag=$(git describe --tags) && gtagd $tag && gan && gtag $tag}
-
 # View the full change history of a single file
 # (copied from somewhere)
 function glf() {

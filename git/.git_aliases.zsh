@@ -33,6 +33,10 @@ alias gam='git commit --amend -m'
 alias gama='git commit --amend -am'
 alias gan='git commit --amend --no-edit'
 alias gana='git commit --amend --no-edit -a'
+# 'gad' but keep the tag
+gadktag() {tag=$(git describe --tags) && gtagd $tag && gad && gtag $tag}
+# 'gan' but keep the tag
+ganktag() {tag=$(git describe --tags) && gtagd $tag && gan && gtag $tag}
 
 ##* BRANCH ###
 
@@ -158,3 +162,6 @@ alias gman='git help'
 
 alias gtag='git tag'
 alias gtagd='git tag -d'
+
+alias gpath='git rev-parse --show-toplevel'
+alias gname='basename $(git rev-parse --show-toplevel)'
