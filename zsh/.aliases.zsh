@@ -61,7 +61,6 @@ alias kj='j - >/dev/null'
 ##* MISC ###
 
 alias nv='nvim'
-alias act="act --container-architecture linux/amd64 -s GITHUB_TOKEN=$(gh auth token)"
 mkd() {mkdir $1 && cd $1}
 
 # List or search aliases
