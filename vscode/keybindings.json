@@ -1,4 +1,21 @@
 [
+//* TERMINAL.SENDSEQUENCE
+
+{"key": "cmd+k r",
+    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+"text": "pymain\u000D" } } ] } },
+
+{"key": "cmd+; s",
+    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+"text": "pyts\u000D" } } ] } },
+
+{"key": "cmd+; m",
+    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+"text": "pycov\u000D" } } ] } },
+
+
+//* MISC
+
     {
         "key": "cmd+f",
         "command": "editor.action.startFindReplaceAction",
@@ -1410,21 +1427,6 @@
         "command": "workbench.action.tasks.runTask"
     },
     {
-        "key": "cmd+k r",
-        "command": "workbench.action.tasks.runTask",
-        "args": "pymain"
-    },
-    {
-        "key": "cmd+; s",
-        "command": "workbench.action.tasks.runTask",
-        "args": "pyts"
-    },
-    {
-        "key": "cmd+; m",
-        "command": "workbench.action.tasks.runTask",
-        "args": "pycov"
-    },
-    {
         "key": "cmd+; f",
         "command": "testing.reRunFailTests"
     },
@@ -1449,5 +1451,9 @@
     {
         "key": "cmd+; cmd+m",
         "command": "-testing.openOutputPeek"
+    },
+    {
+        "key": "alt+cmd+,",
+        "command": "workbench.action.openGlobalKeybindingsFile"
     }
 ]

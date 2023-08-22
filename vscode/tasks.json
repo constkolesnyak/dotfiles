@@ -1,20 +1,4 @@
 {
     "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "pymain",
-            "command": "pymain",
-            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
-        },
-        {
-            "label": "pyts",
-            "command": "pyts",
-            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
-        },
-        {
-            "label": "pycov",
-            "command": "pycov",
-            "type": "shell", "options": { "shell": { "args": ["-c", "-i"] } }
-        }
-    ]
+    "tasks": []
 }
