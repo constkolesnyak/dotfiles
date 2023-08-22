@@ -158,7 +158,7 @@ alias gmv='git mv'
 
 alias gclean='git clean -f'
 
-alias gman='git help'
+alias ghelp='git help'
 
 alias gtag='git tag'
 alias gtagd='git tag -d'

@@ -38,4 +38,4 @@ alias poshot='poetry show --tree'
 alias poche='poetry check'
 alias pochelo='poetry lock --check'
 
-alias poman='poetry help'
+alias pohelp='poetry help'
