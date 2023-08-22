@@ -72,7 +72,7 @@ from [cstow.toml](cstow.toml) to GNU Stow.
 
 4.  Run `cstow` for real.
 
-        restow
+        ststow
 
 ### 3) Finally
 
@@ -107,5 +107,5 @@ from [cstow.toml](cstow.toml) to GNU Stow.
 
 ## Uninstall
 
-    unstow
+    destow
     /bin/rm -rf ~/dotfiles ~/.stow-global-ignore
