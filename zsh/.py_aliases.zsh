@@ -1,15 +1,15 @@
 alias py='python3'
 alias python='python3'
 
-alias pybin="echo $(gpath)/.venv/bin"
-alias pyv="$(pybin)/python"
+alias pybin='echo $(gpath)/.venv/bin'
+alias pyv='$(pybin)/python'
 
-pymain() {pyv "$(gpath)/src/$(gname)/main.py"}
+alias pymain='pyv "$(gpath)/src/$(gname)/main.py"'
 
-alias pyt="$(pybin)/pytest"
+alias pyt='$(pybin)/pytest'
 alias pyts='pyt -m smoke'
 
-alias pycover="$(pybin)/coverage"
+alias pycover='$(pybin)/coverage'
 pycov() {pycover erase && pycover run -m pytest && pycover html && open "$(gpath)/htmlcov/index.html"}
 
 ##* POETRY ###
