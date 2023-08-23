@@ -50,14 +50,14 @@ alias cat='bat'
 
 ##* NAVIGATION ###
 
-alias ..='cd ..'
-alias ...='cd ../..'
+alias ..=' cd ..'
+alias ...=' cd ../..'
 
 alias j_='__zoxide_z'
 alias ji_='__zoxide_zi'
-alias j='j_'
-alias ji='ji_'
-alias kj='j - >/dev/null'
+alias j=' j_'
+alias ji=' ji_'
+alias kj=' j - >/dev/null'
 
 ##* MISC ###
 
