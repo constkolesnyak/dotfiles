@@ -6,13 +6,14 @@ alias pyv='$(pybin)/python'
 
 alias pymain='pyv "$(gpath)/src/$(gname)/main.py"'
 
+##* TESTING ###
+
 alias pyt='$(pybin)/pytest'
 alias pytm='pyt -m smoke'
 alias pyts='pyt -s'
 alias pytk='pyt -k'
 
 alias pycover='$(pybin)/coverage'
-pycov() {pycover erase && pycover run -m pytest && pycover html && open "$(gpath)/htmlcov/index.html"}
 
 ##* POETRY ###
 
