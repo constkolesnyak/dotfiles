@@ -10,6 +10,8 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
 
+    "testing.defaultGutterClickAction": "debug",
+    
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": false,
 
@@ -196,6 +198,7 @@
 
     "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
     "cSpell.userWords": [
+        "asdfqwer",
         "autoload",
         "Commandline",
         "constkolesnyak",
@@ -228,8 +231,10 @@
         "PYPI",
         "pyproject",
         "Pytest",
+        "pytm",
         "pyts",
         "restow",
+        "SENDSEQUENCE",
         "startswith",
         "venv",
         "xonsh"
@@ -366,10 +371,10 @@
     "vim.operatorPendingModeKeyBindingsNonRecursive": [
         { "before": ["["], "after": ["{"] },
         { "before": ["]"], "after": ["}"] },
+        { "before": [","], "after": [] },
 
         { "before": ["<leader>", "j"], "after": ["G"] },
         { "before": ["<leader>", "k"], "after": ["g", "g"] },
-        { "before": [","], "after": [] },
         { "before": ["z"], "after": [","] },
         { "before": [";"], "after": ["<Esc>"] },
         { "before": ["'"], "after": [";"] },
@@ -398,4 +403,6 @@
         
 //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
     ],
+    "testing.automaticallyOpenPeekView": "never",
+    "editor.autoSurround": "never",
 }

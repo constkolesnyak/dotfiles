@@ -5,13 +5,13 @@
     "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
 "text": "pymain\u000D" } } ] } },
 
-{"key": "cmd+; s",
-    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
-"text": "pyts\u000D" } } ] } },
-
-{"key": "cmd+; m",
+{"key": "cmd+m v",
     "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
 "text": "pycov\u000D" } } ] } },
+
+{"key": "cmd+m m",
+    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+"text": "pytm\u000D" } } ] } },
 
 
 //* MISC
@@ -74,7 +74,7 @@
         "when": "viewContainer.workbench.view.extensions.enabled"
     },
     {
-        "key": "cmd+'",
+        "key": "cmd+;",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
@@ -1334,7 +1334,7 @@
         "when": "debugState == 'stopped'"
     },
     {
-        "key": "ctrl+;",
+        "key": "ctrl+c",
         "command": "workbench.action.debug.stop",
         "when": "inDebugMode && !focusedSessionIsAttach"
     },
@@ -1389,7 +1389,7 @@
         "command": "-workbench.action.openSettings"
     },
     {
-        "key": "shift+cmd+a",
+        "key": "alt+cmd+s",
         "command": "git.stageSelectedRanges"
     },
     {
@@ -1397,12 +1397,8 @@
         "command": "-workbench.action.files.saveAs"
     },
     {
-        "key": "cmd+; '",
+        "key": "cmd+m ;",
         "command": "workbench.view.extension.test"
-    },
-    {
-        "key": "cmd+; h",
-        "command": "workbench.panel.testResults.view.focus"
     },
     {
         "key": "ctrl+h",
@@ -1415,7 +1411,7 @@
         "when": "workbench.panel.repl.view.active"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+;",
         "command": "workbench.view.debug"
     },
     {
@@ -1427,7 +1423,7 @@
         "command": "workbench.action.tasks.runTask"
     },
     {
-        "key": "cmd+; f",
+        "key": "cmd+m f",
         "command": "testing.reRunFailTests"
     },
     {
@@ -1435,7 +1431,7 @@
         "command": "-testing.reRunFailTests"
     },
     {
-        "key": "cmd+; r",
+        "key": "cmd+m r",
         "command": "testing.runCurrentFile",
         "when": "editorTextFocus"
     },
@@ -1445,7 +1441,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "cmd+; p",
+        "key": "cmd+m p",
         "command": "testing.openOutputPeek"
     },
     {
@@ -1455,5 +1451,132 @@
     {
         "key": "alt+cmd+,",
         "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    {
+        "key": "cmd+m j",
+        "command": "testing.goToNextMessage",
+        "when": "editorFocus && testing.isPeekVisible"
+    },
+    {
+        "key": "alt+f8",
+        "command": "-testing.goToNextMessage",
+        "when": "editorFocus && testing.isPeekVisible"
+    },
+    {
+        "key": "cmd+m k",
+        "command": "testing.goToPreviousMessage",
+        "when": "editorFocus && testing.isPeekVisible"
+    },
+    {
+        "key": "shift+alt+f8",
+        "command": "-testing.goToPreviousMessage",
+        "when": "editorFocus && testing.isPeekVisible"
+    },
+    {
+        "key": ";",
+        "command": "editor.closeTestPeek",
+        "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
+    },
+    {
+        "key": "escape",
+        "command": "-editor.closeTestPeek",
+        "when": "testing.isInPeek && !config.editor.stablePeek || testing.isPeekVisible && !config.editor.stablePeek"
+    },
+    {
+        "key": "cmd+; cmd+a",
+        "command": "-testing.debugAll"
+    },
+    {
+        "key": "cmd+; cmd+e",
+        "command": "-testing.debugFailTests"
+    },
+    {
+        "key": "cmd+; cmd+l",
+        "command": "-testing.debugLastRun"
+    },
+    {
+        "key": "cmd+; cmd+c",
+        "command": "-testing.debugAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; cmd+f",
+        "command": "-testing.debugCurrentFile",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; cmd+r",
+        "command": "-testing.refreshTests",
+        "when": "testing.canRefresh"
+    },
+    {
+        "key": "cmd+m l",
+        "command": "testing.reRunLastRun"
+    },
+    {
+        "key": "cmd+; l",
+        "command": "-testing.reRunLastRun"
+    },
+    {
+        "key": "cmd+m a",
+        "command": "testing.runAll"
+    },
+    {
+        "key": "cmd+; a",
+        "command": "-testing.runAll"
+    },
+    {
+        "key": "cmd+m c",
+        "command": "testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; c",
+        "command": "-testing.runAtCursor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+; cmd+o",
+        "command": "-testing.showMostRecentOutput",
+        "when": "testing.hasAnyResults"
+    },
+    {
+        "key": "cmd+m i",
+        "command": "testing.toggleInlineTestOutput"
+    },
+    {
+        "key": "cmd+; cmd+i",
+        "command": "-testing.toggleInlineTestOutput"
+    },
+    {
+        "key": "cmd+; cmd+x",
+        "command": "-testing.cancelRun"
+    },
+    {
+        "key": "cmd+m h",
+        "command": "workbench.panel.testResults.view.focus"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+cmd+s",
+        "command": "-saveAll"
+    },
+    {
+        "key": "shift+cmd+s",
+        "command": "-workbench.action.files.saveLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "alt+cmd+u",
+        "command": "git.unstageSelectedRanges"
     }
 ]
