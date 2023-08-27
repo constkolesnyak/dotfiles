@@ -15,6 +15,14 @@ alias pytk='pyt -k'
 
 alias pycover='$(pybin)/coverage'
 
+pycov() {
+    cd $(gpath)
+    pycover erase
+    pycover run -m pytest || return
+    pycover html
+    open 'htmlcov/index.html'
+}
+
 ##* POETRY ###
 
 alias po='poetry'
