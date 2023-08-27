@@ -37,6 +37,9 @@ lt() {la --tree "$@" | bat --style='grid,numbers'}
 alias ltl="lt -L"
 alias ltg="lt -I .git --git-ignore"
 
+alias lgss='ls -lba && git status -s 2>/dev/null || true'
+alias pwd_gum_lgss='pwd_gum && lgss'
+
 ##* REPLACEMENTS ###
 
 alias ps='procs'
@@ -50,14 +53,14 @@ alias cat='bat'
 
 ##* NAVIGATION ###
 
-alias ..=' cd ..'
-alias ...=' cd ../..'
+alias ..=' cd .. && pwd_gum_lgss'
+alias ...=' cd ../.. && pwd_gum_lgss'
 
-alias j_='__zoxide_z'
-alias ji_='__zoxide_zi'
+j_() {__zoxide_z "$@" && pwd_gum_lgss}
+ji_() {__zoxide_zi "$@" && pwd_gum_lgss}
 alias j=' j_'
 alias ji=' ji_'
-alias kj=' j - >/dev/null'
+alias kj=' __zoxide_z - >/dev/null && pwd_gum_lgss'
 
 ##* MISC ###
 

@@ -12,12 +12,10 @@ realias() {
     done
 }
 
-v() {
-    if [ $# -eq 0 ]; then
-        code .
-    else
-        code $@
-    fi
+pwd_gum() {
+    pwd | rev | cut -d '/' -f 1-5 | rev | gum style \
+        --foreground '#02e8e8' --border-foreground 212 --border double \
+        --align center --width 70
 }
 
 e() {
@@ -25,6 +23,14 @@ e() {
         env
     else
         env | rg $@
+    fi
+}
+
+v() {
+    if [ $# -eq 0 ]; then
+        code .
+    else
+        code $@
     fi
 }
 
