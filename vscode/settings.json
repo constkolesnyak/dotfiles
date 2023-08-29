@@ -11,6 +11,7 @@
     "explorer.confirmDragAndDrop": false,
 
     "testing.defaultGutterClickAction": "debug",
+    "testing.automaticallyOpenPeekView": "never",
     
     "extensions.autoUpdate": "onlyEnabledExtensions",
     "extensions.ignoreRecommendations": false,
@@ -34,13 +35,15 @@
     "diffEditor.renderSideBySide": false,
 
     //*_ Todo Tree
-    "todo-tree.general.tags": [ "FIXME", "TODO", "..." ],
+    "todo-tree.general.tags": [ "FIXME", "TODO"],
     "todo-tree.regex.regexCaseSensitive": false,
     "todo-tree.highlights.enabled": false,
 
 
 //* EDITOR
 
+    "editor.inlineSuggest.enabled": true,
+    "editor.autoSurround": "never",
     "editor.linkedEditing": true,
     "workbench.sideBar.location": "right",
     "editor.codeActionsOnSave": {
@@ -48,14 +51,13 @@
         "source.organizeImports": true
     },
 
-    "editor.inlineSuggest.enabled": true,
-
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 5,
 
     "editor.stickyScroll.enabled": true,
     "editor.stickyScroll.defaultModel": "foldingProviderModel",
 
+    "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
     "editor.minimap.autohide": true,
@@ -127,7 +129,17 @@
     "workbench.colorTheme": "Omni",
     "materialTheme.accent": "Purple",
     "editor.tokenColorCustomizations": {
-        "comments": "#8086A2"
+        "comments": "#8086A2",
+        "[Omni]": {
+            "textMateRules": [
+                {
+                    "scope":"string.quoted.docstring.multi.python",
+                    "settings": {
+                        "foreground": "#8960f7" 
+                    }
+                }
+            ]
+        },
     },
     "workbench.colorCustomizations": {
         "tab.activeBorder": "#C7CCE5",
@@ -284,7 +296,6 @@
         { "before": ["<leader>", "o"], "commands": ["workbench.action.gotoSymbol"] },
         { "before": ["<leader>", "'"], "commands": ["editor.togglequotes"] },
         { "before": ["<leader>", "r"], "commands": ["editor.action.rename"] },
-        { "before": ["<leader>", "f"], "commands": ["editor.action.quickFix"] },
         { "before": ["<leader>", "b"], "commands": ["extension.toggleBool"] },
         { "before": ["<leader>", "/"], "commands": ["editor.toggleFold"] },
 
@@ -330,6 +341,7 @@
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
         { "before": ["g", "s"], "after": ["S"] },
         { "before": ["<leader>", "/"], "commands": ["editor.createFoldingRangeFromSelection"] },
+        { "before": ["<leader>", "c"], "commands": ["editor.action.refactor"] },
 
         { "before": [","], "after": ["g", "r"] },
         { "before": ["z"], "after": [","] },
@@ -403,6 +415,4 @@
         
 //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
     ],
-    "testing.automaticallyOpenPeekView": "never",
-    "editor.autoSurround": "never",
 }

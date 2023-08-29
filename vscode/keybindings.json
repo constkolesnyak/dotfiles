@@ -1578,5 +1578,10 @@
     {
         "key": "alt+cmd+u",
         "command": "git.unstageSelectedRanges"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
     }
 ]
