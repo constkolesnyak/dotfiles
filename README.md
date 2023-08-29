@@ -11,7 +11,7 @@
 | Tool                                                | Description           |
 | --------------------------------------------------- | --------------------- |
 | [GNU Stow](https://www.gnu.org/software/stow/)      | Symlink farm manager  |
-| [cstow](https://github.com/constkolesnyak/cstow)    | My GNU Stow wrapper   |
+| [Cstow](https://github.com/constkolesnyak/cstow)    | My GNU Stow wrapper   |
 | [Homebrew](https://brew.sh/)                        | Package manager       |
 | [Mas](https://github.com/mas-cli/mas)               | App Store CLI         |
 | [Warp](https://www.warp.dev/)                       | Terminal              |
@@ -26,7 +26,7 @@
 
 ### How It Works
 
-[cstow](https://github.com/constkolesnyak/cstow)
+[Cstow](https://github.com/constkolesnyak/cstow)
 passes [dirs and targets](https://www.gnu.org/software/stow/manual/stow.html#Invoking-Stow)
 from [cstow.toml](cstow.toml) to GNU Stow.
 
@@ -58,19 +58,19 @@ from [cstow.toml](cstow.toml) to GNU Stow.
 
 ### 3) Stow
 
-1.  Setup `cstow`.
-
-<!-- todo add link to 'setup' header in cstow README -->
-
-2.  Symlink `.stow-global-ignore`.
+1.  Symlink `.stow-global-ignore`.
 
         ln -s ~/dotfiles/.stow-global-ignore ~/.stow-global-ignore
 
-3.  Run `cstow` in simulation mode.
+2.  [Install](https://github.com/constkolesnyak/cstow#installation)
+    and [configure](https://github.com/constkolesnyak/cstow#configuration)
+    Cstow.
+
+3.  Run Cstow in simulation mode.
 
         nostow
 
-4.  Run `cstow` for real.
+4.  Run Cstow for real.
 
         ststow
 
