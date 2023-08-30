@@ -56,11 +56,16 @@ alias cat='bat'
 alias ..=' cd .. && pwd_gum_lgss'
 alias ...=' cd ../.. && pwd_gum_lgss'
 
-j_() {__zoxide_z "$@" && pwd_gum_lgss}
+j_() {
+    if [ $# -eq 0 ]; then
+        __zoxide_z - >/dev/null && pwd_gum_lgss
+    else
+        __zoxide_z "$@" && pwd_gum_lgss
+    fi
+}
 ji_() {__zoxide_zi "$@" && pwd_gum_lgss}
 alias j=' j_'
 alias ji=' ji_'
-alias kj=' __zoxide_z - >/dev/null && pwd_gum_lgss'
 
 ##* MISC ###
 
