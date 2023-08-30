@@ -1,6 +1,7 @@
 #!/usr/bin/env xonsh
 
 import os
+import sys
 
 
 try:
@@ -9,7 +10,7 @@ except KeyError:
     defaults_dir = $HOME + "/Desktop/Defaults"
 
 if not os.path.isdir(defaults_dir):
-    print(f"Directory '{defaults_dir}' does not exist")
+    print(f"ERROR: Directory '{defaults_dir}' does not exist", file=sys.stderr)
     exit(1)
 
 
