@@ -1,10 +1,8 @@
 # My Dotfiles
 
-## About
-
-### Screenshot
-
 ![Screenshot](screenshot.png)
+
+## About
 
 ### Built With
 
