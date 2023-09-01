@@ -53,6 +53,7 @@ alias cat='bat'
 
 ##* NAVIGATION ###
 
+alias h=' cd' # home
 alias ..=' cd .. && pwd_gum_lgss'
 alias ...=' cd ../.. && pwd_gum_lgss'
 
