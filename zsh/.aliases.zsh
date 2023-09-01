@@ -58,10 +58,11 @@ alias ...=' cd ../.. && pwd_gum_lgss'
 
 j_() {
     if [ $# -eq 0 ]; then
-        __zoxide_z - >/dev/null && pwd_gum_lgss
+        __zoxide_z - >/dev/null
     else
-        __zoxide_z "$@" && pwd_gum_lgss
+        __zoxide_z "$@"
     fi
+    pwd_gum_lgss
 }
 ji_() {__zoxide_zi "$@" && pwd_gum_lgss}
 alias j=' j_'
