@@ -63,7 +63,7 @@ j_() {
     else
         __zoxide_z "$@"
     fi
-    pwd_gum_lgss
+    [ "$(pwd)" != "$HOME" ] && pwd_gum_lgss
 }
 ji_() {__zoxide_zi "$@" && pwd_gum_lgss}
 alias j=' j_'
