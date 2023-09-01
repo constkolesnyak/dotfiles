@@ -38,18 +38,7 @@ alias ltl="lt -L"
 alias ltg="lt -I .git --git-ignore"
 
 alias lgss='ls -lba && git status -s 2>/dev/null || true'
-alias pwd_gum_lgss='pwd_gum && lgss'
-
-##* REPLACEMENTS ###
-
-alias ps='procs'
-alias diff='batdiff'
-alias rm_='trash-put --trash-dir ~/.Trash'
-alias rm="rm_" # better expansion
-alias du='ncdu'
-
-alias bcat='/bin/cat'
-alias cat='bat'
+alias pwd_gum_lgss='[ "$(pwd)" != "$HOME" ] && pwd_gum && lgss'
 
 ##* NAVIGATION ###
 
@@ -63,11 +52,22 @@ j_() {
     else
         __zoxide_z "$@"
     fi
-    [ "$(pwd)" != "$HOME" ] && pwd_gum_lgss
+    pwd_gum_lgss
 }
 ji_() {__zoxide_zi "$@" && pwd_gum_lgss}
 alias j=' j_'
 alias ji=' ji_'
+
+##* REPLACEMENTS ###
+
+alias ps='procs'
+alias diff='batdiff'
+alias rm_='trash-put --trash-dir ~/.Trash'
+alias rm="rm_"
+alias du='ncdu'
+
+alias bcat='/bin/cat'
+alias cat='bat'
 
 ##* MISC ###
 
