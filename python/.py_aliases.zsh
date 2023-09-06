@@ -1,5 +1,6 @@
 alias py='python3'
 alias python='python3'
+alias pip='pip3'
 
 alias pybin='echo $(gpath)/.venv/bin'
 alias pyv='$(pybin)/python'
