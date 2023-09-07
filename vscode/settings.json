@@ -17,7 +17,8 @@
     "extensions.ignoreRecommendations": false,
 
     "files.associations": {
-        "**/*.yml": "yaml"
+        "**/*.yml": "yaml",
+        "**/vscode/snippets/*.json": "jsonc"
     },
 
     //* Code Runner
@@ -43,6 +44,8 @@
 //* EDITOR
 
     "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    
     "editor.autoSurround": "never",
     "editor.linkedEditing": true,
     "workbench.sideBar.location": "right",
@@ -139,7 +142,7 @@
                     }
                 }
             ]
-        },
+        }
     },
     "workbench.colorCustomizations": {
         "tab.activeBorder": "#C7CCE5",
@@ -163,7 +166,6 @@
     "python.terminal.activateEnvironment": false,
 
     "autoDocstring.docstringFormat": "google-notypes",
-    "autoDocstring.quoteStyle": "'''",
     "autoDocstring.startOnNewLine": true,
     "autoDocstring.generateDocstringOnEnter": true,
 
@@ -215,6 +217,8 @@
         "Commandline",
         "constkolesnyak",
         "CSTOW",
+        "dataclass",
+        "dataclasses",
         "docstrings",
         "dotenv",
         "dotfiles",
@@ -222,6 +226,7 @@
         "gname",
         "gpath",
         "htmlcov",
+        "ifmain",
         "isdir",
         "isort",
         "jsontools",
@@ -317,6 +322,7 @@
         { "before": ["f"], "after": ["<leader>", "<leader>", "s"] },
         { "before": ["s"], "after": ["f"] },
         { "before": ["S"], "after": ["F"] },
+        { "before": ["<leader>", "f"], "after": ["*"] },
 
         { "before": ["<leader>", "<leader>", "s"], "after": [] },
         { "before": ["<leader>", "<leader>", "f"], "after": [] },
@@ -361,6 +367,7 @@
         { "before": ["f"], "after": ["<leader>", "<leader>", "s"] },
         { "before": ["s"], "after": ["f"] },
         { "before": ["S"], "after": ["F"] },
+        { "before": ["<leader>", "f"], "after": ["*"] },
 
         { "before": ["<leader>", "<leader>", "s"], "after": [] },
         { "before": ["<leader>", "<leader>", "f"], "after": [] },
