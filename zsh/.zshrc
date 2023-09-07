@@ -20,7 +20,7 @@ setopt notify
 setopt share_history
 # Don't save commands that start with a space in history
 setopt histignorespace
-# Globs shouldn't match dotfiles
+# "*" shouldn't match dotfiles
 setopt noglobdots
 
 ##* TAB COMPLETION ###
