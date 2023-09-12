@@ -3,3 +3,6 @@ root_dir = '$DOTFILES'
 [targets_dirs]
 '~' = ['misc/home', 'zsh', 'git', 'python']
 '~/Library/Application Support/Code/User' = ['vscode']
+'/Users/konst/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main Vault/' = [
+    'misc/obsidian',
+]
