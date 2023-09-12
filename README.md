@@ -1,6 +1,6 @@
 # My Dotfiles
 
-![Screenshot](screenshot.png)
+![Screenshot](misc/screenshot.png)
 
 ## About
 
