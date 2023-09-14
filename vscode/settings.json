@@ -24,7 +24,7 @@
     //* Code Runner
     "code-runner.enableAppInsights": false,  // telemetry
     "code-runner.executorMap": {
-        "python": ". $workspaceRoot/.venv/bin/activate; echo ''; python3 $fullFileName"
+        "python": ". $workspaceRoot/.venv/bin/activate; echo ''; python $fullFileName"
     },
     "code-runner.runInTerminal": true,
 
@@ -74,6 +74,7 @@
     "editor.fontFamily": "'Fira Code', 'Cascadia Code', 'Consolas', Menlo, Monaco, 'Courier New', monospace",
 
     "workbench.activityBar.visible": false,
+    "window.commandCenter": false,
     "workbench.startupEditor": "none",
     
     "better-comments.tags": [
@@ -214,6 +215,7 @@
     "cSpell.userWords": [
         "asdfqwer",
         "autoload",
+        "bidict",
         "Commandline",
         "constkolesnyak",
         "CSTOW",
@@ -263,7 +265,7 @@
     "editor.formatOnSave": true,
 
     //* Prettier
-    "[json][yaml][markdown]": {
+    "[json][jsonc][yaml][markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "prettier.singleQuote": true,
@@ -296,14 +298,14 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         { "before": ["Y"], "after": ["y", "$"] },
         { "before": ["U"], "after": ["<C-r>"] },
-        { "before": ["<leader>", "l"], "commands": ["workbench.action.navigateToLastEditLocation"] },
         { "before": ["<leader>", "g"], "commands": ["workbench.action.showAllSymbols"] },
         { "before": ["<leader>", "o"], "commands": ["workbench.action.gotoSymbol"] },
         { "before": ["<leader>", "'"], "commands": ["editor.togglequotes"] },
         { "before": ["<leader>", "r"], "commands": ["editor.action.rename"] },
         { "before": ["<leader>", "b"], "commands": ["extension.toggleBool"] },
         { "before": ["<leader>", "/"], "commands": ["editor.toggleFold"] },
-
+        
+        { "before": ["<leader>", "`"], "commands": ["workbench.action.navigateToLastEditLocation"] },
         { "before": [","], "after": ["g", "r"] },
         { "before": ["z"], "after": [","] },
         { "before": [";"], "after": ["<Esc>"] },
@@ -349,6 +351,7 @@
         { "before": ["<leader>", "/"], "commands": ["editor.createFoldingRangeFromSelection"] },
         { "before": ["<leader>", "c"], "commands": ["editor.action.refactor"] },
 
+        { "before": ["<leader>", "`"], "commands": ["workbench.action.navigateToLastEditLocation"] },
         { "before": [","], "after": ["g", "r"] },
         { "before": ["z"], "after": [","] },
         { "before": [";"], "after": ["<Esc>"] },

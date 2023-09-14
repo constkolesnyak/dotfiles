@@ -37,6 +37,10 @@
         "prefix": "defm",
         "body": "def ${1:method}(self, ${2:args}):\n\t${0:...}"
     },
+    "def class method": {
+        "prefix": "defc",
+        "body": "@classmethod\ndef ${1:classmethod}(cls, ${2:args}):\n\t${0:...}"
+    },
     "self": {
         "prefix": "s",
         "body": "self.$0"
@@ -140,8 +144,8 @@
         "prefix": "lam",
         "body": "lambda ${1:args}: ${0:...}"
     },
-    "print": {
-        "prefix": "p",
-        "body": "print(${0:args})"
+    "pprint": {
+        "prefix": "l",
+        "body": "pprint(${0:args})"
     }
 }

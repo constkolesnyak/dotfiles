@@ -1,19 +1,19 @@
 [
 //* TERMINAL.SENDSEQUENCE
 
-{"key": "cmd+k r",
-    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
-"text": "pymain\u000D" } } ] } },
+    {"key": "cmd+k r",
+        "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+    "text": "pymain\u000D" } } ] } },
 
-{"key": "cmd+m v",
-    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
-"text": "pycov\u000D" } } ] } },
+    {"key": "cmd+m v",
+        "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+    "text": "pycov\u000D" } } ] } },
 
-{"key": "cmd+m m",
-    "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
-"text": "pytm\u000D" } } ] } },
+    {"key": "cmd+m m",
+        "command": "runCommands", "args": { "commands": [ { "command": "workbench.action.terminal.focus" }, { "command": "workbench.action.terminal.sendSequence", "args": {
+    "text": "pytm\u000D" } } ] } },
 
-
+    
 //* MISC
 
     {

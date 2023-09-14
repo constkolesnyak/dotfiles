@@ -1,4 +1,7 @@
 {
+    "[jsonc]": {
+        "editor.defaultFormatter": null
+    },
     "cSpell.words": [
         "adef",
         "autocd",
@@ -18,10 +21,12 @@
         "brupg",
         "Cascadia",
         "catthehacker",
+        "classmethod",
         "compinit",
         "Consolas",
         "Creset",
         "dcif",
+        "defc",
         "defm",
         "destow",
         "difftool",
@@ -133,6 +138,7 @@
         "poshotl",
         "posync",
         "poupd",
+        "pprint",
         "pretium",
         "procs",
         "pymain",
