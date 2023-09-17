@@ -24,6 +24,7 @@
   //* Code Runner
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
+    "sql": "clickf $fullFileName",
     "python": ". $workspaceRoot/.venv/bin/activate; echo ''; python $fullFileName"
   },
   "code-runner.runInTerminal": true,
@@ -169,6 +170,7 @@
     "foreground": "#C7CCE5",
     "editor.foreground": "#C7CCE5",
     "editor.selectionBackground": "#366B84",
+    "terminal.selectionBackground": "#366B84",
     "quickInput.foreground": "#DBE0F9",
     "descriptionForeground": "#C7CCE5",
     "sideBar.foreground": "#DBE0F9",
@@ -189,7 +191,7 @@
 
   "python.testing.pytestEnabled": true,
 
-  //* Lint
+  //* Linter
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "strict",
   "python.analysis.diagnosticSeverityOverrides": {
@@ -227,7 +229,7 @@
   ],
   "isort.args": ["--profile", "black"],
 
-  //* LINT
+  //* LINTERS
 
   "errorLens.enabledDiagnosticLevels": ["error", "warning"],
 
@@ -246,8 +248,10 @@
     "dotenv",
     "dotfiles",
     "evalx",
+    "fastapi",
     "gname",
     "gpath",
+    "gremprune",
     "htmlcov",
     "ifmain",
     "isdir",
@@ -276,13 +280,23 @@
     "restow",
     "SENDSEQUENCE",
     "startswith",
+    "uvicorn",
     "venv",
     "xonsh"
   ],
 
-  //* FORMAT
+  //* FORMATTERS
 
   "editor.formatOnSave": true,
+
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "sqltools.format": {
+    "reservedWordCase": "upper",
+    "linesBetweenQueries": 2
+  },
+  "sqltools.highlightQuery": false,
 
   //* Prettier
   "[json][jsonc][yaml][markdown]": {

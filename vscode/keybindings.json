@@ -2,6 +2,23 @@
   //* TERMINAL.SENDSEQUENCE
 
   {
+    "key": "cmd+k u",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        { "command": "workbench.action.terminal.kill" },
+        {
+          "command": "runCommands",
+          "args": {
+            "commands": ["code-runner.run", "terminal.focus"]
+          }
+        }
+      ]
+    }
+  },
+
+  {
     "key": "cmd+k r",
     "command": "runCommands",
     "args": {
