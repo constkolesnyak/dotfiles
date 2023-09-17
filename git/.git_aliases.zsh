@@ -73,6 +73,7 @@ alias ghcl='gh repo clone'
 alias grem='git remote'
 alias grema='git remote add'
 alias gremrm='git remote rm'
+alias gremprune='git fetch --prune origin'
 alias gremsh='git remote show'
 alias gremv='git remote -v'
 
@@ -126,6 +127,7 @@ alias glsf='git ls-files'
 ##* MERGE & REBASE ###
 
 alias gm='git merge'
+alias gms='git merge --squash'
 alias gmt='git mergetool'
 
 alias grb='git rebase'

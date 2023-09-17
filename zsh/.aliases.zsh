@@ -11,7 +11,8 @@ alias destow="cstow delete"
 
 ##* BREW ###
 
-alias brupg="brew update && brew upgrade && mas upgrade"
+alias brupg="brew update && brew upgrade"
+alias brupgall="brew update && brew upgrade && mas upgrade"
 alias brls="brew list"
 alias brins="brew install"
 alias bruni="brew uninstall"

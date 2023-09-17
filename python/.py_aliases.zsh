@@ -29,6 +29,7 @@ pycov() {
 alias po='poetry'
 
 ponew() {poetry new --src --no-interaction $1 && cd $1 && poetry version 0.0.dev0 >/dev/null}
+alias poinit='poetry init'
 alias popublish='poetry publish --build'
 
 alias poadd='poetry add'
