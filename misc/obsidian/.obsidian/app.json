@@ -1,5 +1,6 @@
 {
   "vimMode": true,
   "readableLineLength": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "showInlineTitle": true
 }
