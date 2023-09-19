@@ -49,7 +49,7 @@
 ##* MERGE & REBASE ###
 
 [pull]
-    rebase = true
+    rebase = false
 
 [rebase]
 	autosquash = true
