@@ -1,6 +1,27 @@
 [
   //* TERMINAL.SENDSEQUENCE
 
+  //* Temp
+  {
+    "key": "cmd+k cmd+j",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        { "command": "workbench.action.terminal.kill" },
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/big_bot/services/main.py\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  //* Permanent
+
   {
     "key": "cmd+k u",
     "command": "runCommands",
@@ -1634,5 +1655,19 @@
     "key": "cmd+/",
     "command": "-toggleExplainMode",
     "when": "suggestWidgetVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "merge.goToNextUnhandledConflict",
+    "when": "isMergeEditor"
+  },
+  {
+    "key": "alt+k",
+    "command": "merge.goToPreviousUnhandledConflict",
+    "when": "isMergeEditor"
+  },
+  {
+    "key": "cmd+'",
+    "command": "workbench.action.showAllSymbols"
   }
 ]

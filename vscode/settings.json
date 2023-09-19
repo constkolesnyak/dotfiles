@@ -37,6 +37,7 @@
   "diffEditor.renderSideBySide": false,
 
   //*_ Todo Tree
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/.venv/**"],
   "todo-tree.general.tags": ["FIXME", "TODO"],
   "todo-tree.regex.regexCaseSensitive": false,
   "todo-tree.highlights.enabled": false,
@@ -331,10 +332,6 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["Y"], "after": ["y", "$"] },
     { "before": ["U"], "after": ["<C-r>"] },
-    {
-      "before": ["<leader>", "g"],
-      "commands": ["workbench.action.showAllSymbols"]
-    },
     {
       "before": ["<leader>", "o"],
       "commands": ["workbench.action.gotoSymbol"]
