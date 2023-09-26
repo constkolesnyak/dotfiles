@@ -40,6 +40,10 @@
     "prefix": "defc",
     "body": "@classmethod\ndef ${1:classmethod}(cls, ${2:args}):\n\t${0:...}"
   },
+  "def property": {
+    "prefix": "defp",
+    "body": "@property\ndef ${1:property}(self):\n\t${0:...}"
+  },
   "self": {
     "prefix": "s",
     "body": "self.$0"
@@ -142,5 +146,9 @@
   "pprint": {
     "prefix": "l",
     "body": "pprint(${0:args})"
+  },
+  "ti": {
+    "prefix": "ti",
+    "body": " # type: ignore"
   }
 }

@@ -1,25 +1,6 @@
 [
   //* TERMINAL.SENDSEQUENCE
 
-  //* Temp
-  {
-    "key": "cmd+k cmd+j",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        { "command": "workbench.action.terminal.focus" },
-        { "command": "workbench.action.terminal.kill" },
-        { "command": "workbench.action.terminal.focus" },
-        {
-          "command": "workbench.action.terminal.sendSequence",
-          "args": {
-            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/big_bot/services/main.py\u000D"
-          }
-        }
-      ]
-    }
-  },
-
   //* Permanent
 
   {
@@ -56,7 +37,7 @@
   },
 
   {
-    "key": "cmd+m v",
+    "key": "shift+cmd+j",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -64,7 +45,115 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pycov\u000D"
+            "text": "!!\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  //* Temp
+
+  {
+    "key": "cmd+k cmd+j",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        { "command": "workbench.action.terminal.kill" },
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/controller.py\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "cmd+m e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyt 2>/dev/null\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  //* TEST
+
+  //* Native
+
+  {
+    "key": "cmd+m a",
+    "command": "testing.runAll"
+  },
+  {
+    "key": "cmd+m r",
+    "command": "testing.runCurrentFile",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m l",
+    "command": "testing.reRunLastRun"
+  },
+  {
+    "key": "cmd+m f",
+    "command": "testing.reRunFailTests"
+  },
+
+  //* Terminal
+
+  {
+    "key": "cmd+m a",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyta\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "cmd+m r",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyt ${file}\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "cmd+m s",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyts\u000D"
           }
         }
       ]
@@ -81,6 +170,22 @@
           "command": "workbench.action.terminal.sendSequence",
           "args": {
             "text": "pytm\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "cmd+m v",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.focus" },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pycov\u000D"
           }
         }
       ]
@@ -1464,10 +1569,6 @@
     "command": "-workbench.action.files.saveAs"
   },
   {
-    "key": "cmd+m ;",
-    "command": "workbench.view.extension.test"
-  },
-  {
     "key": "ctrl+h",
     "command": "workbench.debug.action.toggleRepl",
     "when": "workbench.panel.repl.view.active"
@@ -1490,18 +1591,10 @@
     "command": "workbench.action.tasks.runTask"
   },
   {
-    "key": "cmd+m f",
-    "command": "testing.reRunFailTests"
-  },
-  {
     "key": "cmd+; e",
     "command": "-testing.reRunFailTests"
   },
-  {
-    "key": "cmd+m r",
-    "command": "testing.runCurrentFile",
-    "when": "editorTextFocus"
-  },
+
   {
     "key": "cmd+; f",
     "command": "-testing.runCurrentFile",
@@ -1576,18 +1669,12 @@
     "command": "-testing.refreshTests",
     "when": "testing.canRefresh"
   },
-  {
-    "key": "cmd+m l",
-    "command": "testing.reRunLastRun"
-  },
+
   {
     "key": "cmd+; l",
     "command": "-testing.reRunLastRun"
   },
-  {
-    "key": "cmd+m a",
-    "command": "testing.runAll"
-  },
+
   {
     "key": "cmd+; a",
     "command": "-testing.runAll"
@@ -1618,6 +1705,10 @@
   {
     "key": "cmd+; cmd+x",
     "command": "-testing.cancelRun"
+  },
+  {
+    "key": "cmd+m ;",
+    "command": "workbench.view.extension.test"
   },
   {
     "key": "cmd+m h",
@@ -1669,5 +1760,15 @@
   {
     "key": "cmd+'",
     "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "-workbench.action.search.toggleQueryDetails",
+    "when": "inSearchEditor || searchViewletFocus"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]

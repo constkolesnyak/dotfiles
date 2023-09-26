@@ -25,7 +25,7 @@
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
     "sql": "clickf $fullFileName",
-    "python": ". $workspaceRoot/.venv/bin/activate; echo ''; python $fullFileName"
+    "python": "pyact; echo ''; python $fullFileName"
   },
   "code-runner.runInTerminal": true,
 
@@ -281,6 +281,7 @@
     "restow",
     "SENDSEQUENCE",
     "startswith",
+    "usefixtures",
     "uvicorn",
     "venv",
     "xonsh"
