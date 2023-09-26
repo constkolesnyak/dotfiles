@@ -4,12 +4,14 @@ alias pip='pip3'
 
 alias pybin='echo $(gpath)/.venv/bin'
 alias pyv='$(pybin)/python'
+alias pyact='. $(pybin)/activate'
 
 alias pymain='pyv "$(gpath)/src/$(gname)/main.py"'
 
 ##* TESTING ###
 
 alias pyt='$(pybin)/pytest'
+alias pyta='pyt $(gpath)'
 alias pytm='pyt -m smoke'
 alias pyts='pyt -s'
 alias pytk='pyt -k'

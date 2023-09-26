@@ -14,7 +14,7 @@ format = '[$symbol$branch(:$remote_branch)]($style) '
 # Remove 'took'
 format = '[$duration]($style) '
 # Grey
-style = 'fg:246'  
+style = 'fg:246'
 
 [python]
 # Remove 'via'
@@ -27,3 +27,7 @@ version_format = '${raw}'
 format = '[$symbol$version]($style) '
 # Remove 'v'
 version_format = '${raw}'
+
+[docker_context]
+# Remove 'via' and $context. Default format: 'via [$symbol$context]($style) '
+format = '[$symbol]($style)'

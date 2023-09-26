@@ -45,6 +45,7 @@ alias gbl='git branch -vva'
 
 alias gbc='git switch -c'
 alias gbdel='git branch --delete'
+alias gbdd='git branch -D'
 
 alias gbs='git switch'
 alias gb='git switch -'
@@ -55,6 +56,7 @@ alias gbd='git switch dev'
 ##* STASH ###
 
 alias gst='git stash'
+alias gsts='git stash save'
 alias gstu='git stash -u'
 alias gstp='git stash -p'
 
@@ -63,7 +65,7 @@ alias gstap='git stash apply'
 alias gstdr='git stash drop'
 
 alias gstl='git stash list'
-alias gsts='git stash show -p'
+alias gstsh='git stash show -p'
 
 ##* REMOTE ###
 
@@ -73,7 +75,7 @@ alias ghcl='gh repo clone'
 alias grem='git remote'
 alias grema='git remote add'
 alias gremrm='git remote rm'
-alias gremprune='git fetch --prune origin'
+alias gprune='git fetch --prune origin'
 alias gremsh='git remote show'
 alias gremv='git remote -v'
 
@@ -85,8 +87,8 @@ alias gplr='git pull --rebase'
 alias gplm='git pull --no-rebase'
 
 alias gpush='git push && git push --tags'
-
-alias gsup='git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)'
+alias gpusup='git push --set-upstream origin $(git branch --show-current)'
+alias gsup='git branch --set-upstream origin $(git branch --show-current)'
 
 ##* RE(SET/STORE/VERT) ###
 
@@ -127,8 +129,10 @@ alias glsf='git ls-files'
 ##* MERGE & REBASE ###
 
 alias gm='git merge'
+alias gmf='git merge --ff-only'
 alias gms='git merge --squash'
 alias gmt='git mergetool'
+alias gma='git merge --abort'
 
 alias grb='git rebase'
 alias grbm='git rebase main'
