@@ -55,17 +55,43 @@
   //* Temp
 
   {
-    "key": "cmd+k cmd+j",
+    "key": "cmd+k c",
     "command": "runCommands",
     "args": {
       "commands": [
-        { "command": "workbench.action.terminal.focus" },
-        { "command": "workbench.action.terminal.kill" },
-        { "command": "workbench.action.terminal.focus" },
+        { "command": "workbench.action.terminal.new" },
+        {
+          "command": "workbench.action.terminal.renameWithArg",
+          "args": {
+            "name": "Controller"
+          }
+        },
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
             "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/controller.py\u000D"
+          }
+        }
+      ]
+    }
+  },
+
+  {
+    "key": "cmd+k s",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        { "command": "workbench.action.terminal.new" },
+        {
+          "command": "workbench.action.terminal.renameWithArg",
+          "args": {
+            "name": "Shard"
+          }
+        },
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": {
+            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/shard.py\u000D"
           }
         }
       ]
@@ -1770,5 +1796,25 @@
     "key": "shift+cmd+k",
     "command": "-editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchEditorRegex",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-workbench.action.terminal.toggleFindRegex",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleFindRegex",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchRegex",
+    "when": "searchViewletFocus"
   }
 ]
