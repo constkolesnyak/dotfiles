@@ -75,16 +75,13 @@ alias ghcl='gh repo clone'
 alias grem='git remote'
 alias grema='git remote add'
 alias gremrm='git remote rm'
-alias gprune='git fetch --prune origin'
 alias gremsh='git remote show'
 alias gremv='git remote -v'
 
-alias gf='git fetch'
-alias gfo='git fetch origin'
-
-alias gpl='git pull'
-alias gplr='git pull --rebase'
-alias gplm='git pull --no-rebase'
+alias gf='git fetch --prune'
+alias gpl='git pull --prune'
+alias gplr='git pull --prune --rebase'
+alias gplm='git pull --prune --no-rebase'
 
 alias gpush='git push && git push --tags'
 alias gpusup='git push --set-upstream origin $(git branch --show-current)'
@@ -129,6 +126,7 @@ alias glsf='git ls-files'
 ##* MERGE & REBASE ###
 
 alias gm='git merge'
+alias gmm='git merge main'
 alias gmf='git merge --ff-only'
 alias gms='git merge --squash'
 alias gmt='git mergetool'
