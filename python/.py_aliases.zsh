@@ -50,7 +50,6 @@ alias poinf='poetry env info'
 alias posho='poetry show --latest'
 alias poshotl='poetry show --latest --top-level'
 alias poshot='poetry show --tree'
-alias poche='poetry check'
-alias pochelo='poetry lock --check'
+alias poche='poetry check --lock'
 
 alias pohelp='poetry help'
