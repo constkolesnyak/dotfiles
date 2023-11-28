@@ -73,7 +73,7 @@
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', 'Cascadia Code', 'Consolas', Menlo, Monaco, 'Courier New', monospace",
 
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.location": "hidden",
   "window.commandCenter": false,
   "workbench.startupEditor": "none",
 
