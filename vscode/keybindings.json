@@ -277,7 +277,7 @@
     "when": "viewContainer.workbench.view.extensions.enabled"
   },
   {
-    "key": "cmd+;",
+    "key": "cmd+h",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
@@ -848,7 +848,7 @@
     "when": "terminal.active"
   },
   {
-    "key": "cmd+h",
+    "key": "cmd+;",
     "command": "workbench.action.togglePanel"
   },
   {

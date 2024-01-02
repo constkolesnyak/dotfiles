@@ -147,12 +147,16 @@
     "prefix": "lam",
     "body": "lambda ${1:args}: ${0:...}"
   },
-  "pprint": {
+  "Ice Cream": {
     "prefix": "l",
-    "body": "pprint(${0:args})"
+    "body": "ic($0)"
   },
   "type: ignore": {
     "prefix": "ti",
-    "body": " # type: ignore"
+    "body": "  # type: ignore"
+  },
+  "pyright: ignore": {
+    "prefix": "pi",
+    "body": "  # pyright: ignore"
   }
 }

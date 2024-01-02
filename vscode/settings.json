@@ -4,6 +4,7 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.osxExec": "Warp.app",
   "search.smartCase": true,
+  "files.trimTrailingWhitespace": true,
   "telemetry.telemetryLevel": "off",
   "update.showReleaseNotes": false,
 
@@ -51,8 +52,8 @@
   "editor.linkedEditing": true,
   "workbench.sideBar.location": "right",
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.organizeImports": true
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit"
   },
 
   "editor.cursorSmoothCaretAnimation": "on",
@@ -230,6 +231,23 @@
   ],
   "isort.args": ["--profile", "black"],
 
+  //* SQL
+
+  //* Format
+
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+
+  "Prettier-SQL.keywordCase": "upper",
+  "Prettier-SQL.linesBetweenQueries": 2,
+
+  "sqltools.format": {
+    "reservedWordCase": "upper",
+    "linesBetweenQueries": 2
+  },
+  "sqltools.highlightQuery": false,
+
   //* LINTERS
 
   "errorLens.enabledDiagnosticLevels": ["error", "warning"],
@@ -275,6 +293,7 @@
     "pymain",
     "PYPI",
     "pyproject",
+    "pyright",
     "Pytest",
     "pytm",
     "pyts",
@@ -290,15 +309,6 @@
   //* FORMATTERS
 
   "editor.formatOnSave": true,
-
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
-  },
-  "sqltools.format": {
-    "reservedWordCase": "upper",
-    "linesBetweenQueries": 2
-  },
-  "sqltools.highlightQuery": false,
 
   //* Prettier
   "[json][jsonc][yaml][markdown]": {
