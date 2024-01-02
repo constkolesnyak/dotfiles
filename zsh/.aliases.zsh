@@ -9,6 +9,8 @@ alias ststow="cstow stow"
 alias restow="cstow restow"
 alias destow="cstow delete"
 
+alias upd_some_cli_apps="{ bls -l ~/.local/bin && echo && npmls } | tee $DOTFILES/misc/some_cli_apps.txt"
+
 ##* BREW ###
 
 alias brupg="brew update && brew upgrade"
@@ -22,6 +24,12 @@ alias brcheck="brew bundle check $brew_ending"
 alias brdump="brew bundle dump --force --describe $brew_ending"
 alias brbundle="brew bundle $brew_ending"
 unset brew_ending
+
+##* NODE ###
+
+alias npmins="npm install -g"
+alias npmuni="npm uninstall -g"
+alias npmls="npm list -g --depth=0"
 
 ##* LS ###
 

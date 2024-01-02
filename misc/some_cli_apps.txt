@@ -1,0 +1,9 @@
+total 905384
+-rwxr-xr-x@ 1 konst  staff  463556135 Sep 15 15:14 clickhouse
+lrwxr-xr-x  1 konst  staff         46 Dec 26 00:15 cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
+lrwxr-xr-x@ 1 konst  staff         50 Dec 31 15:00 voxh -> /Users/konst/.local/pipx/venvs/vox-harbor/bin/voxh
+
+/opt/homebrew/lib
+├── npm@10.2.4
+└── sql-formatter@15.0.2
+
