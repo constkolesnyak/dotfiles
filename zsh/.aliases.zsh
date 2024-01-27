@@ -80,6 +80,7 @@ alias cat='bat'
 
 ##* MISC ###
 
+alias fucking=sudo
 alias nv='nvim'
 mkd() {mkdir $1 && cd $1}
 

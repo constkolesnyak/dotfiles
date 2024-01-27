@@ -1783,7 +1783,7 @@
     "when": "isMergeEditor"
   },
   {
-    "key": "cmd+'",
+    "key": "alt+cmd+'",
     "command": "workbench.action.showAllSymbols"
   },
   {
@@ -1815,5 +1815,9 @@
     "key": "alt+cmd+r",
     "command": "-toggleSearchRegex",
     "when": "searchViewletFocus"
+  },
+  {
+    "key": "cmd+'",
+    "command": "workbench.action.gotoSymbol"
   }
 ]

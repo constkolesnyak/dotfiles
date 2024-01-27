@@ -80,6 +80,8 @@ from [cstow.toml](cstow.toml) to GNU Stow.
 
 ### 4) Additionally
 
+- Install apps listed in [some_cli_apps.txt](misc/some_cli_apps.txt).
+
 - [Sync](https://code.visualstudio.com/docs/editor/settings-sync) VS Code UI state.
   Unfortunately, it
   [can't](https://code.visualstudio.com/docs/editor/profiles#_where-is-the-ui-state-globalstatejson-file)
