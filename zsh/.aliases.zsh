@@ -82,6 +82,7 @@ alias cat='bat'
 
 alias fucking=sudo
 alias nv='nvim'
+alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
 mkd() {mkdir $1 && cd $1}
 
 mov_to_gif() {ffmpeg -i "$1.mov" -pix_fmt rgb8 -r 10 "$1.gif" && gifsicle -O3 "$1.gif" -o "$1.gif"}
