@@ -7,6 +7,7 @@
   "files.trimTrailingWhitespace": true,
   "telemetry.telemetryLevel": "off",
   "update.showReleaseNotes": false,
+  "workbench.layoutControl.enabled": false,
 
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
