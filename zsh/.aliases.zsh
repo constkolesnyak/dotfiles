@@ -35,11 +35,11 @@ alias npmls="npm list -g --depth=0"
 
 alias bls="/bin/ls"
 
-alias ls="exa --color=always --icons --group-directories-first"
+alias ls="eza --color=always --icons --group-directories-first"
 alias sl="ls"
 alias ll="ls -lb"
 alias la="ls -a"
-alias l.="exa -a | egrep '^\.'"
+alias l.="eza -a | egrep '^\.'"
 alias l="ls -lba"
 
 lt() {la --tree "$@" | bat --style='grid,numbers'}
