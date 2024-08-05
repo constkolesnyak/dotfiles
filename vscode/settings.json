@@ -327,6 +327,10 @@
 
   "editor.formatOnSave": true,
 
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
   //* Prettier
   "[json][jsonc][yaml][markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
