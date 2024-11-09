@@ -84,4 +84,12 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 
-##* LINES BELLOW ARE ADDED BY 'git config' COMMAND ###
+##* LFS ###
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+##* LINES BELLOW HAVE BEEN ADDED BY 'git config' COMMAND ###
