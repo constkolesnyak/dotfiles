@@ -2,6 +2,7 @@
   //* MISC
 
   "security.workspace.trust.untrustedFiles": "open",
+  "security.promptForLocalFileProtocolHandling": false,
   "terminal.external.osxExec": "Warp.app",
   "search.smartCase": true,
   "files.trimTrailingWhitespace": true,
@@ -288,6 +289,7 @@
     "kwargs",
     "labelpad",
     "labelsize",
+    "lpluck",
     "Mandalorian",
     "matplotlib",
     "Neovim",

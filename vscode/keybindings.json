@@ -55,7 +55,7 @@
   //* Temp
 
   {
-    "key": "cmd+k c",
+    "key": "cmd+k r",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -63,13 +63,13 @@
         {
           "command": "workbench.action.terminal.renameWithArg",
           "args": {
-            "name": "Controller"
+            "name": "VH main.py"
           }
         },
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/controller.py\u000D"
+            "text": "pyv $(gpath)/main.py tg\u000D"
           }
         }
       ]
@@ -223,7 +223,7 @@
   {
     "key": "cmd+f",
     "command": "editor.action.startFindReplaceAction",
-    "when": "editorFocus || editorIsOpen"
+    "when": "editorFocus"
   },
   {
     "key": "alt+cmd+f",
@@ -652,7 +652,7 @@
     "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
   {
-    "key": "shift+alt+right",
+    "key": "cmd+]",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
@@ -662,7 +662,7 @@
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
   {
-    "key": "shift+alt+left",
+    "key": "cmd+[",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
@@ -672,11 +672,6 @@
     "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
   },
   {
-    "key": "cmd+[",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "alt+cmd+left",
     "command": "-workbench.action.terminal.focusPreviousPane",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
@@ -684,11 +679,6 @@
   {
     "key": "alt+cmd+left",
     "command": "-workbench.action.previousEditor"
-  },
-  {
-    "key": "cmd+]",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
     "key": "alt+cmd+right",
@@ -848,7 +838,7 @@
     "when": "terminal.active"
   },
   {
-    "key": "cmd+;",
+    "key": "cmd+'",
     "command": "workbench.action.togglePanel"
   },
   {
@@ -1783,7 +1773,7 @@
     "when": "isMergeEditor"
   },
   {
-    "key": "alt+cmd+'",
+    "key": "cmd+;",
     "command": "workbench.action.showAllSymbols"
   },
   {
@@ -1817,7 +1807,38 @@
     "when": "searchViewletFocus"
   },
   {
-    "key": "cmd+'",
-    "command": "workbench.action.gotoSymbol"
+    "key": "cmd+i",
+    "command": "editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "shift+f12",
+    "command": "-editor.action.goToReferences",
+    "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "-cursorWordEndRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFocus || terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "cmd+f",
+    "command": "-workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
   }
 ]
