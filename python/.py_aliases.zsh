@@ -1,12 +1,13 @@
-alias py='python3'
-alias python='python3'
-alias pip='pip3'
+alias pyth='python3'
 
 alias pybin='echo $(gpath)/.venv/bin'
-alias pyv='$(pybin)/python'
+alias py='$(pybin)/python'
 alias pyact='. $(pybin)/activate'
 
-alias pymain='pyv "$(gpath)/src/$(gname)/main.py"'
+##* PIP ###
+
+alias pip='$(pybin)/pip'
+alias pipr='pip install -r $(gpath)/requirements.txt'
 
 ##* TESTING ###
 

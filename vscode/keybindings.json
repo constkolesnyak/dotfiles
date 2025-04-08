@@ -29,7 +29,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pymain\u000D"
+            "text": "pymain $VH_PYMAIN_ARGS\u000D" // .dev.env
           }
         }
       ]
@@ -55,21 +55,25 @@
   //* Temp
 
   {
-    "key": "cmd+k r",
+    "key": "cmd+k cmd+j",
     "command": "runCommands",
     "args": {
       "commands": [
-        { "command": "workbench.action.terminal.new" },
         {
           "command": "workbench.action.terminal.renameWithArg",
           "args": {
-            "name": "VH main.py"
+            "name": "asdf"
           }
         },
+
+        { "command": "workbench.action.terminal.focus" },
+        { "command": "workbench.action.terminal.kill" },
+        { "command": "workbench.action.terminal.focus" },
+
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pyv $(gpath)/main.py tg\u000D"
+            "text": "!!\u000D"
           }
         }
       ]
@@ -91,7 +95,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pyv ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/shard.py\u000D"
+            "text": "py ~/garage/Dev/Projects/Python/vox-harbor/vox_harbor/services/shard.py\u000D"
           }
         }
       ]
@@ -221,7 +225,7 @@
   //* MISC
 
   {
-    "key": "cmd+f",
+    "key": "cmd+k cmd+f",
     "command": "editor.action.startFindReplaceAction",
     "when": "editorFocus"
   },
@@ -1840,5 +1844,23 @@
     "key": "cmd+f",
     "command": "-workbench.action.terminal.focusFind",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+d",
+    "command": "git.revertSelectedRanges"
+  },
+  {
+    "key": "cmd+k cmd+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+f",
+    "command": "actions.find"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-revealFileInOS",
+    "when": "!editorFocus"
   }
 ]

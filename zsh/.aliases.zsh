@@ -16,6 +16,7 @@ alias upd_some_cli_apps="{ bls -l ~/.local/bin && echo && npmls } | tee $DOTFILE
 alias brupg="brew update && brew upgrade"
 alias brupgall="brew update && brew upgrade && mas upgrade"
 alias brls="brew list"
+alias brg="brew list | rg"
 alias brins="brew install"
 alias bruni="brew uninstall"
 
@@ -98,6 +99,7 @@ alias cbp='pbpaste'
 alias yt-audio="yt-dlp --extract-audio --audio-format mp3"
 alias yt-hd="yt-dlp -f 'bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]'"
 alias yt-fullhd="yt-dlp -f 'bestvideo[height<=1080][ext=mp4]+bestaudio[ext=m4a]'"
+alias yt-high="yt-dlp -f 'bestvideo[height<=1440][ext=mp4]+bestaudio[ext=m4a]'"
 alias yt-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
 
 # Confirmation

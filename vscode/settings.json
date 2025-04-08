@@ -28,7 +28,7 @@
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
     "sql": "clickf $fullFileName",
-    "python": "pyact; echo ''; python $fullFileName"
+    "python": "pyact; source $(gpath)/.env ; echo ''; python $fullFileName"
   },
   "code-runner.runInTerminal": true,
 
@@ -41,7 +41,7 @@
 
   //*_ Todo Tree
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/.venv/**"],
-  "todo-tree.general.tags": ["FIXME", "TODO"],
+  "todo-tree.general.tags": ["FIXME", "TODO", "TDC"],
   "todo-tree.regex.regexCaseSensitive": false,
   "todo-tree.highlights.enabled": false,
 
@@ -81,6 +81,15 @@
   "workbench.startupEditor": "none",
 
   "better-comments.tags": [
+    {
+      "tag": "tdc",
+      "color": "#000000",
+      "backgroundColor": "#6c7502",
+      "strikethrough": false,
+      "underline": false,
+      "bold": false,
+      "italic": false
+    },
     {
       "tag": "todo",
       "color": "#000000",
@@ -257,6 +266,7 @@
   "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
   "cSpell.userWords": [
     "asdfqwer",
+    "asyncio",
     "autoload",
     "barh",
     "bidict",
@@ -278,6 +288,7 @@
     "gpath",
     "gremprune",
     "htmlcov",
+    "icecream",
     "ifmain",
     "isdir",
     "isort",
@@ -310,6 +321,7 @@
     "restow",
     "SENDSEQUENCE",
     "startswith",
+    "staticmethod",
     "textcoords",
     "usefixtures",
     "uvicorn",

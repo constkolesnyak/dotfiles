@@ -39,3 +39,14 @@ nvi() {
         fzf --delimiter ':' --preview 'bat --color=always --highlight-line {2} {1}' |
         awk -F ':' '{print "+"$2" "$1}')
 }
+
+pymain() {
+    local deep_main="$(gpath)/src/$(gname)/main.py"
+    local shallow_main="$(gpath)/main.py"
+
+    if [[ -e "$deep_main" ]]; then
+        py "$deep_main" "$@"
+    else
+        py "$shallow_main" "$@"
+    fi
+}

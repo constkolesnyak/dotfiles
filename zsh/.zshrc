@@ -34,7 +34,7 @@ autoload -Uz compinit && compinit
 
 ##* PLUGINS ###
 
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)" # broken
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
@@ -46,5 +46,6 @@ antidote load
 ##* FINAL ###
 
 realias
+refunc # again but w/ aliases
 
 dinosay --random --color purple 'Facturusne operae pretium sim?'

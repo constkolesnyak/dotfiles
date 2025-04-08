@@ -44,6 +44,10 @@
     "prefix": "defc",
     "body": "@classmethod\ndef ${1:classmethod}(cls, ${2:args}):\n\t${0:...}"
   },
+  "def static method": {
+    "prefix": "defs",
+    "body": "@staticmethod\ndef ${1:staticmethod}(${2:args}):\n\t${0:...}"
+  },
   "def property": {
     "prefix": "defp",
     "body": "@property\ndef ${1:property}(self):\n\t${0:...}"
@@ -143,13 +147,21 @@
     "prefix": "ifmain",
     "body": "if __name__ == '__main__':\n\t${0:main()}"
   },
+  "if __name__ == '__main__' (async)": {
+    "prefix": "aifmain",
+    "body": "async def ${1:main}():\n\t${0:...}\n\n\nif __name__ == '__main__':\n\timport asyncio\n\tasyncio.run(${1:main}())\n"
+  },
+  "if __name__ == '__main__' (_not_an_actual_test)": {
+    "prefix": "tifmain",
+    "body": "async def _not_an_actual_test() -> None:\n\t${0:...}\n\n\nif __name__ == '__main__':\n\tfrom vox_harbor.common.utils import run_with_essentials\n\trun_with_essentials(_not_an_actual_test())\n"
+  },
   "lambda": {
     "prefix": "lam",
     "body": "lambda ${1:args}: ${0:...}"
   },
   "Ice Cream": {
     "prefix": "l",
-    "body": "ic($0)"
+    "body": "icecream.ic($0)"
   },
   "type: ignore": {
     "prefix": "ti",

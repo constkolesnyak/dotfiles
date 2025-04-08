@@ -3,7 +3,18 @@ total 905384
 lrwxr-xr-x  1 konst  staff         46 Dec 26 00:15 cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
 lrwxr-xr-x@ 1 konst  staff         50 Dec 31 15:00 voxh -> /Users/konst/.local/pipx/venvs/vox-harbor/bin/voxh
 
+# npm list -g --depth=0
 /opt/homebrew/lib
-├── npm@10.2.4
+├── corepack@0.29.4
+├── npm@10.9.0
 └── sql-formatter@15.0.2
 
+# pipx list
+venvs are in /Users/konst/.local/pipx/venvs
+apps are exposed on your $PATH at /Users/konst/.local/bin
+manual pages are exposed at /Users/konst/.local/share/man
+   package cstow 1.0.0, installed using Python 3.12.1
+    - cstow
+   package dinosay 1.2.0, installed using Python 3.12.7
+    - dinolist
+    - dinosay
