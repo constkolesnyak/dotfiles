@@ -1837,11 +1837,6 @@
   },
   {
     "key": "cmd+f",
-    "command": "workbench.action.terminal.focusFind",
-    "when": "terminalFocus || terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+f",
     "command": "-workbench.action.terminal.focusFind",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
   },
@@ -1862,5 +1857,15 @@
     "key": "alt+cmd+r",
     "command": "-revealFileInOS",
     "when": "!editorFocus"
+  },
+  {
+    "key": "cmd+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFocus"
   }
 ]
