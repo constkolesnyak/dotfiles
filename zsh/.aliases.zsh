@@ -81,6 +81,7 @@ alias cat='bat'
 
 ##* MISC ###
 
+alias ring="say 'no more jobs'"
 alias fucking=sudo
 alias nv='nvim'
 alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
