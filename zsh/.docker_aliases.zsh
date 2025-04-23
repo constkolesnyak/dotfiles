@@ -18,11 +18,16 @@ alias di='docker image'
 alias dil='docker image ls'
 alias dirm='docker rmi -f'
 alias dipr='docker image prune --force'
+alias dp='docker push'
+alias dt='docker tag'
+alias dirn='docker image rename'
 
-#tdc platforms???
-# alias db='docker build --platform linux/arm64/v8 --tag'
-# alias dbd='docker build --platform linux/amd64 --no-cache --progress=plain -t debug .'
+alias db='docker build . --platform linux/amd64 --tag'
+alias dbd='docker build . --platform linux/amd64 --no-cache --progress=plain --tag debug_img'
 
 alias dei='docker exec --tty --interactive'
 
 alias dspr='docker system prune --all --volumes'
+
+# ACT
+alias act='act --container-architecture linux/amd64'

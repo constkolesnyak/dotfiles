@@ -81,6 +81,7 @@ alias cat='bat'
 
 ##* MISC ###
 
+alias wh=where
 alias ring="say 'no more jobs'"
 alias fucking=sudo
 alias nv='nvim'
