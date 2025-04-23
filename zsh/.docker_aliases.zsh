@@ -1,7 +1,7 @@
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker#aliases
 
-alias dcs='colima start'
 alias d='docker'
+alias dcs='colima start'
 
 alias dcu='docker-compose up --remove-orphans --build --watch'
 
@@ -19,6 +19,10 @@ alias dil='docker image ls'
 alias dirm='docker rmi -f'
 alias dipr='docker image prune --force'
 
-alias db='docker build --platform linux/arm64/v8 --tag'
+#tdc platforms???
+# alias db='docker build --platform linux/arm64/v8 --tag'
+# alias dbd='docker build --platform linux/amd64 --no-cache --progress=plain -t debug .'
+
+alias dei='docker exec --tty --interactive'
 
 alias dspr='docker system prune --all --volumes'
