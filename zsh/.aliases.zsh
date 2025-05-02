@@ -107,3 +107,6 @@ alias yt-best="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]'"
 # Confirmation
 alias cp='cp -i'
 alias mv='mv -i'
+
+# SSH
+alias familyvpn='ssh vpn -t vnstat --months'
