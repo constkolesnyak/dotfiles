@@ -9,12 +9,12 @@ alias ststow="cstow stow"
 alias restow="cstow restow"
 alias destow="cstow delete"
 
-alias upd_some_cli_apps="{ bls -l ~/.local/bin && echo && npmls } | tee $DOTFILES/misc/some_cli_apps.txt"
+alias dump_some_cli_apps="{ npmls && /bin/ls -l ~/.local/bin && pipx list } | tee $DOTFILES/misc/some_cli_apps.txt"
 
 ##* BREW ###
 
 alias brupg="brew update && brew upgrade"
-alias brupgall="brew update && brew upgrade && mas upgrade"
+alias brupgall="brew update && brew upgrade && mas upgrade && pipx upgrade-all && brdump && dump_some_cli_apps"
 alias brls="brew list"
 alias brg="brew list | rg"
 alias brins="brew install"

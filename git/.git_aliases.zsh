@@ -44,14 +44,12 @@ alias gbr='git branch'
 alias gbl='git branch -vva'
 
 alias gbc='git switch -c'
-alias gbdel='git branch --delete'
-alias gbdd='git branch -D'
+alias gbd='git branch -D'
 
 alias gbs='git switch'
 alias gb='git switch -'
 alias gbi='git branch --no-color | grep -v "^\*" | fzf | xargs git checkout'
 alias gbm='git switch main'
-alias gbd='git switch dev'
 
 ##* STASH ###
 

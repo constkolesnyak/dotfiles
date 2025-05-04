@@ -1,15 +1,13 @@
-total 905384
--rwxr-xr-x@ 1 konst  staff  463556135 Sep 15 15:14 clickhouse
-lrwxr-xr-x  1 konst  staff         46 Dec 26 00:15 cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
-lrwxr-xr-x@ 1 konst  staff         50 Dec 31 15:00 voxh -> /Users/konst/.local/pipx/venvs/vox-harbor/bin/voxh
-
-# npm list -g --depth=0
 /opt/homebrew/lib
-├── corepack@0.29.4
-├── npm@10.9.0
+├── corepack@0.32.0
+├── npm@10.9.2
 └── sql-formatter@15.0.2
 
-# pipx list
+total 819384
+-rwxr-xr-x@ 1 konst  staff  419524128 Jan 10 19:46 clickhouse
+lrwxr-xr-x  1 konst  staff         46 Jan 23  2024 cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
+lrwxr-xr-x@ 1 konst  staff         51 Nov 15 12:13 dinolist -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinolist
+lrwxr-xr-x@ 1 konst  staff         50 Nov 15 12:13 dinosay -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinosay
 venvs are in /Users/konst/.local/pipx/venvs
 apps are exposed on your $PATH at /Users/konst/.local/bin
 manual pages are exposed at /Users/konst/.local/share/man
