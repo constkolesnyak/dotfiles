@@ -26,6 +26,14 @@ e() {
     fi
 }
 
+o() {
+    if [ $# -eq 0 ]; then
+        open .
+    else
+        open $@
+    fi
+}
+
 v() {
     if [ $# -eq 0 ]; then
         code .

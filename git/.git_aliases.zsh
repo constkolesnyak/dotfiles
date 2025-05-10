@@ -53,10 +53,9 @@ alias gbm='git switch main'
 
 ##* STASH ###
 
-alias gst='git stash'
-alias gsts='git stash save'
-alias gstu='git stash -u'
-alias gstp='git stash -p'
+alias gst='git stash -u'
+alias gsts='git stash -u save'
+alias gstp='git stash -u -p'
 
 alias gstpo='git stash pop'
 alias gstap='git stash apply'
