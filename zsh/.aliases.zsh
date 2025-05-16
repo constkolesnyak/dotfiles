@@ -81,16 +81,6 @@ alias cat='bat'
 
 ##* MISC ###
 
-alias wh=where
-alias ring="say 'no more jobs'"
-alias fucking=sudo
-alias nv='nvim'
-alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
-decrypt() {gpg --no-symkey-cache --output ${1%.gpg} --decrypt $1}
-mkd() {mkdir $1 && cd $1}
-
-mov_to_gif() {ffmpeg -i "$1.mov" -pix_fmt rgb8 -r 10 "$1.gif" && gifsicle -O3 "$1.gif" -o "$1.gif"}
-
 # List or search aliases
 alias a='acs'
 
@@ -111,3 +101,22 @@ alias mv='mv -i'
 
 # SSH
 alias familyvpn='ssh vpn -t vnstat --months'
+
+# Misc Misc
+w() {
+    resolved="$1"
+    if alias "$1" &>/dev/null; then
+        resolved=$(alias "$1" | cut -d"'" -f2)
+    fi
+
+    viddy --disable_auto_save -d -n 1 --shell zsh "$resolved ${*:2}"
+}
+
+alias wh=where
+alias ring="say 'no more jobs'"
+alias fucking=sudo
+alias nv='nvim'
+alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
+decrypt() {gpg --no-symkey-cache --output ${1%.gpg} --decrypt $1}
+mkd() {mkdir $1 && cd $1}
+mov_to_gif() {ffmpeg -i "$1.mov" -pix_fmt rgb8 -r 10 "$1.gif" && gifsicle -O3 "$1.gif" -o "$1.gif"}
