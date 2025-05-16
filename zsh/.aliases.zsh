@@ -2,23 +2,23 @@
 
 alias reload='. ~/.zshrc'
 
-alias conf="v ~/dotfiles"
+alias conf='v ~/dotfiles'
 
-alias nostow="cstow no"
-alias ststow="cstow stow"
-alias restow="cstow restow"
-alias destow="cstow delete"
+alias nostow='cstow no'
+alias ststow='cstow stow'
+alias restow='cstow restow'
+alias destow='cstow delete'
 
 alias dump_some_cli_apps="{ npmls && /bin/ls -l ~/.local/bin && pipx list } | tee $DOTFILES/misc/some_cli_apps.txt"
 
 ##* BREW ###
 
-alias brupg="brew update && brew upgrade"
-alias brupgall="brew update && brew upgrade && mas upgrade && pipx upgrade-all && brdump && dump_some_cli_apps"
-alias brls="brew list"
-alias brg="brew list | rg"
-alias brins="brew install"
-alias bruni="brew uninstall"
+alias brupg='brew update && brew upgrade'
+alias brupgall='brew update && brew upgrade && mas upgrade && pipx upgrade-all && brdump && dump_some_cli_apps'
+alias brls='brew list'
+alias brg='brew list | rg'
+alias brins='brew install'
+alias bruni='brew uninstall'
 
 brew_ending="--no-upgrade --verbose --file=$DOTFILES/Brewfile"
 alias brcheck="brew bundle check $brew_ending"
@@ -28,24 +28,24 @@ unset brew_ending
 
 ##* NODE ###
 
-alias npmins="npm install -g"
-alias npmuni="npm uninstall -g"
-alias npmls="npm list -g --depth=0"
+alias npmins='npm install -g'
+alias npmuni='npm uninstall -g'
+alias npmls='npm list -g --depth=0'
 
 ##* LS ###
 
-alias bls="/bin/ls"
+alias bls='/bin/ls'
 
-alias ls="eza --color=always --icons --group-directories-first"
-alias sl="ls"
-alias ll="ls -lb"
-alias la="ls -a"
-alias l.="eza -a | egrep '^\.'"
-alias l="ls -lba"
+alias ls='eza --color=always --icons --group-directories-first'
+alias sl='ls'
+alias ll='ls -lb'
+alias la='ls -a'
+alias l.='eza -a | egrep "^\."'
+alias l='ls -lba'
 
 lt() {la --tree "$@" | bat --style='grid,numbers'}
-alias ltl="lt -L"
-alias ltg="lt -I .git --git-ignore"
+alias ltl='lt -L'
+alias ltg='lt -I .git --git-ignore'
 
 alias lgss='ls -lba && git status -s 2>/dev/null || true'
 alias pwd_gum_lgss='[ "$(pwd)" != "$HOME" ] && pwd_gum && lgss'
@@ -73,7 +73,7 @@ alias ji=' ji_'
 alias ps='procs'
 alias diff='batdiff'
 alias rm_='trash-put --trash-dir ~/.Trash'
-alias rm="rm_"
+alias rm='rm_'
 alias du='ncdu'
 
 alias bcat='/bin/cat'
@@ -113,7 +113,7 @@ w() {
 }
 
 alias wh=where
-alias ring="say 'no more jobs'"
+alias ring='say "no more jobs"'
 alias fucking=sudo
 alias nv='nvim'
 alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'

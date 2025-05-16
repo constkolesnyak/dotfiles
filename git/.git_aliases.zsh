@@ -137,7 +137,7 @@ alias grba='git rebase --abort'
 
 ##* MISC ###
 
-alias g="git"
+alias g='git'
 
 alias gco='git checkout'
 alias gcop='git checkout HEAD~'
