@@ -163,6 +163,8 @@ brew "toilet"
 brew "tokei"
 # Command-line interface to the freedesktop.org trashcan
 brew "trash-cli", link: true
+# Modern watch command
+brew "viddy"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
@@ -177,10 +179,6 @@ brew "zoxide"
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# iOS App Store alternative
-cask "altserver"
-# Transfer files from and to an Android smartphone
-cask "android-file-transfer"
 # Memory training application
 cask "anki"
 # Application uninstaller
@@ -215,8 +213,6 @@ cask "google-drive"
 cask "hiddenbar"
 # Free and open-source media player
 cask "iina"
-# Tool to optimise images to a smaller size
-cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Tool to control external monitor brightness & volume
@@ -229,8 +225,6 @@ cask "obsidian"
 cask "pocket-casts"
 # Quick Look generator for Markdown files
 cask "qlmarkdown"
-# Control your tools with a few keystrokes
-cask "raycast"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Music streaming service
@@ -241,12 +235,8 @@ cask "steam"
 cask "telegram"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-# Disposable email client
-cask "tempbox"
 # Unpacks archive files
 cask "the-unarchiver"
-# Web browser focusing on security
-cask "tor-browser"
 # Open-source BitTorrent client
 cask "transmission"
 # Open-source code editor
@@ -261,8 +251,6 @@ cask "whatsapp"
 cask "yandex"
 # Cloud storage
 cask "yandex-disk"
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "BetterSnapTool", id: 417375580
@@ -280,12 +268,10 @@ mas "One Thing", id: 1604176982
 mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "Pixea", id: 1507782672
-mas "Shazam", id: 897118787
 mas "Things", id: 904280696
 mas "ToothFairy", id: 1191449274
 mas "Userscripts", id: 1463298887
 mas "Velja", id: 1607635845
-mas "WireGuard", id: 1451685025
 vscode "74th.monokai-charcoal-high-contrast"
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"
