@@ -2,8 +2,8 @@
 
 ohmyzsh/ohmyzsh path:lib/functions.zsh
 
-ohmyzsh/ohmyzsh path:plugins/jsontools/jsontools.plugin.zsh
-ohmyzsh/ohmyzsh path:plugins/extract/extract.plugin.zsh
-ohmyzsh/ohmyzsh path:plugins/magic-enter/magic-enter.plugin.zsh
-ohmyzsh/ohmyzsh path:plugins/macos/macos.plugin.zsh
-ohmyzsh/ohmyzsh path:plugins/aliases/aliases.plugin.zsh
+ohmyzsh/ohmyzsh path:plugins/jsontools
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+ohmyzsh/ohmyzsh path:plugins/macos
+ohmyzsh/ohmyzsh path:plugins/aliases

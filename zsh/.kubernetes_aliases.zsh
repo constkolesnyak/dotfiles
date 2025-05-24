@@ -7,7 +7,7 @@ alias kccc='kubectl config current-context'
 
 alias kgsr='kubectl get services' # IPs
 alias kgp='kubectl get pods'
-alias kgn='kubectl get namespaces'
+alias kgn='kubectl get nodes'
 alias kga='kubectl get all'
 alias kgd='kubectl get deployments'
 alias kgss='kubectl get statefulsets'
@@ -30,3 +30,10 @@ alias krsd='kubectl rollout status deployment'
 alias kl='kubectl logs'
 
 kei() {kubectl exec -it "$@" -- bash}
+
+kge() {
+    kubectl get events \
+        --field-selector involvedObject.name=$1 \
+        --sort-by='.lastTimestamp' \
+        -o jsonpath='{range .items[*]}{.message}{"\n=============================\n"}{end}'
+}

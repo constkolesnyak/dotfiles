@@ -179,8 +179,6 @@ brew "zoxide"
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# Memory training application
-cask "anki"
 # Application uninstaller
 cask "appcleaner"
 # Desktop password and login vault

@@ -120,3 +120,4 @@ alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
 decrypt() {gpg --no-symkey-cache --output ${1%.gpg} --decrypt $1}
 mkd() {mkdir $1 && cd $1}
 mov_to_gif() {ffmpeg -i "$1.mov" -pix_fmt rgb8 -r 10 "$1.gif" && gifsicle -O3 "$1.gif" -o "$1.gif"}
+alias ghostscript='/opt/homebrew/bin/gs' # compress pdf
