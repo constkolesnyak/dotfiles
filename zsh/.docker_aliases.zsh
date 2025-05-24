@@ -1,7 +1,9 @@
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker#aliases
 
+# ln -s "$(brew --prefix)/bin/docker-buildx" ~/.docker/cli-plugins/docker-buildx
+
 alias d='docker'
-alias dcs='colima start'
+alias dcs='colima start --arch x86_64'
 
 alias dcu='docker-compose up --remove-orphans --build --watch'
 
@@ -24,9 +26,9 @@ alias dp='docker push'
 alias dt='docker tag'
 alias dirn='docker image rename'
 
-alias db='docker build . --platform linux/amd64 --tag'
-alias dbp='docker build . --platform linux/amd64 --push --tag'
-alias dbd='docker build . --platform linux/amd64 --no-cache --progress=plain --tag debug'
+alias db='docker buildx build . --platform linux/amd64 --tag'
+alias dbp='docker buildx build . --platform linux/amd64 --push --tag'
+alias dbd='docker buildx build . --platform linux/amd64 --no-cache --progress=plain --tag debug'
 
 alias dei='docker exec --tty --interactive'
 
