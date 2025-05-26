@@ -82,7 +82,7 @@ alias cat='bat'
 ##* MISC ###
 
 # List or search aliases
-alias a='acs'
+alias a='als'
 
 # Clipboard
 alias cbc='pbcopy'
