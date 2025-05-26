@@ -5,8 +5,16 @@ alias k='kubectl'
 alias ke='kubectl explain'
 alias kccc='kubectl config current-context'
 
+alias krm='kubectl delete'
+alias krmp='kubectl delete pod'
+alias krmf='kubectl delete --filename'
+alias krmsr='kubectl delete service'
+alias krmd='kubectl delete deployment'
+alias krmss='kubectl delete statefulset'
+
 alias kgsr='kubectl get services' # IPs
 alias kgp='kubectl get pods'
+alias kgpn='kubectl get pods -o wide | grep -v kube-system | grep' # pods on a node
 alias kgn='kubectl get nodes'
 alias kga='kubectl get all'
 alias kgd='kubectl get deployments'
@@ -23,6 +31,7 @@ alias kdd='kubectl describe deployment' # Events at the end
 alias kdp='kubectl describe pod'
 
 alias krr='kubectl rollout restart'
+alias krrf='kubectl rollout restart --filename'
 alias krrd='kubectl rollout restart deployment'
 alias krs='kubectl rollout status'
 alias krsd='kubectl rollout status deployment'

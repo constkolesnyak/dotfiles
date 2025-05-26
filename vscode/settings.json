@@ -44,6 +44,7 @@
   "todo-tree.general.tags": ["FIXME", "TODO", "TDC"],
   "todo-tree.regex.regexCaseSensitive": false,
   "todo-tree.highlights.enabled": false,
+  "todo-tree.tree.groupedByTag": false, // annoying bug!
 
   //* EDITOR
 
