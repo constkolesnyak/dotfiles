@@ -1,6 +1,6 @@
 reenv() {
     for file in ~/.*.env; do
-        . "$file"
+        source "$file"
     done
 }
 
@@ -22,7 +22,7 @@ e() {
     if [ $# -eq 0 ]; then
         env
     else
-        env | rg $@
+        env | rg --ignore-case $@
     fi
 }
 
