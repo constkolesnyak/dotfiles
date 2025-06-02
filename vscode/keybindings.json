@@ -1867,5 +1867,14 @@
     "key": "cmd+f",
     "command": "workbench.action.terminal.focusFind",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "-extension.vim_ctrl+z",
+    "when": "editorTextFocus && vim.active && vim.use<C-z> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+z",
+    "command": "workbench.action.reopenClosedEditor"
   }
 ]

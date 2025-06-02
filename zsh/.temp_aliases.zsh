@@ -1,4 +1,4 @@
-alias click='source $(gpath)/.env ; clickhouse'
+alias click='clickhouse'
 alias clicki='click client --host $CLICKHOUSE_HOST --secure --password $CLICKHOUSE_PASSWORD'
 alias clickf='click client --host $CLICKHOUSE_HOST --secure --password $CLICKHOUSE_PASSWORD\
               --format PrettyCompact --queries-file'

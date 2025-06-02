@@ -45,6 +45,8 @@ brew "cpufetch"
 brew "curl"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
 # Command-line tool for DigitalOcean

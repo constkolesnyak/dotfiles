@@ -1,13 +1,14 @@
 /opt/homebrew/lib
 ├── corepack@0.32.0
-├── npm@10.9.2
+├── npm@11.3.0
 └── sql-formatter@15.0.2
 
 total 819384
--rwxr-xr-x@ 1 konst  staff  419524128 Jan 10 19:46 clickhouse
-lrwxr-xr-x  1 konst  staff         46 Jan 23  2024 cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
-lrwxr-xr-x@ 1 konst  staff         51 Nov 15 12:13 dinolist -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinolist
-lrwxr-xr-x@ 1 konst  staff         50 Nov 15 12:13 dinosay -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinosay
+-rwxr-xr-x@ 1 konst staff 400M    clickhouse
+lrwxr-xr-x 1 konst staff 46B    cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
+lrwxr-xr-x@ 1 konst staff 51B    dinolist -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinolist
+lrwxr-xr-x@ 1 konst staff 50B    dinosay -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinosay
+
 venvs are in /Users/konst/.local/pipx/venvs
 apps are exposed on your $PATH at /Users/konst/.local/bin
 manual pages are exposed at /Users/konst/.local/share/man
