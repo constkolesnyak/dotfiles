@@ -232,6 +232,12 @@
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.autoImportCompletions": true,
 
+  "mypy-type-checker.args": ["--strict"],
+  "mypy-type-checker.severity": {
+    "error": "Error",
+    "note": "Information"
+  },
+
   //* Format
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"

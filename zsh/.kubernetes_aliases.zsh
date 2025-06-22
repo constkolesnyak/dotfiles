@@ -3,7 +3,9 @@
 alias k='kubectl'
 
 alias ke='kubectl explain'
-alias kccc='kubectl config current-context'
+alias kcx='kubectx'
+alias kcc='kubectx -c'
+alias kc='kubectx -'
 
 alias krm='kubectl delete'
 alias krmp='kubectl delete pod'
@@ -14,7 +16,13 @@ alias krmss='kubectl delete statefulset'
 
 alias kgsr='kubectl get services' # IPs
 alias kgp='kubectl get pods'
-alias kgpn='kubectl get pods -o wide | grep -v kube-system | grep' # pods on a node
+wn() {
+    w "kubectl get pods -o wide | awk '{print \$1,\$2,\$3,\$4,\$5,\$7}' | column -t | grep -e '^NAME' -e $1"
+}
+kgt() {
+    kubectl get nodes -l doks.digitalocean.com/node-pool=$1 \
+        -o jsonpath='{range .items[*]}{"\n"}{.metadata.name}{"  "}{.spec.taints}{end}'
+}
 alias kgn='kubectl get nodes'
 alias kga='kubectl get all'
 alias kgd='kubectl get deployments'
