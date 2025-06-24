@@ -35,7 +35,6 @@ alias npmls='npm list -g --depth=0'
 alias bls='/bin/ls'
 
 alias ls='eza --color=always --icons --group-directories-first'
-alias sl='ls'
 alias ll='ls -lb'
 alias la='ls -a'
 alias l.='eza -a | egrep "^\."'

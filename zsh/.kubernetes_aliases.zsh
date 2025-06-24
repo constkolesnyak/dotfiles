@@ -3,7 +3,8 @@
 alias k='kubectl'
 
 alias ke='kubectl explain'
-alias kcx='kubectx'
+alias kci='kubectx'
+alias kcl='kubectl config get-contexts'
 alias kcc='kubectx -c'
 alias kc='kubectx -'
 
