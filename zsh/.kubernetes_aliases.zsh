@@ -27,7 +27,7 @@ kgt() {
 alias kgn='kubectl get nodes'
 alias kga='kubectl get all'
 alias kgd='kubectl get deployments'
-alias kgss='kubectl get statefulsets'
+alias kgss='kubectl get statefulsets,statefulsets.apps.kruise.io'
 alias kgscl='kubectl get secrets'
 alias kgsc='kubectl get secret --output yaml github-secrets | yq e ".stringData = (.data | with_entries(.value |= @base64d)) | del(.data)"'
 
