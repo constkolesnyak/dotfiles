@@ -4,12 +4,13 @@
   //* Permanent
 
   {
-    "key": "cmd+k u",
+    "key": "cmd+k u", // reload terminal
     "command": "runCommands",
     "args": {
       "commands": [
         { "command": "workbench.action.terminal.focus" },
         { "command": "workbench.action.terminal.kill" },
+        { "command": "workbench.action.terminal.new" },
         {
           "command": "runCommands",
           "args": {
@@ -21,7 +22,7 @@
   },
 
   {
-    "key": "cmd+k r",
+    "key": "cmd+k cmd+j", // run "pymain $VH_PYMAIN_ARGS" from .dev.env
     "command": "runCommands",
     "args": {
       "commands": [
@@ -29,7 +30,7 @@
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "pymain $VH_PYMAIN_ARGS\u000D" // .dev.env
+            "text": "pymain $=VH_PYMAIN_ARGS\u000D"
           }
         }
       ]
@@ -37,7 +38,7 @@
   },
 
   {
-    "key": "shift+cmd+j",
+    "key": "", //tdc
     "command": "runCommands",
     "args": {
       "commands": [
@@ -55,7 +56,7 @@
   //* Temp
 
   {
-    "key": "cmd+k cmd+j",
+    "key": "", //tdc
     "command": "runCommands",
     "args": {
       "commands": [
@@ -81,7 +82,7 @@
   },
 
   {
-    "key": "cmd+k s",
+    "key": "", //tdc
     "command": "runCommands",
     "args": {
       "commands": [
@@ -103,7 +104,7 @@
   },
 
   {
-    "key": "cmd+m e",
+    "key": "", //tdc
     "command": "runCommands",
     "args": {
       "commands": [
