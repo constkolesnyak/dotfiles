@@ -1,9 +1,9 @@
 /opt/homebrew/lib
-├── corepack@0.32.0
-├── npm@11.3.0
+├── corepack@0.33.0
+├── npm@11.4.2
 └── sql-formatter@15.0.2
 
-total 819384
+total 819384      
 -rwxr-xr-x@ 1 konst staff 400M    clickhouse
 lrwxr-xr-x 1 konst staff 46B    cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
 lrwxr-xr-x@ 1 konst staff 51B    dinolist -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinolist

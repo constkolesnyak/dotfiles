@@ -15,15 +15,18 @@ alias krmsr='kubectl delete service'
 alias krmd='kubectl delete deployment'
 alias krmss='kubectl delete statefulset'
 
-alias kgsr='kubectl get services' # IPs
-alias kgp='kubectl get pods'
 wn() {
     w "kubectl get pods -o wide | awk '{print \$1,\$2,\$3,\$4,\$5,\$7}' | column -t | grep -e '^NAME' -e $1"
 }
 kgt() {
-    kubectl get nodes -l doks.digitalocean.com/node-pool=$1 \
+    node_pool_suffix=$1
+    kubectl get nodes -l doks.digitalocean.com/node-pool=node-pool-${node_pool_suffix} \
         -o jsonpath='{range .items[*]}{"\n"}{.metadata.name}{"  "}{.spec.taints}{end}'
 }
+
+alias kgsr='kubectl get services' # IPs
+alias kgp='kubectl get pods'
+alias kgpvc='kubectl get pvc'
 alias kgn='kubectl get nodes'
 alias kga='kubectl get all'
 alias kgd='kubectl get deployments'

@@ -34,5 +34,7 @@ alias dei='docker exec --tty --interactive'
 
 alias dspr='docker system prune --all --volumes'
 
-# ACT
+alias dpl='docker pull'
+
+#* ACT
 alias act='act --container-architecture linux/amd64 --var-file .env'

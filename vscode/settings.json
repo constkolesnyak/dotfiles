@@ -28,7 +28,8 @@
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
     "sql": "clickf $fullFileName",
-    "python": "pyact; source $(gpath)/.env ; echo ''; python $fullFileName"
+    // "python": "pyact; source $(gpath)/.env ; echo ''; python $fullFileName"
+    "python": "pyact; echo ''; python3 $fullFileName"
   },
   "code-runner.runInTerminal": true,
 
@@ -265,6 +266,10 @@
     "linesBetweenQueries": 2
   },
   "sqltools.highlightQuery": false,
+
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
 
   //* LINTERS
 

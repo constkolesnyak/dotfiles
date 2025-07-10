@@ -98,8 +98,10 @@ alias mv='mv -i'
 
 # SSH
 alias familyvpn='ssh vpn -t vnstat --months'
+alias devbox='ssh devbox'
+alias devbox-root='ssh devbox-root'
 
-# Misc Misc
+#* Misc Misc
 w() {
     resolved="$1"
     if alias "$1" &>/dev/null; then
@@ -108,6 +110,7 @@ w() {
 
     viddy --disable_auto_save -d -n 1 --shell zsh "$resolved ${*:2}"
 }
+alias we='watchexec --restart'
 
 alias wh=where
 alias ring='say "no more jobs"'

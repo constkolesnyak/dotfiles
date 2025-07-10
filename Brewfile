@@ -1,5 +1,5 @@
+tap "azure/kubelogin"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "nikolaeu/numi"
 # Portable ASCII art graphics library
 brew "aalib"
@@ -19,6 +19,8 @@ brew "asciinema"
 brew "asciiquarium"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # C library of Git core methods that is re-entrant and linkable
@@ -27,6 +29,8 @@ brew "libgit2"
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
+# Python code formatter
+brew "black"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Console Bonsai is a bonsai tree generator, written in C using ncurses
@@ -41,8 +45,6 @@ brew "colima"
 brew "cowsay"
 # CPU architecture fetching tool
 brew "cpufetch"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
 # Docker CLI plugin for extended build capabilities with BuildKit
@@ -103,6 +105,8 @@ brew "imagemagick"
 brew "krb5"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
 # Pager program similar to more
 brew "less"
 # Postgres C API library
@@ -115,6 +119,8 @@ brew "node"
 brew "mailsy"
 # Mac App Store command-line interface
 brew "mas"
+# Experimental optional static type checker for Python
+brew "mypy"
 # NCurses Disk Usage
 brew "ncdu"
 # Fast, highly customisable system info script
@@ -149,6 +155,8 @@ brew "qemu"
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Cross-shell prompt for astronauts
@@ -177,10 +185,14 @@ brew "yq"
 brew "yt-dlp"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# A Kubernetes credential (exec) plugin implementing azure authentication
+brew "azure/kubelogin/kubelogin"
 # Application launcher and productivity software
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
+# Memory training application
+cask "anki"
 # Application uninstaller
 cask "appcleaner"
 # Desktop password and login vault
@@ -196,7 +208,7 @@ cask "devtoys"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Video and audio player
@@ -247,6 +259,8 @@ cask "vlc"
 cask "warp"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Wine wrapper built with SwiftUI
+cask "whisky"
 # Web browser
 cask "yandex"
 # Cloud storage
@@ -306,6 +320,7 @@ vscode "mikestead.dotenv"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
+vscode "ms-python.mypy-type-checker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "mtxr.sqltools"
