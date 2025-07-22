@@ -1,8 +1,8 @@
 ##* LOG ###
 
 alias gl_='git log --graph --pretty=format:"%C(magenta)%h%Creset  %C(blue)%ad%Creset  %C(cyan)%s  %C(auto)%d%Creset%n" --date=format:"%d %b %H:%M"'
-alias gl='gl_ --all' # better expansion
-alias glh='gl_'      # better expansion
+alias gl='gl_'        # better expansion
+alias gll='gl_ --all' # better expansion
 alias glp='gl -p'
 alias glt='gl --stat'
 alias glsl='git shortlog'
