@@ -45,6 +45,8 @@ brew "colima"
 brew "cowsay"
 # CPU architecture fetching tool
 brew "cpufetch"
+# Suite of command-line tools for converting to and working with CSV
+brew "csvkit"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
 # Docker CLI plugin for extended build capabilities with BuildKit
@@ -55,8 +57,6 @@ brew "docker-compose"
 brew "doctl"
 # GNU Emacs text editor
 brew "emacs"
-# Run arbitrary commands when files change
-brew "entr"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -111,6 +111,10 @@ brew "kubectx"
 brew "less"
 # Postgres C API library
 brew "libpq"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Additional guest agents for Lima
+brew "lima-additional-guestagents"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Platform built on V8 to build network applications
@@ -149,8 +153,6 @@ brew "procs"
 brew "python-tk@3.13"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -159,6 +161,8 @@ brew "shellcheck"
 brew "sl"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
+# Non-interactive SSH password auth
+brew "sshpass"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -177,6 +181,8 @@ brew "trash-cli", link: true
 brew "viddy"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
+# Execute commands when watched files change
+brew "watchexec"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
 brew "xonsh"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -265,6 +271,8 @@ cask "whisky"
 cask "yandex"
 # Cloud storage
 cask "yandex-disk"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "BetterSnapTool", id: 417375580
@@ -317,12 +325,14 @@ vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "michead.vscode-mesh-viewer"
 vscode "mikestead.dotenv"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.mypy-type-checker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "mtxr.sqltools"
 vscode "njpwerner.autodocstring"
 vscode "patbenatar.advanced-new-file"

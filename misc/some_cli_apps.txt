@@ -1,6 +1,6 @@
 /opt/homebrew/lib
-├── corepack@0.33.0
-├── npm@11.4.2
+├── corepack@0.34.0
+├── npm@11.5.1
 └── sql-formatter@15.0.2
 
 total 819384      

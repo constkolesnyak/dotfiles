@@ -49,6 +49,7 @@ alias krs='kubectl rollout status'
 alias krsd='kubectl rollout status deployment'
 
 alias kl='kubectl logs'
+alias klt='kubectl logs --tail=30'
 
 kei() {kubectl exec -it "$@" -- bash}
 

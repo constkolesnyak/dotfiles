@@ -28,7 +28,6 @@
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
     "sql": "clickf $fullFileName",
-    // "python": "pyact; source $(gpath)/.env ; echo ''; python $fullFileName"
     "python": "pyact; echo ''; python3 $fullFileName"
   },
   "code-runner.runInTerminal": true,
@@ -217,7 +216,8 @@
     "reportUnusedVariable": "information",
     "reportUnusedFunction": "information",
     "reportUnusedClass": "information",
-    "reportMissingTypeStubs": "information"
+    "reportMissingTypeStubs": "information",
+    "reportUnknownLambdaType": "none"
   },
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.completeFunctionParens": true,
