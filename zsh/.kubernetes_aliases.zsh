@@ -32,7 +32,7 @@ alias kga='kubectl get all'
 alias kgd='kubectl get deployments'
 alias kgss='kubectl get statefulsets,statefulsets.apps.kruise.io'
 alias kgscl='kubectl get secrets'
-alias kgsc='kubectl get secret --output yaml github-secrets | yq e ".stringData = (.data | with_entries(.value |= @base64d)) | del(.data)"'
+alias kgsc='kubectl get secret --output yaml github-secrets | yq e ".stringData = (.data | with_entries(.value |= @base64d)) | del(.data) | del(.metadata.annotations.\"kubectl.kubernetes.io/last-applied-configuration\")"'
 
 alias kaf='kubectl apply --filename'
 alias kadr='kubectl apply --dry-run=client --filename'
