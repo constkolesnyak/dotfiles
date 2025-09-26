@@ -68,7 +68,7 @@ pymain() {
     fi
 }
 
-codext() {
+codetemp() {
     # usage: echo asdf | codeext tsv
     local ext="${1:-tsv}" f
     f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
