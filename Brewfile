@@ -21,6 +21,8 @@ brew "asciiquarium"
 brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
+# GNU internationalization (i18n) and localization (l10n) library
+brew "gettext"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # C library of Git core methods that is re-entrant and linkable
@@ -29,14 +31,20 @@ brew "libgit2"
 brew "bat"
 # Bash scripts that integrate bat with various command-line tools
 brew "bat-extras"
+# GNU binary tools for native development
+brew "binutils"
 # Python code formatter
 brew "black"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # Console Bonsai is a bonsai tree generator, written in C using ncurses
 brew "cbonsai"
+# Object-file caching compiler wrapper
+brew "ccache"
 # Control Google Chrome from the command-line
 brew "chrome-cli"
+# Cross-platform make
+brew "cmake"
 # Console Matrix
 brew "cmatrix"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -47,8 +55,10 @@ brew "cowsay"
 brew "cpufetch"
 # Suite of command-line tools for converting to and working with CSV
 brew "csvkit"
+# Network authentication protocol
+brew "krb5"
 # Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "docker"
 # Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
 # Isolated development environments using Docker
@@ -69,6 +79,10 @@ brew "leptonica"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Generic library support script
+brew "libtool"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
 brew "freetds"
 # Command-line fuzzy finder written in Go
@@ -91,6 +105,8 @@ brew "git-lfs"
 brew "gnupg"
 # Ping, but with a graph
 brew "gping"
+# GNU grep, egrep and fgrep
+brew "grep"
 # Tool for glamorous shell scripts
 brew "gum"
 # Improved top (interactive process viewer)
@@ -101,8 +117,6 @@ brew "icu4c@75"
 brew "libheif"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
-# Network authentication protocol
-brew "krb5"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
@@ -115,6 +129,10 @@ brew "libpq"
 brew "qemu"
 # Additional guest agents for Lima
 brew "lima-additional-guestagents"
+# Next-gen compiler infrastructure
+brew "llvm"
+# LLVM Project Linker
+brew "lld"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Platform built on V8 to build network applications
@@ -125,12 +143,16 @@ brew "mailsy"
 brew "mas"
 # Experimental optional static type checker for Python
 brew "mypy"
+# Netwide Assembler (NASM) is an 80x86 assembler
+brew "nasm"
 # NCurses Disk Usage
 brew "ncdu"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
 # Recreates the SETEC ASTRONOMY effect from 'Sneakers'
 brew "no-more-secrets"
 # Command-line Git information tool
@@ -197,6 +219,8 @@ brew "azure/kubelogin/kubelogin"
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
+# VPN client
+cask "amneziavpn"
 # Memory training application
 cask "anki"
 # Application uninstaller
@@ -291,6 +315,7 @@ mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "Pixea", id: 1507782672
 mas "Things", id: 904280696
+mas "Toggl Track", id: 1291898086
 mas "ToothFairy", id: 1191449274
 mas "Userscripts", id: 1463298887
 mas "Velja", id: 1607635845
@@ -319,6 +344,7 @@ vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jnoortheen.xonsh"
 vscode "johnpapa.vscode-peacock"
 vscode "johnpapa.winteriscoming"
+vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "mads-hartmann.bash-ide-vscode"
 vscode "max-ss.cyberpunk"
 vscode "mechatroner.rainbow-csv"

@@ -68,7 +68,7 @@
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 2,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.size": "fit",
 
   //* APPEARANCE
@@ -276,7 +276,7 @@
   "errorLens.enabledDiagnosticLevels": ["error", "warning"],
 
   "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
-  "cSpell.userWords": [],
+  "cSpell.userWords": ["MANPAGER", "SETUPTOOLS", "VIRTUALENVS"],
 
   //* FORMATTERS
 
@@ -455,5 +455,7 @@
     { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
 
     //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
-  ]
+  ],
+  "editor.inlayHints.enabled": "on",
+  "security.workspace.trust.enabled": false
 }
