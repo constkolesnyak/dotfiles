@@ -2,7 +2,7 @@ codetemp() {
     # usage: echo asdf | codetemp tsv
     local ext="${1:-tsv}" f
     f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
-    cat >"$f"
+    cat > "$f"
     code "$f"
 }
 
