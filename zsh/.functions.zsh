@@ -1,3 +1,11 @@
+codetemp() {
+    # usage: echo asdf | codetemp tsv
+    local ext="${1:-tsv}" f
+    f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
+    cat >"$f"
+    code "$f"
+}
+
 dump_some_cli_apps() {
     {
         npmls &&
@@ -66,12 +74,4 @@ pymain() {
     else
         py "$shallow_main" "$@"
     fi
-}
-
-codetemp() {
-    # usage: echo asdf | codetemp tsv
-    local ext="${1:-tsv}" f
-    f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
-    cat >"$f"
-    code "$f"
 }
