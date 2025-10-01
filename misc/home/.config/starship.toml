@@ -110,6 +110,12 @@ format = '[$duration]($style) '
 # Grey
 style = 'fg:246'
 
+[nodejs]
+# Remove 'via'
+format = '[🧩 (${version} )]($style)'
+# Remove 'v'
+version_format = '${raw}'
+
 [python]
 # Remove 'via'
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
