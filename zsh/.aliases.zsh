@@ -114,7 +114,6 @@ alias we='watchexec --restart'
 
 alias wh=where
 alias ring='say "no more jobs"'
-alias fucking=sudo
 alias nv='nvim'
 alias encrypt='gpg --no-symkey-cache --symmetric --cipher-algo AES256'
 decrypt() {gpg --no-symkey-cache --output ${1%.gpg} --decrypt $1}

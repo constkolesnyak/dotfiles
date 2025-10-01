@@ -1,6 +1,6 @@
 /opt/homebrew/lib
 ├── corepack@0.34.0
-├── npm@11.5.1
+├── npm@11.6.0
 └── sql-formatter@15.0.2
 
 total 819384      
@@ -8,6 +8,8 @@ total 819384
 lrwxr-xr-x 1 konst staff 46B    cstow -> /Users/konst/.local/pipx/venvs/cstow/bin/cstow
 lrwxr-xr-x@ 1 konst staff 51B    dinolist -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinolist
 lrwxr-xr-x@ 1 konst staff 50B    dinosay -> /Users/konst/.local/pipx/venvs/dinosay/bin/dinosay
+lrwxr-xr-x@ 1 konst staff 53B    kmpt -> /Users/konst/.local/pipx/venvs/minimal-pairs/bin/kmpt
+lrwxr-xr-x@ 1 konst staff 56B    polyglotka -> /Users/konst/.local/pipx/venvs/polyglotka/bin/polyglotka
 
 venvs are in /Users/konst/.local/pipx/venvs
 apps are exposed on your $PATH at /Users/konst/.local/bin
@@ -17,3 +19,7 @@ manual pages are exposed at /Users/konst/.local/share/man
    package dinosay 1.2.0, installed using Python 3.12.7
     - dinolist
     - dinosay
+   package minimal-pairs 0.1, installed using Python 3.13.7
+    - kmpt
+   package polyglotka 0.1, installed using Python 3.13.7
+    - polyglotka

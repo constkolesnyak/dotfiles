@@ -1,6 +1,7 @@
 tap "azure/kubelogin"
 tap "homebrew/bundle"
 tap "nikolaeu/numi"
+tap "warpdotdev/warp"
 # Portable ASCII art graphics library
 brew "aalib"
 # Run your GitHub Actions locally
@@ -47,18 +48,26 @@ brew "chrome-cli"
 brew "cmake"
 # Console Matrix
 brew "cmatrix"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# OpenAI's coding agent that runs in your terminal
+brew "codex"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # CPU architecture fetching tool
 brew "cpufetch"
 # Suite of command-line tools for converting to and working with CSV
 brew "csvkit"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Network authentication protocol
 brew "krb5"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
 # Isolated development environments using Docker
@@ -129,8 +138,6 @@ brew "libpq"
 brew "qemu"
 # Additional guest agents for Lima
 brew "lima-additional-guestagents"
-# Next-gen compiler infrastructure
-brew "llvm"
 # LLVM Project Linker
 brew "lld"
 # Rainbows and unicorns in your console!
@@ -175,8 +182,6 @@ brew "procs"
 brew "python-tk@3.13"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
@@ -219,8 +224,6 @@ brew "azure/kubelogin/kubelogin"
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# VPN client
-cask "amneziavpn"
 # Memory training application
 cask "anki"
 # Application uninstaller
@@ -259,6 +262,8 @@ cask "iina"
 cask "insomnia"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
 # Calculator and converter application
 cask "numi"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -287,6 +292,8 @@ cask "visual-studio-code"
 cask "vlc"
 # Rust-based terminal
 cask "warp"
+# Command-line interface to Warp agents
+cask "warp-cli"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Wine wrapper built with SwiftUI
@@ -361,6 +368,7 @@ vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
 vscode "mtxr.sqltools"
 vscode "njpwerner.autodocstring"
+vscode "openai.chatgpt"
 vscode "patbenatar.advanced-new-file"
 vscode "peterschmalfeldt.explorer-exclude"
 vscode "qufiwefefwoyn.inline-sql-syntax"
