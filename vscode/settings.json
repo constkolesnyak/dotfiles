@@ -246,7 +246,7 @@
   "black-formatter.args": [
     "--skip-string-normalization",
     "--line-length",
-    "93"
+    "110"
   ],
   "isort.args": ["--profile", "black"],
 
@@ -277,6 +277,7 @@
 
   "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
   "cSpell.userWords": [
+    "fastapi",
     "funcy",
     "icecream",
     "MANPAGER",
@@ -286,6 +287,7 @@
     "pydantic",
     "pytest",
     "SETUPTOOLS",
+    "uvicorn",
     "VIRTUALENVS"
   ],
 
