@@ -277,16 +277,23 @@
 
   "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
   "cSpell.userWords": [
+    "addopts",
     "fastapi",
+    "filterwarnings",
     "funcy",
     "icecream",
+    "Kolesnyak",
+    "Konstantin",
     "MANPAGER",
     "numpy",
     "pipx",
+    "platformdirs",
     "plotly",
     "pydantic",
     "pytest",
+    "pythonpath",
     "SETUPTOOLS",
+    "testpaths",
     "uvicorn",
     "VIRTUALENVS"
   ],
