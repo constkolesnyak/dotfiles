@@ -3,6 +3,7 @@
 
   "security.workspace.trust.untrustedFiles": "open",
   "security.promptForLocalFileProtocolHandling": false,
+  "security.workspace.trust.enabled": false,
   "terminal.external.osxExec": "Warp.app",
   "search.smartCase": true,
   "files.trimTrailingWhitespace": true,
@@ -50,7 +51,7 @@
 
   "editor.inlineSuggest.enabled": true,
   "editor.suggestSelection": "recentlyUsedByPrefix",
-
+  "editor.inlayHints.enabled": "on",
   "editor.autoSurround": "never",
   "editor.linkedEditing": true,
   "workbench.sideBar.location": "right",
@@ -250,6 +251,13 @@
   ],
   "isort.args": ["--profile", "black"],
 
+  //* JAVASCRIPT
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4
+  },
+
   //* SQL
 
   //* Format
@@ -283,17 +291,20 @@
     "funcy",
     "icecream",
     "Kolesnyak",
+    "konst",
     "Konstantin",
     "MANPAGER",
     "numpy",
     "pipx",
     "platformdirs",
     "plotly",
+    "Pufit",
     "pydantic",
     "pytest",
     "pythonpath",
     "SETUPTOOLS",
     "testpaths",
+    "userscript",
     "uvicorn",
     "VIRTUALENVS"
   ],
@@ -475,7 +486,5 @@
     { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
 
     //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
-  ],
-  "editor.inlayHints.enabled": "on",
-  "security.workspace.trust.enabled": false
+  ]
 }
