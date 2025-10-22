@@ -286,6 +286,8 @@
   "cSpell.enableFiletypes": ["properties", "shellscript", "xonsh"],
   "cSpell.userWords": [
     "addopts",
+    "anki",
+    "beforeunload",
     "fastapi",
     "filterwarnings",
     "funcy",
@@ -303,6 +305,8 @@
     "pytest",
     "pythonpath",
     "SETUPTOOLS",
+    "Spacebar",
+    "Tampermonkey",
     "testpaths",
     "userscript",
     "uvicorn",
