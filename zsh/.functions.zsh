@@ -75,3 +75,30 @@ pymain() {
         py "$shallow_main" "$@"
     fi
 }
+
+transubs() {
+    local DESCRIPTION="\
+Translate as literally as possible, even idioms. \
+Try to preserve original word order and formatting"
+
+    local MODEL="gemini-2.5-flash"
+    local LANG="Russian"
+    local SUBS_DIR="$HOME/google_drive/Misc/Subs"
+    local INPUT_DIR="$SUBS_DIR/input_subs"
+    local OUTPUT_DIR="$SUBS_DIR/output_subs"
+    local ARCHIVE_DIR="$SUBS_DIR/archive_subs"
+
+    for input_file in $INPUT_DIR/*.srt; do
+        [[ -e "$input_file" ]] || continue
+        local filename="$(basename "$input_file")"
+
+        gemini-srt-translator translate \
+            -i "$input_file" \
+            -o "$OUTPUT_DIR/$filename" \
+            -l "$LANG" \
+            -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
+            --model "$MODEL" \
+            --description "$DESCRIPTION"
+        /bin/mv "$input_file" "$ARCHIVE_DIR"
+    done
+}
