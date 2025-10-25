@@ -76,7 +76,15 @@ pymain() {
     fi
 }
 
-transubs() {
+subs() {
+    # LR subs
+
+    if /bin/ls $~POLYGLOTKA_EXPORTED_FILES_DIR/$~POLYGLOTKA_LR_SUBS_GLOB_PATTERN &>/dev/null; then
+        polyglotka subs
+    fi
+
+    # Gemini subs
+
     local DESCRIPTION="\
 Translate as literally as possible, even idioms. \
 Try to preserve original word order and formatting"
