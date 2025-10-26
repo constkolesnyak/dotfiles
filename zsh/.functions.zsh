@@ -76,15 +76,14 @@ pymain() {
     fi
 }
 
-subs() {
-    # LR subs
-
-    if /bin/ls $~POLYGLOTKA_EXPORTED_FILES_DIR/$~POLYGLOTKA_LR_SUBS_GLOB_PATTERN &>/dev/null; then
+subs_lr() {
+    lr_files=(${POLYGLOTKA_EXPORTED_FILES_DIR}/${~POLYGLOTKA_LR_SUBS_GLOB_PATTERN}(N))
+    if (( ${#lr_files} )); then
         polyglotka subs
     fi
+}
 
-    # Gemini subs
-
+subs_trans() {
     local DESCRIPTION="\
 Translate as literally as possible, even idioms. \
 Try to preserve original word order and formatting"
@@ -106,7 +105,9 @@ Try to preserve original word order and formatting"
             -l "$LANG" \
             -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
             --model "$MODEL" \
-            --description "$DESCRIPTION"
-        /bin/mv "$input_file" "$ARCHIVE_DIR"
+            --description "$DESCRIPTION" && \
+            /bin/mv "$input_file" "$ARCHIVE_DIR"
     done
 }
+
+subs() {subs_lr && subs_trans}
