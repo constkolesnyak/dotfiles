@@ -97,9 +97,11 @@ Remove brackets and everything inside them."
     local OUTPUT_DIR="$SUBS_DIR/output_subs"
     local ARCHIVE_DIR="$SUBS_DIR/archive_subs"
 
-    for input_file in $INPUT_DIR/*.srt; do
+    input_files=(${INPUT_DIR}/*.srt(N))
+
+    for input_file in $input_files; do
         [[ -e "$input_file" ]] || continue
-        local output_file_name="$(basename "$input_file") - $LANG"
+        local output_file_name="$(basename "$input_file" .srt) - ${LANG}.srt"
 
         gemini-srt-translator translate \
             -i "$input_file" \
