@@ -86,10 +86,12 @@ subs_lr() {
 subs_trans() {
     local DESCRIPTION="\
 Translate as literally as possible, even idioms. \
-Try to preserve original word order and formatting"
+Try to preserve original word order. \
+Remove brackets and everything inside them."
 
-    local MODEL="gemini-2.5-flash"
     local LANG="Russian"
+    local MODEL="gemini-2.5-flash"
+
     local SUBS_DIR="$HOME/google_drive/Misc/Subs"
     local INPUT_DIR="$SUBS_DIR/input_subs"
     local OUTPUT_DIR="$SUBS_DIR/output_subs"
@@ -97,11 +99,11 @@ Try to preserve original word order and formatting"
 
     for input_file in $INPUT_DIR/*.srt; do
         [[ -e "$input_file" ]] || continue
-        local filename="$(basename "$input_file")"
+        local output_file_name="$(basename "$input_file") - $LANG"
 
         gemini-srt-translator translate \
             -i "$input_file" \
-            -o "$OUTPUT_DIR/$filename" \
+            -o "$OUTPUT_DIR/$output_file_name" \
             -l "$LANG" \
             -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
             --model "$MODEL" \
