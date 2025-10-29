@@ -95,9 +95,13 @@ Remove brackets and everything inside them."
     local SUBS_DIR="$HOME/google_drive/Misc/Subs"
     local INPUT_DIR="$SUBS_DIR/input_subs"
     local OUTPUT_DIR="$SUBS_DIR/output_subs"
-    local ARCHIVE_DIR="$SUBS_DIR/archive_subs"
+    local TRASH_DIR="$SUBS_DIR/trash_subs"
 
-    input_files=(${INPUT_DIR}/*.srt(N))
+    for old_trash_file in $TRASH_DIR/*(.mw+2N); do
+        rm $old_trash
+    done
+
+    local input_files=(${INPUT_DIR}/*.srt(N))
 
     for input_file in $input_files; do
         [[ -e "$input_file" ]] || continue
@@ -110,7 +114,7 @@ Remove brackets and everything inside them."
             -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
             --model "$MODEL" \
             --description "$DESCRIPTION" && \
-            /bin/mv "$input_file" "$ARCHIVE_DIR"
+            /bin/mv "$input_file" "$TRASH_DIR"
     done
 }
 

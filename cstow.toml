@@ -9,3 +9,6 @@ root_dir = '$DOTFILES'
 '~/Library/Application Support/Anki2/addons21/deduplicator_anki' = [
     '~/garage/Dev/Projects/Python/deduplicator-anki/deduplicator_anki',
 ]
+'~/.hammerspoon' = [
+    '/Users/konst/garage/Dev/Projects/Misc/iblurred-toggler/src',
+]
