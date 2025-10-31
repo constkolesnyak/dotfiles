@@ -92,7 +92,7 @@ Remove brackets and everything inside them."
     local LANG="Russian"
     local MODEL="gemini-2.5-flash"
 
-    local SUBS_DIR="$HOME/google_drive/Misc/Subs"
+    local SUBS_DIR="$HOME/garage/Subs"
     local INPUT_DIR="$SUBS_DIR/input_subs"
     local OUTPUT_DIR="$SUBS_DIR/output_subs"
     local TRASH_DIR="$SUBS_DIR/trash_subs"
@@ -104,8 +104,9 @@ Remove brackets and everything inside them."
     local input_files=(${INPUT_DIR}/*.srt(N))
 
     for input_file in $input_files; do
-        [[ -e "$input_file" ]] || continue
-        local output_file_name="$(basename "$input_file" .srt) - ${LANG}.srt"
+        input_file_basename="$(basename "$input_file" .srt)"
+        echo "Translating: $input_file_basename"
+        local output_file_name="$input_file_basename - ${LANG}.srt"
 
         gemini-srt-translator translate \
             -i "$input_file" \
