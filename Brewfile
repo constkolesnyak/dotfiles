@@ -44,6 +44,8 @@ brew "cbonsai"
 brew "ccache"
 # Control Google Chrome from the command-line
 brew "chrome-cli"
+# Tool for emulating mouse and keyboard events
+brew "cliclick"
 # Cross-platform make
 brew "cmake"
 # Console Matrix
@@ -56,8 +58,6 @@ brew "codex"
 brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Apjanke's fork of the classic cowsay project
-brew "cowsay"
 # CPU architecture fetching tool
 brew "cpufetch"
 # Suite of command-line tools for converting to and working with CSV
@@ -120,6 +120,8 @@ brew "grep"
 brew "gum"
 # Improved top (interactive process viewer)
 brew "htop"
+# Website copier/offline browser
+brew "httrack"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@75"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
@@ -142,7 +144,7 @@ brew "lima-additional-guestagents"
 brew "lld"
 # Rainbows and unicorns in your console!
 brew "lolcat"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Quickly generate a temporary email address
 brew "mailsy"
@@ -210,6 +212,8 @@ brew "viddy"
 brew "virtualenv"
 # Execute commands when watched files change
 brew "watchexec"
+# Internet file retriever
+brew "wget"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
 brew "xonsh"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -230,14 +234,10 @@ cask "anki"
 cask "appcleaner"
 # Desktop password and login vault
 cask "bitwarden"
-# Downloads videos and audio from websites
-cask "clipgrab"
-# Databases and SQL IDE
-cask "datagrip"
+# Screen recording software
+cask "cap"
 # Universal database tool and SQL client
 cask "dbeaver-community"
-# Utilities designed to make common development tasks easier
-cask "devtoys"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -246,30 +246,26 @@ cask "docker-desktop"
 cask "dropbox"
 # Video and audio player
 cask "elmedia-player"
-# Web browser
-cask "firefox"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
 # Web browser
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
+# Desktop automation application
+cask "hammerspoon"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Free and open-source media player
 cask "iina"
 # HTTP and GraphQL Client
 cask "insomnia"
+# Open-source keystroke visualiser
+cask "keycastr"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
-# VPN client for secure internet access and private browsing
-cask "nordvpn"
 # Calculator and converter application
 cask "numi"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-# Podcast platform
-cask "pocket-casts"
 # Quick Look generator for Markdown files
 cask "qlmarkdown"
 # Screenshot measurement and annotation tool
@@ -288,18 +284,12 @@ cask "the-unarchiver"
 cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
-# Multimedia player
-cask "vlc"
 # Rust-based terminal
 cask "warp"
 # Command-line interface to Warp agents
 cask "warp-cli"
-# Native desktop client for WhatsApp
-cask "whatsapp"
 # Wine wrapper built with SwiftUI
 cask "whisky"
-# Web browser
-cask "yandex"
 # Cloud storage
 cask "yandex-disk"
 # Video communication and virtual meeting platform
@@ -308,7 +298,6 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "BetterSnapTool", id: 417375580
 mas "Bitwarden", id: 1352778147
-mas "Calendars", id: 608834326
 mas "Dark Reader for Safari", id: 1438243180
 mas "Data Jar", id: 1453273600
 mas "Dropover", id: 1355679052
@@ -318,9 +307,9 @@ mas "Hidden Bar", id: 1452453066
 mas "Jump Desktop", id: 524141863
 mas "Numbers", id: 409203825
 mas "One Thing", id: 1604176982
-mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
-mas "Pixea", id: 1507782672
+mas "PreviewText", id: 1660037028
+mas "Shazam", id: 897118787
 mas "Things", id: 904280696
 mas "Toggl Track", id: 1291898086
 mas "ToothFairy", id: 1191449274

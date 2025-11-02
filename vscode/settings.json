@@ -317,7 +317,8 @@
     "unblur",
     "userscript",
     "uvicorn",
-    "VIRTUALENVS"
+    "VIRTUALENVS",
+    "VTUBEUSE"
   ],
 
   //* FORMATTERS
