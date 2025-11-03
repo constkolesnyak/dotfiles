@@ -3,12 +3,9 @@ root_dir = '$DOTFILES'
 [targets_dirs]
 '~' = ['misc/home', 'zsh', 'git', 'python']
 '~/Library/Application Support/Code/User' = ['vscode']
-'~/Library/Application Support/Anki2/addons21/field_matcher' = [
-    '~/garage/Dev/Projects/Python/field-matcher-anki/field_matcher',
-]
+# '~/Library/Application Support/Anki2/addons21/field_matcher' = [
+#     '~/garage/Dev/Projects/Python/field-matcher-anki/field_matcher',
+# ]
 '~/Library/Application Support/Anki2/addons21/deduplicator_anki' = [
     '~/garage/Dev/Projects/Python/deduplicator-anki/deduplicator_anki',
-]
-'~/.hammerspoon' = [
-    '/Users/konst/garage/Dev/Projects/Misc/iblurred-toggler/src',
 ]
