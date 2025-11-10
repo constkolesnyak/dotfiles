@@ -15,25 +15,21 @@ clean_srt() {
 }
 
 subs_trans() {
-    local DESCRIPTION="\
-Translate as literally as possible, including idioms. \
-Preserve source word order where grammatical. \
+    local PROMPT="\
+Translate as literally as possible. \
+Preserve original word order where grammatical. \
 \
-Delete brackets and everything inside them. \
+Delete brackets and everything inside them, e.g.（ナズナ）. \
 Delete lines containing '♪'. \
-\
-Absolutely remove any emotional or filler exclamations such as \
-“Ah”, “A?”, “Eh?”, “Ugh”, “Oh...”, “Wow!”, and any Japanese equivalents. \
-They should never appear in the output. \
-If a line only contains them, delete the line. \
-If a line starts or ends with them, cut them out. \
+Delete emotional or filler exclamations such as \
+'Ah', 'A?', 'Eh?', 'Ugh', 'Oh...', 'Wow!', and any Japanese equivalents. \
 \
 Trim leading/trailing whitespace. \
-After all deletions and trimming, if a line is empty, output '[empty]'. \
+After all deletions and trimming, if a line is empty, output 'deleted'.\
 "
 
     local LANG="Russian"
-    local MODEL="gemini-2.5-flash"
+    local MODEL="gemini-2.5-pro"
 
     local SUBS_DIR="$HOME/garage/Subs"
     local INPUT_DIR="$SUBS_DIR/input_subs"
@@ -46,9 +42,14 @@ After all deletions and trimming, if a line is empty, output '[empty]'. \
 
     local input_files=(${INPUT_DIR}/*.srt(N))
 
+    echo "Translating:"
+    for input_file in $input_files; do
+        echo "$(basename "$input_file" .srt)"
+    done
+    sleep 1
+
     for input_file in $input_files; do
         input_file_basename="$(basename "$input_file" .srt)"
-        echo "Translating: $input_file_basename"
         local output_file_name="$input_file_basename - ${LANG}.srt"
         local output_file="$OUTPUT_DIR/$output_file_name"
 
@@ -59,7 +60,7 @@ After all deletions and trimming, if a line is empty, output '[empty]'. \
             -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
             --model "$MODEL" \
             --progress-log \
-            --description "$DESCRIPTION" && \
+            --description "$PROMPT" && \
             /usr/bin/touch "$input_file" && \
             /bin/mv "$input_file" "$TRASH_DIR" && \
             clean_srt "$output_file"
