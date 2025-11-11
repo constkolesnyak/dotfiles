@@ -36,17 +36,20 @@ After all deletions and trimming, if a line is empty, output 'deleted'.\
     local OUTPUT_DIR="$SUBS_DIR/output_subs"
     local TRASH_DIR="$SUBS_DIR/trash_subs"
 
-    for old_trash_file in $TRASH_DIR/*(.mw+2N); do
-        rm $old_trash
-    done
-
     local input_files=(${INPUT_DIR}/*.srt(N))
+    if (( ! ${#input_files} )); then
+        return 0
+    fi
+
+    for old_trash_file in $TRASH_DIR/*(.mw+2N); do
+        rm $old_trash_file
+    done
 
     echo "Translating:"
     for input_file in $input_files; do
         echo "$(basename "$input_file" .srt)"
     done
-    sleep 1
+    sleep 0.5
 
     for input_file in $input_files; do
         input_file_basename="$(basename "$input_file" .srt)"
@@ -60,14 +63,23 @@ After all deletions and trimming, if a line is empty, output 'deleted'.\
             -k "$GEMINI_SRT_TRANSLATOR_API_KEY" \
             --model "$MODEL" \
             --progress-log \
-            --description "$PROMPT" && \
-            /usr/bin/touch "$input_file" && \
-            /bin/mv "$input_file" "$TRASH_DIR" && \
+            --description "$PROMPT"
+
+        local progress_files=(${INPUT_DIR}/*.progress(N))
+        if (( ${#progress_files} )); then
+            /bin/mv ${progress_files[@]} "$TRASH_DIR"
+        else
+            /usr/bin/touch "$input_file"
+            /bin/mv "$input_file" "$TRASH_DIR"
             clean_srt "$output_file"
+        fi
     done
 
     /bin/mv "$INPUT_DIR"/*.log "$TRASH_DIR"
-    find "$OUTPUT_DIR" -name '*.srt' ! -name '*clean.srt' -exec /bin/mv {} "$TRASH_DIR/" \;
+    find "$OUTPUT_DIR" -name '*.srt' ! -name '*clean.srt' ! -name '*_primary.srt' ! -name '*_secondary.srt' -exec /bin/mv {} "$TRASH_DIR/" \;
 }
 
-subs() {subs_lr && subs_trans}
+subs() {
+    subs_lr
+    subs_trans
+}
