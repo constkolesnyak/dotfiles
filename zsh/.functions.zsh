@@ -75,3 +75,8 @@ pymain() {
         py "$shallow_main" "$@"
     fi
 }
+
+epub2txt () {
+	local txt="${1%.epub}.txt"
+	pandoc "$1" -o "$txt" -f epub -t plain && echo "$txt"
+}
