@@ -33,7 +33,7 @@ After all deletions and trimming, if a line is empty, output 'deleted'.\
 
     local SUBS_DIR="$HOME/garage/Subs"
     local INPUT_DIR="$SUBS_DIR/input_subs"
-    local OUTPUT_DIR="$SUBS_DIR/output_subs"
+    local OUTPUT_DIR="$SUBS_DIR/output_subs/japanese_subs"
     local TRASH_DIR="$SUBS_DIR/trash_subs"
 
     local input_files=(${INPUT_DIR}/*.srt(N))
