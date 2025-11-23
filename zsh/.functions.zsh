@@ -1,8 +1,11 @@
 codetemp() {
-    # usage: echo asdf | codetemp tsv
-    local ext="${1:-tsv}" f
-    f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
-    /bin/cat > "$f"
+    # Usage:
+    #   codetemp tsv
+    #   echo asdf | codetemp tsv
+
+    local ext="${1:-txt}"
+    local f="$(mktemp "${TMPDIR:-/tmp}/$(date +%s).${ext}")" || return
+    [ ! -t 0 ] && /bin/cat > "$f"
     code "$f"
 }
 
