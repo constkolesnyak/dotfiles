@@ -1,10 +1,3 @@
-subs_lr() {
-    lr_files=(${POLYGLOTKA_EXPORTED_FILES_DIR}/${~POLYGLOTKA_LR_SUBS_GLOB_PATTERN}(N))
-    if (( ${#lr_files} )); then
-        polyglotka subs
-    fi
-}
-
 clean_srt() {
     # Remove lines w/o a single space
     local no_space='^[0-9]+\n[0-9:, -->]+\n(?![^\n]* )[^\n]+\n?$'
@@ -38,7 +31,8 @@ After all deletions and trimming, if a line is empty, output 'deleted'.\
 
     local input_files=(${INPUT_DIR}/*.srt(N))
     if (( ! ${#input_files} )); then
-        return 0
+        echo "subs_trans: input files not found" >&2
+        return 1
     fi
 
     for old_trash_file in $TRASH_DIR/*(.mw+2N); do
@@ -79,7 +73,19 @@ After all deletions and trimming, if a line is empty, output 'deleted'.\
     find "$OUTPUT_DIR" -name '*.srt' ! -name '*clean.srt' ! -name '*_primary.srt' ! -name '*_secondary.srt' -exec /bin/mv {} "$TRASH_DIR/" \;
 }
 
+subs_lr() {
+    lr_files=(${POLYGLOTKA_EXPORTED_FILES_DIR}/${~POLYGLOTKA_LR_SUBS_GLOB_PATTERN}(N))
+    if (( ! ${#lr_files} )); then
+        echo "subs_lr: LR files not found" >&2
+        return 1
+    fi
+    polyglotka subs --name "$1"
+}
+
 subs() {
-    subs_lr
-    subs_trans
+    if [[ -n "$*" ]]; then
+        subs_lr "$*"
+    else
+        subs_trans
+    fi
 }
