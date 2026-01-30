@@ -8,7 +8,7 @@ alias pyact='. $(pybin)/activate'
 ##* PIP ###
 
 alias pip='$(pybin)/pip'
-alias pipr='pip install -r $(gpath)/requirements.txt'
+alias pipr='pyact && pip install -r $(gpath)/requirements.txt'
 
 ##* TESTING ###
 

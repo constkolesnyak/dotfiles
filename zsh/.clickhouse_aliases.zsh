@@ -1,8 +1,7 @@
-alias click='echo "CLICKHOUSE_CLI_MODE=$CLICKHOUSE_CLI_MODE\n" && clickhouse'
-alias clicki='click client --host $CLICKHOUSE_CLI_HOST --secure --password $CLICKHOUSE_CLI_PASSWORD'
-alias clickf='click client --host $CLICKHOUSE_CLI_HOST --secure --password $CLICKHOUSE_CLI_PASSWORD\
-              --format PrettyCompact --queries-file'
+alias click='echo "CLICKHOUSE_CLI_MODE=$CLICKHOUSE_CLI_MODE\n" && clickhouse client --secure --host $CLICKHOUSE_CLI_HOST --password $CLICKHOUSE_CLI_PASSWORD'
+alias clickf='click --format PrettyCompact --queries-file'
+alias clickq='click --query'
 
 clickff() {
-    clicki --queries-file $1 --format $2
+    click --queries-file $1 --format $2
 }

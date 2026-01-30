@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "mcp-clickhouse-vox": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp-clickhouse",
+        "--python",
+        "3.10",
+        "--with",
+        "fastmcp==2.12.4",
+        "mcp-clickhouse"
+      ],
+      "env": {
+        "CLICKHOUSE_HOST": "od3gj41mbk.eastus.azure.clickhouse-staging.com",
+        "CLICKHOUSE_PORT": "8443",
+        "CLICKHOUSE_USER": "default",
+        "CLICKHOUSE_PASSWORD": "mcMcH_tmi1Vqw",
+        "CLICKHOUSE_SECURE": "true",
+        "CLICKHOUSE_VERIFY": "true",
+        "CLICKHOUSE_CONNECT_TIMEOUT": "30",
+        "CLICKHOUSE_SEND_RECEIVE_TIMEOUT": "30"
+      }
+    }
+  }
+}

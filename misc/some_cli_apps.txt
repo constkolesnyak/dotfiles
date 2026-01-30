@@ -1,5 +1,5 @@
 /opt/homebrew/lib
-├── npm@11.6.2
+├── npm@11.7.0
 └── sql-formatter@15.0.2
 
 total 819384      
@@ -11,6 +11,7 @@ lrwxr-xr-x@ 1 konst staff 78B    gemini-srt-translator -> /Users/konst/.local/pi
 lrwxr-xr-x@ 1 konst staff 60B    gst -> /Users/konst/.local/pipx/venvs/gemini-srt-translator/bin/gst
 lrwxr-xr-x@ 1 konst staff 53B    kmpt -> /Users/konst/.local/pipx/venvs/minimal-pairs/bin/kmpt
 lrwxr-xr-x@ 1 konst staff 56B    polyglotka -> /Users/konst/.local/pipx/venvs/polyglotka/bin/polyglotka
+lrwxr-xr-x@ 1 konst staff 52B    vtubeuse -> /Users/konst/.local/pipx/venvs/vtubeuse/bin/vtubeuse
 
 venvs are in /Users/konst/.local/pipx/venvs
 apps are exposed on your $PATH at /Users/konst/.local/bin
@@ -20,10 +21,12 @@ manual pages are exposed at /Users/konst/.local/share/man
    package dinosay 1.2.0, installed using Python 3.12.7
     - dinolist
     - dinosay
-   package gemini-srt-translator 2.1.5, installed using Python 3.13.7
+   package gemini-srt-translator 3.0.0, installed using Python 3.13.9
     - gemini-srt-translator
     - gst
    package minimal-pairs 0.1, installed using Python 3.13.7
     - kmpt
    package polyglotka 0.1, installed using Python 3.13.7
     - polyglotka
+   package vtubeuse 0.1, installed using Python 3.13.9
+    - vtubeuse

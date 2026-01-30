@@ -6,6 +6,6 @@ root_dir = '$DOTFILES'
 # '~/Library/Application Support/Anki2/addons21/field_matcher' = [
 #     '~/garage/Dev/Projects/Python/field-matcher-anki/field_matcher',
 # ]
-'~/Library/Application Support/Anki2/addons21/deduplicator_anki' = [
-    '~/garage/Dev/Projects/Python/deduplicator-anki/deduplicator_anki',
-]
+# '~/Library/Application Support/Anki2/addons21/deduplicator_anki' = [
+#     '~/garage/Dev/Projects/Python/deduplicator-anki/deduplicator_anki',
+# ]

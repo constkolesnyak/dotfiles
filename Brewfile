@@ -80,13 +80,7 @@ brew "emacs"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Library for JPEG-2000 image manipulation
-brew "openjpeg"
-# Image processing and image analysis library
-brew "leptonica"
-# OCR (Optical Character Recognition) engine
-brew "tesseract"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
@@ -100,6 +94,12 @@ brew "fzf"
 brew "gd"
 # GitHub command-line tool
 brew "gh"
+# Library for JPEG-2000 image manipulation
+brew "openjpeg"
+# Image processing and image analysis library
+brew "leptonica"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # GIF image/animation creator/editor
@@ -110,7 +110,7 @@ brew "git"
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Ping, but with a graph
 brew "gping"
@@ -126,7 +126,7 @@ brew "httrack"
 brew "icu4c@75"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
@@ -206,6 +206,8 @@ brew "toilet"
 brew "tokei"
 # Command-line interface to the freedesktop.org trashcan
 brew "trash-cli", link: true
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Modern watch command
 brew "viddy"
 # Tool for creating isolated virtual python environments
@@ -236,6 +238,10 @@ cask "appcleaner"
 cask "bitwarden"
 # Screen recording software
 cask "cap"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# OpenAI's official browser with ChatGPT built in
+cask "chatgpt-atlas"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Voice and text chat software
@@ -270,6 +276,8 @@ cask "numi"
 cask "qlmarkdown"
 # Screenshot measurement and annotation tool
 cask "shottr"
+# Instant messaging application focusing on security
+cask "signal"
 # Music streaming service
 cask "spotify"
 # Video game digital distribution service
@@ -287,19 +295,18 @@ cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
 # Command-line interface to Warp agents
-cask "warp-cli"
+cask "warpdotdev/warp/warp-cli"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Cloud storage
 cask "yandex-disk"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "AdGuard for Safari", id: 1440147259
+mas "AdGuard Mini", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "BetterSnapTool", id: 417375580
 mas "Bitwarden", id: 1352778147
 mas "Dark Reader for Safari", id: 1438243180
-mas "Data Jar", id: 1453273600
 mas "Dropover", id: 1355679052
 mas "Encrypto", id: 935235287
 mas "GrandPerspective", id: 1111570163
@@ -309,6 +316,7 @@ mas "Numbers", id: 409203825
 mas "One Thing", id: 1604176982
 mas "Pages", id: 409201541
 mas "PreviewText", id: 1660037028
+mas "RunCat", id: 1429033973
 mas "Shazam", id: 897118787
 mas "Things", id: 904280696
 mas "Toggl Track", id: 1291898086
@@ -336,6 +344,7 @@ vscode "foxundermoon.shell-format"
 vscode "github.vscode-github-actions"
 vscode "gruntfuggly.todo-tree"
 vscode "idleberg.applescript"
+vscode "idleberg.jxa"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jnoortheen.xonsh"
 vscode "johnpapa.vscode-peacock"

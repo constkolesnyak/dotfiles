@@ -49,3 +49,5 @@ realias
 refunc # again but w/ aliases
 
 dinosay --random --color purple 'Facturusne operae pretium sim?'
+
+export PATH="$HOME/.local/bin:$PATH"
