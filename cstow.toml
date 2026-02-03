@@ -1,7 +1,7 @@
 root_dir = '$DOTFILES'
 
 [targets_dirs]
-'~' = ['misc/home', 'zsh', 'git', 'python']
+'~' = ['misc/home', 'zsh', 'git', 'python', 'claude']
 '~/Library/Application Support/Code/User' = ['vscode']
 # '~/Library/Application Support/Anki2/addons21/field_matcher' = [
 #     '~/garage/Dev/Projects/Python/field-matcher-anki/field_matcher',

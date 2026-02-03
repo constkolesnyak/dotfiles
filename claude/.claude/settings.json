@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Frog.aiff & terminal-notifier -title 'Claude Code' -message 'Claude is waiting for input' -contentImage ~/.claude/notification-icon.png"
+          }
+        ]
+      }
+    ]
+  }
+}

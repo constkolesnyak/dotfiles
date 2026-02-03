@@ -123,3 +123,5 @@ alias ghostscript='/opt/homebrew/bin/gs' # compress pdf
 # in2csv 'asdf.xlsx' > asdf.csv
 
 alias c='claude'
+alias cs='claude --dangerously-skip-permissions'
+alias csc='claude --dangerously-skip-permissions -c'
