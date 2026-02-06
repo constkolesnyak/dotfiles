@@ -22,14 +22,14 @@
 
   "files.associations": {
     "**/*.yml": "yaml",
-    "**/vscode/snippets/*.json": "jsonc"
+    "**/vscode/snippets/*.json": "jsonc",
   },
 
   //* Code Runner
   "code-runner.enableAppInsights": false, // telemetry
   "code-runner.executorMap": {
     "sql": "clickf $fullFileName",
-    "python": "pyact; echo ''; python3 $fullFileName"
+    "python": "pyact; echo ''; python3 $fullFileName",
   },
   "code-runner.runInTerminal": true,
 
@@ -57,7 +57,7 @@
   "workbench.sideBar.location": "right",
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "explicit",
   },
 
   "editor.cursorSmoothCaretAnimation": "on",
@@ -90,7 +90,7 @@
       "strikethrough": false,
       "underline": false,
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "todo",
@@ -99,7 +99,7 @@
       "strikethrough": false,
       "underline": false,
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "fixme",
@@ -108,7 +108,7 @@
       "strikethrough": false,
       "underline": false,
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "//",
@@ -117,7 +117,7 @@
       "strikethrough": true,
       "underline": false,
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "*",
@@ -126,7 +126,7 @@
       "strikethrough": false,
       "underline": false,
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "type: ignore",
@@ -135,8 +135,8 @@
       "strikethrough": false,
       "underline": false,
       "bold": false,
-      "italic": false
-    }
+      "italic": false,
+    },
   ],
 
   "peacock.favoriteColors": [
@@ -147,7 +147,7 @@
     { "name": "Light Blue", "value": "#0270de" },
     { "name": "Dark Blue", "value": "#031485" },
     { "name": "Purple", "value": "#8002cf" },
-    { "name": "Pink", "value": "#832561" }
+    { "name": "Pink", "value": "#832561" },
   ],
   "peacock.affectActivityBar": false,
   "peacock.affectSashHover": false,
@@ -173,11 +173,11 @@
         {
           "scope": "string.quoted.docstring.multi.python",
           "settings": {
-            "foreground": "#8960f7"
-          }
-        }
-      ]
-    }
+            "foreground": "#8960f7",
+          },
+        },
+      ],
+    },
   },
   "workbench.colorCustomizations": {
     "tab.activeBorder": "#C7CCE5",
@@ -193,7 +193,7 @@
     "editorGutter.modifiedBackground": "#4cc4fc",
     "scrollbar.shadow": "#FFFFFF",
     "editorInlayHint.background": "#ee8ae1a8",
-    "editorInlayHint.foreground": "#000000"
+    "editorInlayHint.foreground": "#000000",
   },
 
   //* PYTHON
@@ -218,14 +218,14 @@
     "reportUnusedFunction": "information",
     "reportUnusedClass": "information",
     "reportMissingTypeStubs": "information",
-    "reportUnknownLambdaType": "none"
+    "reportUnknownLambdaType": "none",
   },
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.completeFunctionParens": true,
   "python.analysis.autoFormatStrings": true,
   "python.analysis.fixAll": [
     "source.convertImportFormat",
-    "source.unusedImports"
+    "source.unusedImports",
   ],
   "python.analysis.enablePytestSupport": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
@@ -237,17 +237,17 @@
   "mypy-type-checker.args": ["--strict"],
   "mypy-type-checker.severity": {
     "error": "Error",
-    "note": "Information"
+    "note": "Information",
   },
 
   //* Format
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
   },
   "black-formatter.args": [
     "--skip-string-normalization",
     "--line-length",
-    "110"
+    "110",
   ],
   "isort.args": ["--profile", "black"],
 
@@ -255,7 +255,7 @@
 
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
   },
 
   //* SQL
@@ -263,7 +263,7 @@
   //* Format
 
   "[sql]": {
-    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode",
   },
 
   "Prettier-SQL.keywordCase": "upper",
@@ -271,12 +271,12 @@
 
   "sqltools.format": {
     "reservedWordCase": "upper",
-    "linesBetweenQueries": 2
+    "linesBetweenQueries": 2,
   },
   "sqltools.highlightQuery": false,
 
   "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
   },
 
   //* LINTERS
@@ -318,7 +318,7 @@
     "userscript",
     "uvicorn",
     "VIRTUALENVS",
-    "VTUBEUSE"
+    "VTUBEUSE",
   ],
 
   //* FORMATTERS
@@ -326,12 +326,12 @@
   "editor.formatOnSave": true,
 
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
 
   //* Prettier
   "[json][jsonc][yaml][markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "prettier.singleQuote": true,
 
@@ -355,7 +355,7 @@
 
   //* Insert mode
   "vim.insertModeKeyBindingsNonRecursive": [
-    { "before": ["k", "j"], "after": ["<Esc>"] }
+    { "before": ["k", "j"], "after": ["<Esc>"] },
   ],
 
   //* Normal mode
@@ -364,7 +364,7 @@
     { "before": ["U"], "after": ["<C-r>"] },
     {
       "before": ["<leader>", "o"],
-      "commands": ["workbench.action.gotoSymbol"]
+      "commands": ["workbench.action.gotoSymbol"],
     },
     { "before": ["<leader>", "'"], "commands": ["editor.togglequotes"] },
     { "before": ["<leader>", "r"], "commands": ["editor.action.rename"] },
@@ -373,7 +373,7 @@
 
     {
       "before": ["<leader>", "`"],
-      "commands": ["workbench.action.navigateToLastEditLocation"]
+      "commands": ["workbench.action.navigateToLastEditLocation"],
     },
     { "before": [","], "after": ["g", "r"] },
     { "before": ["z"], "after": [","] },
@@ -409,7 +409,7 @@
     { "before": ["<leader>", "<leader>", "k"], "after": [] },
     { "before": ["<leader>", "<leader>", "/"], "after": [] },
     { "before": ["<leader>", "<leader>", "g", "e"], "after": [] },
-    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
+    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] },
   ],
 
   //* Visual mode
@@ -419,13 +419,13 @@
     { "before": ["g", "s"], "after": ["S"] },
     {
       "before": ["<leader>", "/"],
-      "commands": ["editor.createFoldingRangeFromSelection"]
+      "commands": ["editor.createFoldingRangeFromSelection"],
     },
     { "before": ["<leader>", "c"], "commands": ["editor.action.refactor"] },
 
     {
       "before": ["<leader>", "`"],
-      "commands": ["workbench.action.navigateToLastEditLocation"]
+      "commands": ["workbench.action.navigateToLastEditLocation"],
     },
     { "before": [","], "after": ["g", "r"] },
     { "before": ["z"], "after": [","] },
@@ -461,7 +461,7 @@
     { "before": ["<leader>", "<leader>", "k"], "after": [] },
     { "before": ["<leader>", "<leader>", "/"], "after": [] },
     { "before": ["<leader>", "<leader>", "g", "e"], "after": [] },
-    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
+    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] },
   ],
 
   //* Pending mode
@@ -495,8 +495,9 @@
     { "before": ["<leader>", "<leader>", "k"], "after": [] },
     { "before": ["<leader>", "<leader>", "/"], "after": [] },
     { "before": ["<leader>", "<leader>", "g", "e"], "after": [] },
-    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] }
+    { "before": ["<leader>", "<leader>", "<leader>", "j"], "after": [] },
 
     //* LINES BELLOW ARE AUTOMATICALLY ADDED BY VSCODE
-  ]
+  ],
+  "claudeCode.preferredLocation": "panel",
 }
