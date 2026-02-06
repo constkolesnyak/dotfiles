@@ -122,7 +122,5 @@ mov_to_gif() {ffmpeg -i "$1.mov" -pix_fmt rgb8 -r 10 "$1.gif" && gifsicle -O3 "$
 alias ghostscript='/opt/homebrew/bin/gs' # compress pdf
 # in2csv 'asdf.xlsx' > asdf.csv
 
-alias c='claude --dangerously-skip-permissions'
-alias cc='claude --dangerously-skip-permissions -c'
-alias cs='claude'
-alias csc='claude -c'
+alias c='claude --allow-dangerously-skip-permissions'
+alias cc='claude --allow-dangerously-skip-permissions -c'
