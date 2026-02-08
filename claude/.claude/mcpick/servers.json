@@ -1,0 +1,29 @@
+{
+  "servers": [
+    {
+      "name": "notion",
+      "type": "http",
+      "url": "https://mcp.notion.com/mcp"
+    },
+    {
+      "name": "telegram-mcp",
+      "type": "stdio",
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "--directory",
+        "/Users/konst/.claude/mcp/telegram-mcp",
+        "run",
+        "main.py"
+      ],
+      "env": {}
+    },
+    {
+      "name": "things",
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "things-mcp"
+      ]
+    }
+  ]
+}
