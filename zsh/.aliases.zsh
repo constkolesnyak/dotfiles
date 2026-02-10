@@ -12,7 +12,7 @@ alias destow='cstow delete'
 ##* BREW ###
 
 alias brupg='brew update && brew upgrade'
-alias brupgall='brew update && brew upgrade && mas upgrade && pipx upgrade-all && brdump && dump_some_cli_apps'
+alias brupgall='brew update && brew upgrade && mas upgrade && uv tool upgrade --all && brdump && dump_some_cli_apps'
 alias brls='brew list'
 alias brg='brew list | rg'
 alias brins='brew install'

@@ -20,7 +20,7 @@ destow      # Remove all symlinks
 ```bash
 brcheck     # Check what apps from Brewfile are missing
 brbundle    # Install apps from Brewfile
-brupgall    # Update everything (brew, mas, pipx) and dump Brewfile
+brupgall    # Update everything (brew, mas, uv tools) and dump Brewfile
 ```
 
 ### Shell

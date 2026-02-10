@@ -174,8 +174,6 @@ brew "openssl@1.1"
 brew "pandoc"
 # General-purpose scripting language
 brew "php"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Python package management tool
 brew "poetry"
 # Modern replacement for ps written in Rust

@@ -14,7 +14,7 @@ dump_some_cli_apps() {
         npmls &&
             /bin/ls -lh ~/.local/bin | awk '{$6=$7=$8=""; print $0}' &&
             echo '' &&
-            pipx list
+            uv tool list
     } | tee $DOTFILES/misc/some_cli_apps.txt
 }
 
